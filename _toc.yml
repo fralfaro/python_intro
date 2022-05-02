@@ -1,0 +1,19 @@
+- file: index
+
+- part: Introducción
+  chapters:
+  - file: python_intro/intro_progra.md
+  - file: python_intro/introduccion.md
+
+- part: Conceptos Básicos
+  chapters:
+  - file: python_intro/basico.ipynb
+  - file: python_intro/flujo.ipynb
+  - file: python_intro/estructura.ipynb
+  - file: python_intro/funciones.ipynb
+    sections:
+          - file: python_intro/funcional.ipynb
+  - file: python_intro/error.ipynb
+  - file: python_intro/buenas_practicas.ipynb
+
+

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "python_intro"
+version = "0.1.0"
+description = "Introduccion basica de Python"
+authors = ["Francisco Alfaro <francisco.alfaro.496@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+jupyterlab = "*"
+jupyter-book = "*"
+
+
+
+
+
