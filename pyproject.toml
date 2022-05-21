@@ -1,17 +1,12 @@
 [tool.poetry]
-name = "python_intro"
+name = "docs"
 version = "0.1.0"
-description = "Introduccion basica de Python"
+description = "mkdocs - courses"
 authors = ["Francisco Alfaro <francisco.alfaro.496@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-jupyterlab = "*"
-jupyter-book = "*"
-
-
-
-
-
+mkdocs-material = "^8.2.15"
+nbconvert = "^6.5.0"
