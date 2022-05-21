@@ -19,7 +19,11 @@ jobs:
       - name: Notebook to markdown
         run: cd docs && poetry run jupyter nbconvert --to markdown  *.ipynb
       - name: Build the book
-        run: poetry run mkdocs gh-deploy --force
-
+        run: poetry run mkdocs build --site-dir public
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
 
 
