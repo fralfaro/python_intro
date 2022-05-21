@@ -20,7 +20,7 @@ jobs:
         run: cd docs && poetry run jupyter nbconvert --to markdown  *.ipynb
       - name: Build the book
         run: poetry run mkdocs build
-      - name: GitHub Pages action
+      - name: Build GitHub Pages
       - run: poetry run mkdocs gh-deploy --force
 
 
