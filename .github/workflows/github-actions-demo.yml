@@ -21,9 +21,6 @@ jobs:
       - name: Build the book
         run: poetry run mkdocs build
       - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.6.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_build/html
+      - run: poetry run mkdocs gh-deploy --force
 
 
