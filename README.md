@@ -1,6 +1,6 @@
 # Introducción a Python
 
-<a href="https://faam.gitlab.io/python_intro/"><img alt="Link a la Documentación" src="https://jupyterbook.org/badge.svg"></a>
+<a href="https://fralfaro.github.io/python_intro/" src="https://jupyterbook.org/badge.svg"></a>
 [![pipeline status](https://gitlab.com/FAAM/python_intro/badges/master/pipeline.svg)](https://gitlab.com/FAAM/python_intro/-/commits/master)
 
 ## Contenidos temáticos
