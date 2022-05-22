@@ -24,7 +24,6 @@ nav:
     - Excepciones: error.md
     - Buenas prácticas: buenas_practicas.md
 
-
 # Markdown extensions
 markdown_extensions:
   - attr_list
