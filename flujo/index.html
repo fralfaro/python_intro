@@ -713,7 +713,7 @@
 </code></pre></div>
 <h2 id="condicional-if-elif-else">Condicional if-elif-else</h2>
 <p>La sentencia <code>if-elif-else</code> depende de dos o más condiciones, que son evaluadas en orden. La primera que es verdadera determina qué instrucciones serán ejecutadas:</p>
-<p><img src="./images/if_else.png"  align="center" width="300" height="500" /></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/if_else.png"  align="center" width="300" height="500" /></p>
 <p>La sintaxis es la siguiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">if</span> <span class="n">condición1</span><span class="p">:</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">qué</span> <span class="n">hacer</span> <span class="n">si</span> <span class="n">condición1</span> <span class="n">es</span> <span class="n">verdadera</span>
@@ -751,7 +751,7 @@
 <p>El ciclo while («mientras») ejecuta una secuencia de instrucciones mientras una condición sea verdadera:</p>
 <p>Cada una de las veces que el cuerpo del ciclo es ejecutado se llama iteración.</p>
 <p>La condición es evaluada antes de cada iteración. Si la condición es inicialmente falsa, el ciclo no se ejecutará ninguna vez.</p>
-<p><img src="./images/while.png"  align="center" width="300" height="500" /></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/while.png"  align="center" width="300" height="500" /></p>
 <p>La sintaxis es la siguiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">while</span> <span class="n">condición</span><span class="p">:</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">sentencias</span>
@@ -791,7 +791,7 @@
 <h2 id="salir-o-continuar-un-ciclo">Salir o continuar un ciclo</h2>
 <h3 id="break">Break</h3>
 <p>Además de las condiciones de término propias de los ciclos <code>while</code> y <code>for</code>, siempre es posible salir de un ciclo en medio de una iteración usando la sentencia <code>break</code>. Lo lógico es que sea usada dentro de un <code>if</code>, para evitar que el ciclo termine prematuramente en la primera iteración:</p>
-<p><img src="./images/break.png"  align="center" width="300" height="500" /></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/break.png"  align="center" width="300" height="500" /></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
@@ -806,7 +806,7 @@ Fin
 </code></pre></div>
 <h3 id="continue">Continue</h3>
 <p>La sentencia <code>continue</code> se usa para saltar a la iteración siguiente sin llegar al final de la que está en curso.</p>
-<p><img src="./images/continue.png"  align="center" width="300" height="500" /></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/continue.png"  align="center" width="300" height="500" /></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
