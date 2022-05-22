@@ -1,7 +1,8 @@
 # Introducción a Python
 
-<a href="https://fralfaro.github.io/python_intro/" src="https://jupyterbook.org/badge.svg"></a>
-[![pipeline status](https://gitlab.com/FAAM/python_intro/badges/master/pipeline.svg)](https://gitlab.com/FAAM/python_intro/-/commits/master)
+![example workflow](https://github.com/fralfaro/python_intro/actions/workflows/documentation.yml/badge.svg)
+<a href="https://fralfaro.github.io/python_intro/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
+
 
 ## Contenidos temáticos
 
