@@ -11,18 +11,7 @@ repo_name: fralfaro/python_intro
 repo_url: https://github.com/fralfaro/python_intro
 edit_uri: ''
 
-# TOC
-nav:
-    - Home: index.md
-    - Programación: intro_progra.md
-    - Motivación: introduccion.md
-    - Nomenclatura: basico.md
-    - Control de Flujo: flujo.md
-    - Estructura de datos: estructura.md
-    - Funciones: funciones.md
-    - Programación Funcional: funcional.md
-    - Excepciones: error.md
-    - Buenas prácticas: buenas_practicas.md
+
 
 # Markdown extensions
 markdown_extensions:
@@ -36,6 +25,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tabbed
 
 # Extra javascript
 extra_javascript:
@@ -47,18 +38,62 @@ extra_javascript:
 theme:
   name: material
   language: es
+  logo: images/logo.bmp
+  features:
+    - navigation.instant
+    - navigation.top
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
   palette:
-  - media: "(prefers-color-scheme: light)"
-    scheme: default
-    primary: blue grey
-    accent: amber
-    toggle:
-      icon: material/lightbulb
-      name: Switch to light mode
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    primary: blue grey
-    accent: amber
-    toggle:
-      icon: material/lightbulb-outline
-      name: Switch to dark mode
+    # Light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fralfaro
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/fralfaro
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/faam/
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/faamds
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@fralfaro
+
+# Plugins
+plugins:
+  - mkdocs-jupyter:
+      kernel_name: python3
+  - search
+
+
+# TOC
+nav:
+    - Home: index.md
+    - Programación: intro_progra.ipynb
+    - Motivación: introduccion.ipynb
+    - Nomenclatura: basico.ipynb
+    - Control de Flujo: flujo.ipynb
+    - Estructura de datos: estructura.ipynb
+    - Funciones: funciones.ipynb
+    - Programación Funcional: funcional.ipynb
+    - Excepciones: error.ipynb
+    - Buenas prácticas: buenas_practicas.ipynb
