@@ -3153,7 +3153,7 @@ def sumar(a, b):
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Writing modulo_01.py
+<pre>Overwriting modulo_01.py
 </pre>
 </div>
 </div>
@@ -3528,15 +3528,18 @@ print(resultado) # Output: 2.321928094887362</div>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Ejercicio 04</strong></p>
 <p>La suma natural de los primeros <strong>n</strong> números naturales esta dado por:
-$$\displaystyle S = \sum_{k=1}^{n} k = \dfrac{n(n+1)}{2} $$</p>
+$$\displaystyle S = \sum_{k=1}^{n} k = 1 +2 +3 +...+n = \dfrac{n(n+1)}{2} $$</p>
 <p>Escriba una función que se llame <code>suma_numeros_naturales</code> que reciba como input un número entero <strong>n</strong> y devuelva como output la suma de los primeros <strong>n</strong> números naturales.</p>
+<p>Para esto:</p>
 <ul>
-<li><strong>Ejemplo</strong>: <ul>
+<li>a) Programe la función ocupando la fórmula manual: $S = 1+2+3+..+n$</li>
+<li>b) Programe la función ocupando la fórmula cerrada: $S =\dfrac{n(n+1)}{2} $</li>
+</ul>
+<p><strong>Ejemplo</strong>:</p>
+<ul>
 <li><em>suma_numeros_naturales(1)</em> = 1</li>
 <li><em>suma_numeros_naturales(10)</em> = 55</li>
 <li><em>suma_numeros_naturales(100)</em> = 5050</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -3639,8 +3642,18 @@ $$\displaystyle \pi = 4 \sum_{k=1}^{\infty}\dfrac{(-1)^{k+1}}{2k-1} = 4(1-\dfrac
 <p>Euler realizó varios aportes en relación a $e$, pero no fue hasta 1748 cuando publicó su <strong>Introductio in analysin infinitorum</strong> que dio un tratamiento definitivo a las ideas sobre $e$. Allí mostró que:</p>
 <p>En los siglos XVII y XVIII, James Gregory y Gottfried Leibniz descubrieron una serie infinita que sirve para calcular π:</p>
 $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}{3!}+\dfrac{1}{4!} + ... $$<p>Desarolle un programa para estimar el valor de $e$ ocupando el método de Euler, donde la entrada del programa debe ser un número entero $n$ que indique cuántos términos de la suma se utilizará.</p>
+<p>Para esto:</p>
 <ul>
-<li><strong>Ejemplo</strong>: <em>calcular_e(3)</em> =2.5, <em>calcular_e(1000)</em> = 2.7182818284590455</li>
+<li>a) Defina la función <code>factorial</code>, donde la entrada sea un número natural  $n$ y la salida sea el factorial de dicho número.<ul>
+<li><strong>Ejemplo</strong>: <em>factorial(3)</em> =3, <em>factorial(5)</em> = 120</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>b) Ocupe la función <code>factorial</code> dentro de la función <code>calcular_e</code>.     <ul>
+<li><strong>Ejemplo</strong>: <em>calcular_e(3)</em> = 2.6666666666666665, <em>calcular_e(1000)</em> = 2.7182818284590455</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -3669,7 +3682,8 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-33" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-33" class="clipboard-copy-txt"># respuesta
+</div>
     
         </div>
     </div>
@@ -3694,8 +3708,19 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
 <li>los divisores propios de 284 son 1, 2, 4, 71 y 142; entonces $\sigma(284) = 220$.</li>
 </ul>
 <p>Implemente una función llamada <code>amigos</code> cuyo input sean dos números naturales $n_1$ y $n_2$, cuyo output sea verifique si los números son amigos o no.</p>
+<p>Para esto:</p>
+<ul>
+<li>a) Defina la función <code>divisores_propios</code>, donde la entrada sea un número natural $n$ y la salida sea una lista con los divisores propios de dicho número.<ul>
+<li><strong>Ejemplo</strong>: <em>divisores_propios(220)</em> = [1, 2, 4, 5, 10, 11, 20, 22, 44, 55 y 110], <em>divisores_propios(284)</em> = [1, 2, 4, 71 y 142]</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>b) Ocupe la función <code>divisores_propios</code> dentro de la función <code>amigos</code>.</p>
 <ul>
 <li><strong>Ejemplo</strong>: <em>amigos(220,284)</em> = True, <em>amigos(6,5)</em> = False</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -3799,9 +3824,25 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
 <p>La <a href="https://en.wikipedia.org/wiki/Goldbach%27s_conjecture">conjetura de Goldbach</a> es uno de los problemas abiertos más antiguos en matemáticas. Concretamente, G.H. Hardy, en 1921, en su famoso discurso pronunciado en la Sociedad Matemática de Copenhague, comentó que probablemente la conjetura de Goldbach no es solo uno de los problemas no resueltos más difíciles de la teoría de números, sino de todas las matemáticas. Su enunciado es el siguiente:</p>
 <blockquote><p>Todo número par mayor que 2 puede escribirse como suma de dos números primos - Christian Goldbach (1742)</p>
 </blockquote>
-<p>Implemente una función llamada <code>goldbach</code> cuyo input sea un número natural positivo $N$ y como output devuelva la suma de dos primos ($N1$ y $N2$) tal que: $N1+N2=N$.</p>
+<p>Implemente una función llamada <code>goldbach</code> cuyo input sea un número natural positivo $n$ y como output devuelva la suma de dos primos ($n_1$ y $n_2$) tal que: $n_1+n_2=n$.</p>
+<p>Para esto:</p>
 <ul>
+<li>a) Defina la función <code>es_primo</code>, donde la entrada sea un número natural $n$ y la salida sea <strong>True</strong> si el número es primo y <strong>False</strong> en otro caso.<ul>
+<li><strong>Ejemplo</strong>: <em>es_primo(3)</em> = True, <em>es_primo(4)</em> = False</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>b)  Defina la función <code>lista_de_primos</code>, donde la entrada sea un número natural par $n$ mayor que dos y la salida sea una lista con todos los número primos entre 2 y $n$.<ul>
+<li><strong>Ejemplo</strong>: <em>lista_de_primos(4)</em> = [2,3], <em>lista_de_primos(6)</em> = [2,3,5], <em>lista_de_primos(8)</em> = [2,3,5,7]</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>c) Ocupe la función <code>lista_de_primos</code> dentro de la función <code>goldbash</code>.<ul>
 <li><strong>Ejemplo</strong>: goldbash(4) = (2,2), goldbash(6) = (3,3) , goldbash(8) = (3,5)</li>
+</ul>
+</li>
 </ul>
 
 </div>
