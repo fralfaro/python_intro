@@ -1731,13 +1731,34 @@ print(m, n)</div>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Existen tres formas de ocupar esta condicional.</p>
+<ul>
+<li><p><strong>Estructura if</strong>: La estructura if se utiliza para tomar decisiones en función de una condición. Si la condición es verdadera, el bloque de código dentro del if se ejecutará.</p>
+</li>
+<li><p><strong>Estructura if-else</strong>: La estructura if-else se utiliza para tomar decisiones y ejecutar un bloque de código si la condición es verdadera y otro bloque de código si la condición es falsa.</p>
+</li>
+<li><p><strong>Estructura if-elif-else</strong>: La estructura if-elif-else se utiliza para tomar decisiones y ejecutar diferentes bloques de código según diferentes condiciones. Se evalúan las condiciones en orden, y si alguna es verdadera, se ejecutará el bloque de código correspondiente. Si ninguna de las condiciones es verdadera, se ejecutará el bloque de código en la cláusula else.</p>
+</li>
+</ul>
+<p>Es decir, puede no existir o pueden existir varios  <code>elif</code>. Por otro lado, el <code>else</code> es opcional dependiendo del caso.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1752,27 +1773,19 @@ print(m, n)</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># ejemplo 01: if</span>
 
-<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numero positivo&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cero&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
+<span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numero negativo&quot;</span><span class="p">)</span>
-    
-<span class="c1"># Output: numero negativo</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">num = -1
+<div id="cell-2" class="clipboard-copy-txt"># ejemplo 01: if
 
-if num > 0:
-    print("numero positivo")
-elif num == 0:
-    print("cero")
-else:
-    print("numero negativo")
-    
-# Output: numero negativo</div>
+num = -1
+
+if num < 0:
+    print("numero negativo")    </div>
     
         </div>
     </div>
@@ -1804,27 +1817,13 @@ else:
 </div>
 
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Puede haber cero o más partes <code>elif</code>, y la parte <code>else</code> es opcional. La mayoría de los lenguajes de programación usan <code>{}</code> para especificar el bloque de código. Python usa sangría.</p>
-<p>Un bloque de código comienza con sangría y termina con la primera línea sin sangría. La cantidad de sangría depende de usted, pero debe ser consistente a lo largo de ese bloque. En general, se utilizan cuatro espacios en blanco para la sangría y se prefieren a las pestañas.</p>
-<p>Probemos con otro ejemplo:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1839,24 +1838,187 @@ else:
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mundo&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!!&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># ejemplo 02: if-else</span>
 
-<span class="c1"># Output: !!!</span>
+<span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numero no negativo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numero negativo&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">if False:
-    print("Hola")
-    print("mundo")
-print("!!!")
+<div id="cell-3" class="clipboard-copy-txt"># ejemplo 02: if-else
 
-# Output: !!!</div>
+num = -1
+
+if num >= 0:
+    print("numero no negativo")
+else:
+    print("numero negativo")</div>
     
         </div>
     </div>
 
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>numero negativo
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-4">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># ejemplo 03: if-elif-else</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numero positivo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cero&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numero negativo&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-4" class="clipboard-copy-txt"># ejemplo 03: if-elif-else
+
+num = -1
+
+if num > 0:
+    print("numero positivo")
+elif num == 0:
+    print("cero")
+else:
+    print("numero negativo")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>numero negativo
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-5">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># ejemplo 04: no pasa por el if</span>
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!!&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-5" class="clipboard-copy-txt"># ejemplo 04: no pasa por el if
+
+if False:
+    print("Hola mundo")
+print("!!!")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>!!!
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -1890,7 +2052,7 @@ print("!!!")
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-4">
+            <clipboard-copy for="cell-6">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1915,7 +2077,7 @@ print("!!!")
 
 <span class="c1"># Output: La suma es</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt"># definir limite
+<div id="cell-6" class="clipboard-copy-txt"># definir limite
 n = 100
 
 # inicializar contador
@@ -1984,7 +2146,7 @@ print(f"La suma es {suma}")
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-5">
+            <clipboard-copy for="cell-7">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1994,7 +2156,8 @@ print(f"La suma es {suma}")
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># lista de elementos</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># lista de elementos</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> 
 
 <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -2002,9 +2165,10 @@ print(f"La suma es {suma}")
 <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
     <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span><span class="o">+</span><span class="n">val</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La suma es </span><span class="si">{</span><span class="n">suma</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Output: La suma es 28</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La suma es </span><span class="si">{</span><span class="n">suma</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">numbers = [6, 5, 3, 8, 4, 2] # lista de elementos
+<div id="cell-7" class="clipboard-copy-txt"># lista de elementos
+numbers = [6, 5, 3, 8, 4, 2] 
 
 suma = 0
 
@@ -2012,7 +2176,7 @@ suma = 0
 for val in numbers:
     suma = suma+val
 
-print(f"La suma es {suma}") # Output: La suma es 28</div>
+print(f"La suma es {suma}") </div>
     
         </div>
     </div>
@@ -2074,12 +2238,12 @@ print(f"La suma es {suma}") # Output: La suma es 28</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-6">
+            <clipboard-copy for="cell-8">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2092,18 +2256,18 @@ print(f"La suma es {suma}") # Output: La suma es 28</div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">break</span> <span class="c1"># se rompe el ciclo en esta iteracion</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> 
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fin&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--Fin--&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">numbers = [1,2,3,4,5,6,7,8,9]
+<div id="cell-8" class="clipboard-copy-txt">numbers = [1,2,3,4,5,6,7,8,9]
 for n in numbers:
     if n%3==0:
-        break
-    print(n)
+        break # se rompe el ciclo en esta iteracion
+    print(n) 
 
-print("Fin")</div>
+print("--Fin--")</div>
     
         </div>
     </div>
@@ -2127,7 +2291,7 @@ print("Fin")</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>1
 2
-Fin
+--Fin--
 </pre>
 </div>
 </div>
@@ -2156,12 +2320,12 @@ Fin
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-7">
+            <clipboard-copy for="cell-9">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2174,18 +2338,18 @@ Fin
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">continue</span>
+        <span class="k">continue</span> <span class="c1"># continua el ciclo ignorando esta iteracion</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fin&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--Fin--&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt">numbers = [1,2,3,4,5,6,7,8,9]
+<div id="cell-9" class="clipboard-copy-txt">numbers = [1,2,3,4,5,6,7,8,9]
 for n in numbers:
     if n%3==0:
-        continue
+        continue # continua el ciclo ignorando esta iteracion
     print(n)
 
-print("Fin")</div>
+print("--Fin--")</div>
     
         </div>
     </div>
@@ -2213,7 +2377,7 @@ print("Fin")</div>
 5
 7
 8
-Fin
+--Fin--
 </pre>
 </div>
 </div>
@@ -2222,67 +2386,6 @@ Fin
 
 </div>
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Observación:</strong></p>
-<p>Supongamos que tiene un bucle o una función que aún no está implementada, pero desea implementarla en el futuro. No pueden tener un cuerpo vacío. El intérprete se quejaría. Por lo tanto, utiliza la instrucción <code>pass</code> para construir un cuerpo que no hace nada.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-8">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">sequence</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">}</span>
-<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
-    <span class="k">pass</span>
-</pre></div>
-<div id="cell-8" class="clipboard-copy-txt">sequence = {'p', 'a', 's', 's'}
-for val in sequence:
-    pass</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>La diferencia entre <code>continue</code> y <code>pass</code> es que <code>continue</code> termina la iteración actual, pero continua con el ciclo, volviendo al inicio del bucle en la siguiente iteración. En cambio <code>pass</code> simplemente no hace nada y pasa a la siguiente instrucción.</p>
-
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2327,7 +2430,7 @@ Su número es impar</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-9">
+            <clipboard-copy for="cell-10">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2339,7 +2442,7 @@ Su número es impar</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-10" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2398,7 +2501,7 @@ Resto: 4</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-10">
+            <clipboard-copy for="cell-11">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2410,7 +2513,7 @@ Resto: 4</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-11" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2458,7 +2561,7 @@ Las dos palabras tienen el mismo largo</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-11">
+            <clipboard-copy for="cell-12">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2470,7 +2573,7 @@ Las dos palabras tienen el mismo largo</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-12" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2527,7 +2630,7 @@ Ingrese un anno: 2400
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-12">
+            <clipboard-copy for="cell-13">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2539,7 +2642,7 @@ Ingrese un anno: 2400
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-12" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-13" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2601,7 +2704,7 @@ El triangulo es equilatero.</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-13">
+            <clipboard-copy for="cell-14">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2613,7 +2716,7 @@ El triangulo es equilatero.</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-13" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-14" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2668,7 +2771,7 @@ El triangulo es equilatero.</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-14">
+            <clipboard-copy for="cell-15">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2680,7 +2783,7 @@ El triangulo es equilatero.</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-14" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-15" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2721,7 +2824,7 @@ Los números que ha escrito son 6 y 8.</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-15">
+            <clipboard-copy for="cell-16">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2733,7 +2836,7 @@ Los números que ha escrito son 6 y 8.</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-15" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-16" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -2780,7 +2883,7 @@ La suma de los números positivos introducidos es 22.</code></pre>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-16">
+            <clipboard-copy for="cell-17">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2792,7 +2895,7 @@ La suma de los números positivos introducidos es 22.</code></pre>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-16" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-17" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>

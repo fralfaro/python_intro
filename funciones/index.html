@@ -1622,27 +1622,16 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="funciones-y-modulos">Funciones y m&#243;dulos<a class="anchor-link" href="#funciones-y-modulos">&#182;</a></h1><h2 id="funciones-en-python">Funciones en python<a class="anchor-link" href="#funciones-en-python">&#182;</a></h2><p>En programación, una <strong>función</strong> es una sección de un programa que calcula un valor de manera independiente al resto del programa.</p>
-<p>Una función tiene tres componentes importantes:</p>
+<h1 id="funciones-y-modulos">Funciones y m&#243;dulos<a class="anchor-link" href="#funciones-y-modulos">&#182;</a></h1><h2 id="funciones-en-python">Funciones en python<a class="anchor-link" href="#funciones-en-python">&#182;</a></h2><p>Las funciones en Python son bloques de código que pueden ser llamados en cualquier momento del programa. Estos bloques de código reciben uno o varios argumentos y pueden devolver un valor. Las funciones son muy útiles porque te permiten escribir código una vez y reutilizarlo en distintas partes del programa, lo que puede ahorrar mucho tiempo y esfuerzo.</p>
+<p>Formalmente, una función tiene tres componentes importantes:</p>
 <ul>
 <li>los <strong>parámetros</strong>, que son los valores que recibe la función como entrada;</li>
 <li>el <strong>código de la función</strong>, que son las operaciones que hace la función; y</li>
 <li>el <strong>resultado</strong> (o valor de retorno), que es el valor final que entrega la función.</li>
 </ul>
 <p>En esencia, una función es un mini programa. Sus tres componentes son análogos a la entrada, el proceso y la salida de un programa.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Definición de funciones</strong></p>
-<p>Las funciones en Python son creadas mediante la sentencia <code>def</code>:</p>
+<p>Las funciones en Python lucen de la siguiente forma:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="n">parametro_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">parametro_n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Descripcion de la funcion (opcional)</span>
@@ -1651,14 +1640,13 @@ Licensed under the Apache License, Version 2.0.
     <span class="n">resultado</span> <span class="o">=</span> <span class="n">operacion</span><span class="p">(</span><span class="n">parametro_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">parametro_n</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">resultado</span> <span class="c1"># output de la funcion</span>
 </pre></div>
-<p>Los parámetros son variables en las que quedan almacenados los valores de entrada. La función contiene código igual al de cualquier programa. La diferencia es que, al terminar, debe entregar su resultado usando la sentencia <code>return</code>.</p>
-<p>Veamos algunos ejemplos:</p>
+<p>Se utiliza la palabra clave <code>def</code> seguida del nombre de la función, los parámetros que recibe entre paréntesis y dos puntos <code>:</code>. El cuerpo de la función va indentado y puede contener cualquier código que se quiera ejecutar. Para devolver un valor se utiliza la palabra clave <code>return</code>.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1678,75 +1666,17 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># ejemplo: funcion suma</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
-<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Sumar dos numeros</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    
-    <span class="n">resultado</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-    <span class="k">return</span> <span class="n">resultado</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">suma</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt"># ejemplo: funcion suma
+<div id="cell-1" class="clipboard-copy-txt">def suma(a, b):
+    return a + b
 
-def suma(x,y):
-    """
-    Sumar dos numeros
-    """
-    
-    resultado = x+y
-    return resultado</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>La función creada se llama <code>suma</code> y cumple el objetivo de sumar dos números. Para instancia la función, se ejecuta la siguiente sentencia:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-2">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">n1</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">n2</span><span class="o">=</span><span class="mi">3</span>
-<span class="n">valor_suma</span> <span class="o">=</span> <span class="n">suma</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor de la suma de </span><span class="si">{</span><span class="n">n1</span><span class="si">}</span><span class="s2"> y </span><span class="si">{</span><span class="n">n2</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">valor_suma</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
-</pre></div>
-<div id="cell-2" class="clipboard-copy-txt">n1=2
-n2=3
-valor_suma = suma(n1,n2)
-print(f"El valor de la suma de {n1} y {n2} es {valor_suma} ")</div>
+resultado = suma(3, 5)
+print(resultado)</div>
     
         </div>
     </div>
@@ -1768,7 +1698,7 @@ print(f"El valor de la suma de {n1} y {n2} es {valor_suma} ")</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>El valor de la suma de 2 y 3 es 5 
+<pre>8
 </pre>
 </div>
 </div>
@@ -1777,6 +1707,18 @@ print(f"El valor de la suma de {n1} y {n2} es {valor_suma} ")</div>
 
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En este ejemplo se define una función llamada <code>suma</code> que recibe dos parámetros <code>a</code> y <code>b</code> y devuelve la suma de ambos. Se llama a la función con los valores <code>3</code> y <code>5</code> y se almacena el resultado en una variable llamada <code>resultado</code>. Finalmente, se imprime el valor de <code>resultado</code>.</p>
+
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1801,7 +1743,7 @@ print(f"El valor de la suma de {n1} y {n2} es {valor_suma} ")</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-3">
+            <clipboard-copy for="cell-2">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1811,15 +1753,11 @@ print(f"El valor de la suma de {n1} y {n2} es {valor_suma} ")</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">n1</span><span class="o">=</span><span class="s2">&quot;Hola &quot;</span>
-<span class="n">n2</span><span class="o">=</span><span class="s2">&quot;Mundo&quot;</span>
-<span class="n">valor_suma</span> <span class="o">=</span> <span class="n">suma</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor de la suma de </span><span class="si">{</span><span class="n">n1</span><span class="si">}</span><span class="s2">y </span><span class="si">{</span><span class="n">n2</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">valor_suma</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultado</span> <span class="o">=</span> <span class="n">suma</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="p">,</span><span class="s2">&quot;Mundo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">n1="Hola "
-n2="Mundo"
-valor_suma = suma(n1,n2)
-print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
+<div id="cell-2" class="clipboard-copy-txt">resultado = suma("Hola ","Mundo")
+print(resultado)</div>
     
         </div>
     </div>
@@ -1841,7 +1779,7 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>El valor de la suma de Hola y Mundo es Hola Mundo 
+<pre>Hola Mundo
 </pre>
 </div>
 </div>
@@ -1870,6 +1808,94 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Las funciones también pueden tener argumentos opcionales que tienen un valor por defecto. Para definir un argumento opcional se utiliza el operador <code>=</code> para asignarle un valor por defecto. El valor por defecto se utiliza si el argumento no es especificado al llamar a la función.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-3">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">saludo</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">saludo</span><span class="o">=</span><span class="s2">&quot;Hola&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">saludo</span><span class="p">,</span> <span class="n">nombre</span><span class="p">)</span>
+
+<span class="n">saludo</span><span class="p">(</span><span class="s2">&quot;Pedro&quot;</span><span class="p">)</span>
+<span class="n">saludo</span><span class="p">(</span><span class="s2">&quot;Maria&quot;</span><span class="p">,</span> <span class="s2">&quot;Buenos días&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-3" class="clipboard-copy-txt">def saludo(nombre, saludo="Hola"):
+    print(saludo, nombre)
+
+saludo("Pedro")
+saludo("Maria", "Buenos días")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Hola Pedro
+Buenos días Maria
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En este ejemplo se define una función llamada <code>saludo</code> que recibe dos argumentos, <code>nombre</code> y <code>saludo</code>. El argumento saludo tiene un valor por defecto de <code>"Hola"</code>. La función imprime el mensaje de saludo utilizando los valores de <code>saludo</code> y <code>nombre</code>. Se llama a la función con diferentes valores de argumentos.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>A continuación, se creará la función <code>factorial</code>, la cual entregará el <a href="https://es.wikipedia.org/wiki/Factorial#:~:text=7%20Enlaces%20externos-,Definici%C3%B3n%20por%20producto%20e%20inducci%C3%B3n,menores%20o%20iguales%20que%20n.">factorial</a> de un número entero no negativo.</p>
 
 </div>
@@ -1881,7 +1907,7 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1940,7 +1966,7 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1955,9 +1981,9 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">factorial(0)</div>
+<div id="cell-5" class="clipboard-copy-txt">print(factorial(0))</div>
     
         </div>
     </div>
@@ -1975,15 +2001,13 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -1997,7 +2021,7 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2012,9 +2036,9 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">factorial(2) + factorial(5)</div>
+<div id="cell-6" class="clipboard-copy-txt">print(factorial(2) + factorial(5))</div>
     
         </div>
     </div>
@@ -2032,15 +2056,13 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>122</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>122
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -2067,7 +2089,7 @@ print(f"El valor de la suma de {n1}y {n2} es {valor_suma} ")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2109,7 +2131,7 @@ def funcion_01(x):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2124,9 +2146,9 @@ def funcion_01(x):
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">funcion_01</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">funcion_01</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">funcion_01(5)</div>
+<div id="cell-8" class="clipboard-copy-txt">print(funcion_01(5))</div>
     
         </div>
     </div>
@@ -2144,15 +2166,13 @@ def funcion_01(x):
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>50</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>50
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -2166,7 +2186,7 @@ def funcion_01(x):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2210,7 +2230,7 @@ def funcion_02(x,valor):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2225,9 +2245,9 @@ def funcion_02(x,valor):
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">funcion_02</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">funcion_02</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">funcion_02(5,2)</div>
+<div id="cell-10" class="clipboard-copy-txt">print(funcion_02(5,2))</div>
     
         </div>
     </div>
@@ -2245,15 +2265,13 @@ def funcion_02(x,valor):
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>10</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>10
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -2292,7 +2310,7 @@ def funcion_02(x,valor):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2326,7 +2344,7 @@ def funcion_02(x,valor):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2361,7 +2379,7 @@ def funcion_02(x,valor):
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -2395,7 +2413,7 @@ def funcion_02(x,valor):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2429,7 +2447,7 @@ def funcion_02(x,valor):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2507,7 +2525,7 @@ def funcion_02(x,valor):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2581,7 +2599,7 @@ def factorial(n):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2650,7 +2668,7 @@ print(f"El factorial de {num} es {factorial(num)}") </div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2721,7 +2739,7 @@ print(cuadrado_normal(5))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2792,13 +2810,13 @@ print(cuadrado(5))</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2814,48 +2832,24 @@ print(cuadrado(5))</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># args</span>
-<span class="k">def</span> <span class="nf">read_list_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sumar_numeros</span><span class="p">(</span><span class="o">*</span><span class="n">numeros</span><span class="p">):</span>
+    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
+        <span class="n">suma</span> <span class="o">+=</span> <span class="n">numero</span>
+    <span class="k">return</span> <span class="n">suma</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">sumar_numeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
 </pre></div>
 <div id="cell-19" class="clipboard-copy-txt"># args
-def read_list_args(*args):
-    for count, arg in enumerate(args):
-        print(f'{count} - {arg}')</div>
-    
-        </div>
-    </div>
+def sumar_numeros(*numeros):
+    suma = 0
+    for numero in numeros:
+        suma += numero
+    return suma
 
-</div>
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-20">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># instanciar funcion</span>
-<span class="n">read_list_args</span><span class="p">(</span><span class="s1">&#39;Ricardo&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;Ramon&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;jarroba.com&#39;</span><span class="p">)</span>
-</pre></div>
-<div id="cell-20" class="clipboard-copy-txt"># instanciar funcion
-read_list_args('Ricardo', 23, 'Ramon', [1, 2, 3], 'jarroba.com')</div>
+resultado = sumar_numeros(1, 2, 3, 4)
+print(resultado)</div>
     
         </div>
     </div>
@@ -2877,109 +2871,7 @@ read_list_args('Ricardo', 23, 'Ramon', [1, 2, 3], 'jarroba.com')</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0 - Ricardo
-1 - 23
-2 - Ramon
-3 - [1, 2, 3]
-4 - jarroba.com
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-21">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># kwargs</span>
-<span class="k">def</span> <span class="nf">read_dict_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-<div id="cell-21" class="clipboard-copy-txt"># kwargs
-def read_dict_args(**kwargs):
-    for key, value in kwargs.items():
-        print (f'{key} - {value}')        </div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-22">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># instanciar funcion</span>
-<span class="n">read_dict_args</span><span class="p">(</span><span class="n">Team</span><span class="o">=</span><span class="s1">&#39;FC Barcelona&#39;</span><span class="p">,</span> <span class="n">player</span><span class="o">=</span><span class="s1">&#39;Iniesta&#39;</span><span class="p">,</span> <span class="n">demarcation</span><span class="o">=</span><span class="s1">&#39;Right winger&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-</pre></div>
-<div id="cell-22" class="clipboard-copy-txt"># instanciar funcion
-read_dict_args(Team='FC Barcelona', player='Iniesta', demarcation='Right winger', number=8)</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Team - FC Barcelona
-player - Iniesta
-demarcation - Right winger
-number - 8
+<pre>10
 </pre>
 </div>
 </div>
@@ -2996,7 +2888,99 @@ number - 8
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Esto es una forma práctica de trabajar, sin embargo, siempre (o en la mayoría de los casos), es mejor ser explícito con las variables.</p>
+<p>En el primer ejemplo, se define una función llamada <code>sumar_numeros</code> que recibe un número variable de argumentos. La función suma todos los argumentos recibidos y devuelve el resultado.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-20">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># kwargs</span>
+<span class="k">def</span> <span class="nf">imprimir_datos</span><span class="p">(</span><span class="o">**</span><span class="n">datos</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">llave</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">datos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">llave</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+
+<span class="n">imprimir_datos</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="n">edad</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">ciudad</span><span class="o">=</span><span class="s2">&quot;Lima&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-20" class="clipboard-copy-txt"># kwargs
+def imprimir_datos(**datos):
+    for llave, valor in datos.items():
+        print(llave, ":", valor)
+
+imprimir_datos(nombre="Juan", edad=25, ciudad="Lima")       </div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>nombre : Juan
+edad : 25
+ciudad : Lima
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En el segundo ejemplo, se define una función llamada <code>imprimir_datos</code> que recibe un número variable de argumentos con nombre. La función imprime los valores de cada argumento utilizando un ciclo <code>for</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>Nota</strong>: Esto es una forma práctica de trabajar, sin embargo, siempre (o en la mayoría de los casos), es mejor ser explícito con las variables.</p>
+</blockquote>
 
 </div>
 </div>
@@ -3020,12 +3004,12 @@ Esto también se llama metaprogramación ya que una parte del programa intenta m
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-23">
+            <clipboard-copy for="cell-21">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3047,7 +3031,7 @@ Esto también se llama metaprogramación ya que una parte del programa intenta m
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
-<div id="cell-23" class="clipboard-copy-txt">def debug(f):
+<div id="cell-21" class="clipboard-copy-txt">def debug(f):
     def nueva_funcion(a, b):
         print("La funcion Sumar es llamada!!!")
         return f(a, b)
@@ -3110,12 +3094,12 @@ print(Sumar(7, 5))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-24">
+            <clipboard-copy for="cell-22">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3129,7 +3113,7 @@ print(Sumar(7, 5))</div>
 <span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
-<div id="cell-24" class="clipboard-copy-txt">%%writefile modulo_01.py
+<div id="cell-22" class="clipboard-copy-txt">%%writefile modulo_01.py
 def sumar(a, b):
     return a + b</div>
     
@@ -3153,7 +3137,7 @@ def sumar(a, b):
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Overwriting modulo_01.py
+<pre>Writing modulo_01.py
 </pre>
 </div>
 </div>
@@ -3181,12 +3165,12 @@ def sumar(a, b):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-25">
+            <clipboard-copy for="cell-23">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3199,7 +3183,7 @@ def sumar(a, b):
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># importar modulo </span>
 <span class="kn">import</span> <span class="nn">modulo_01</span>
 </pre></div>
-<div id="cell-25" class="clipboard-copy-txt"># importar modulo 
+<div id="cell-23" class="clipboard-copy-txt"># importar modulo 
 import modulo_01 </div>
     
         </div>
@@ -3215,12 +3199,12 @@ import modulo_01 </div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-26">
+            <clipboard-copy for="cell-24">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3233,7 +3217,7 @@ import modulo_01 </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># acceder a las funciones del modulo</span>
 <span class="n">modulo_01</span><span class="o">.</span><span class="n">sumar</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span>
 </pre></div>
-<div id="cell-26" class="clipboard-copy-txt"># acceder a las funciones del modulo
+<div id="cell-24" class="clipboard-copy-txt"># acceder a las funciones del modulo
 modulo_01.sumar(4, 5.5) </div>
     
         </div>
@@ -3252,7 +3236,7 @@ modulo_01.sumar(4, 5.5) </div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -3286,12 +3270,12 @@ modulo_01.sumar(4, 5.5) </div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-27">
+            <clipboard-copy for="cell-25">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3306,7 +3290,7 @@ modulo_01.sumar(4, 5.5) </div>
 <span class="n">resultado</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># retorna logaritmo base 2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># Output: 2.321928094887362</span>
 </pre></div>
-<div id="cell-27" class="clipboard-copy-txt">import math
+<div id="cell-25" class="clipboard-copy-txt">import math
 
 resultado = math.log2(5) # retorna logaritmo base 2
 print(resultado) # Output: 2.321928094887362</div>
@@ -3386,12 +3370,12 @@ print(resultado) # Output: 2.321928094887362</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-28">
+            <clipboard-copy for="cell-26">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3403,7 +3387,7 @@ print(resultado) # Output: 2.321928094887362</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-28" class="clipboard-copy-txt"># respuesta
+<div id="cell-26" class="clipboard-copy-txt"># respuesta
 </div>
     
         </div>
@@ -3439,12 +3423,12 @@ print(resultado) # Output: 2.321928094887362</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-29">
+            <clipboard-copy for="cell-27">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3456,7 +3440,7 @@ print(resultado) # Output: 2.321928094887362</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-29" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-27" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -3493,12 +3477,12 @@ print(resultado) # Output: 2.321928094887362</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-30">
+            <clipboard-copy for="cell-28">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3510,7 +3494,7 @@ print(resultado) # Output: 2.321928094887362</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-30" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-28" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -3551,12 +3535,12 @@ $$\displaystyle S = \sum_{k=1}^{n} k = 1 +2 +3 +...+n = \dfrac{n(n+1)}{2} $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-31">
+            <clipboard-copy for="cell-29">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3568,7 +3552,7 @@ $$\displaystyle S = \sum_{k=1}^{n} k = 1 +2 +3 +...+n = \dfrac{n(n+1)}{2} $$</p>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-31" class="clipboard-copy-txt"># respuesta
+<div id="cell-29" class="clipboard-copy-txt"># respuesta
 </div>
     
         </div>
@@ -3605,12 +3589,12 @@ $$\displaystyle \pi = 4 \sum_{k=1}^{\infty}\dfrac{(-1)^{k+1}}{2k-1} = 4(1-\dfrac
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-32">
+            <clipboard-copy for="cell-30">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3622,7 +3606,7 @@ $$\displaystyle \pi = 4 \sum_{k=1}^{\infty}\dfrac{(-1)^{k+1}}{2k-1} = 4(1-\dfrac
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-32" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-30" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -3665,12 +3649,12 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-33">
+            <clipboard-copy for="cell-31">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3682,7 +3666,7 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-33" class="clipboard-copy-txt"># respuesta
+<div id="cell-31" class="clipboard-copy-txt"># respuesta
 </div>
     
         </div>
@@ -3732,12 +3716,12 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-34">
+            <clipboard-copy for="cell-32">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3749,7 +3733,7 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-34" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-32" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -3787,12 +3771,12 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-35">
+            <clipboard-copy for="cell-33">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3804,7 +3788,7 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-35" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-33" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
@@ -3854,12 +3838,12 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-36">
+            <clipboard-copy for="cell-34">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3871,7 +3855,7 @@ $$\displaystyle e = \sum_{k=0}^{\infty}\dfrac{1}{k!} = 1+\dfrac{1}{2!}+\dfrac{1}
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
 </pre></div>
-<div id="cell-36" class="clipboard-copy-txt"># respuesta</div>
+<div id="cell-34" class="clipboard-copy-txt"># respuesta</div>
     
         </div>
     </div>
