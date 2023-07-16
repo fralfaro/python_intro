@@ -4,7 +4,7 @@
 site_name: Home
 site_url: https://github.com/fralfaro/python_intro
 site_author: Francisco Alfaro
-site_description: Basic demo
+site_description:
 
 # Repository
 repo_name: fralfaro/python_intro
@@ -39,6 +39,7 @@ theme:
   name: material
   language: es
   logo: images/logo.bmp
+  favicon: images/logo_python.svg
   features:
     - navigation.instant
     - navigation.top
