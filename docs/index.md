@@ -1,6 +1,4 @@
 # Home
-![example workflow](https://github.com/fralfaro/python_intro/actions/workflows/documentation.yml/badge.svg)
-<a href="https://fralfaro.github.io/python_intro/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
 
 Introducción básica a Python
 
@@ -9,7 +7,7 @@ Introducción básica a Python
 El material está disponible en el siguiente [repositorio](https://github.com/fralfaro/python_intro), para obtener el código de fuente basta con que ejecutes el siguiente comando:
 
 ```
-https://github.com/FAAM/python_intro
+https://github.com/fralfaro/python_intro
 ```
 
 ## Contenidos temáticos

@@ -1,7 +1,8 @@
 # Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 
 # Project information
-site_name: Home
+site_name: Introducción a Python
+
 site_url: https://github.com/fralfaro/python_intro
 site_author: Francisco Alfaro
 site_description:
@@ -38,7 +39,7 @@ extra_javascript:
 theme:
   name: material
   language: es
-  logo: images/logo.bmp
+  logo: images/logo_python.svg
   favicon: images/logo_python.svg
   features:
     - navigation.instant
