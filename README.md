@@ -8,11 +8,15 @@
 
 ## Contenidos
 
+### Programación & Python
+
 **Programación:**
 La programación es el arte de dar vida a las computadoras mediante la escritura de código. A lo largo de este curso, aprenderemos a comunicarnos con las máquinas y a resolver problemas de manera eficiente utilizando Python como nuestra herramienta principal.
 
 **Motivación:**
 ¿Por qué aprender a programar en Python? Python es conocido por su simplicidad y legibilidad, lo que lo hace perfecto para principiantes. Además, es ampliamente utilizado en la industria para una variedad de aplicaciones, desde desarrollo web hasta inteligencia artificial. Aprender Python puede abrirte muchas puertas en el mundo de la tecnología.
+
+### Sobre Python
 
 **Nomenclatura:**
 Antes de sumergirnos en la programación real, es fundamental comprender las reglas y convenciones que rigen la nomenclatura en Python. Aprenderemos cómo nombrar variables, funciones y más de manera consistente y fácil de entender.
@@ -34,7 +38,3 @@ A veces, las cosas no salen como se esperaba. Aprenderemos a manejar errores y e
 
 **Buenas Prácticas:**
 No solo aprenderemos a programar, sino que también nos enfocaremos en escribir código limpio y seguir las mejores prácticas de desarrollo. Esto es esencial para colaborar con otros programadores y mantener proyectos a largo plazo.
-
-
-
-
