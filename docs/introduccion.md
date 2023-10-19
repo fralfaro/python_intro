@@ -10,7 +10,7 @@ Algunas características de Python:
 
 * **código abierto**: el código fuente está disponible públicamente y se puede modificar y distribuir libremente. Hay una gran comunidad de desarrolladores de Python que contribuyen con módulos y herramientas útiles, y que brindan soporte y ayuda a otros usuarios.
 
-## Popularidad 
+## Popularidad
 
 Python es uno de los lenguajes de programación más populares y ampliamente utilizados en la actualidad. Según los índices de popularidad de lenguajes de programación, Python ha estado en constante aumento en popularidad en los últimos años.
 
@@ -50,12 +50,12 @@ scale: 50%
 Librerías y frameworks
 ```
 
-Una gran ventaja de Python es la amplia selección de **librerías** y **frameworks** que ofrece. 
+Una gran ventaja de Python es la amplia selección de **librerías** y **frameworks** que ofrece.
 
 Hay librerías para distintos tópicos:
 
-* Manipulación de datos 
-* Visualización de datos 
+* Manipulación de datos
+* Visualización de datos
 * Aprendizaje automático
 * Ciencia de los datos
 * Procesamiento natural del lenguaje

@@ -1,7 +1,7 @@
 # Programación
 
 ```{epigraph}
-“Se suele decir que una persona no entiende algo de verdad hasta que puede explicárselo a otro. En realidad, 
+“Se suele decir que una persona no entiende algo de verdad hasta que puede explicárselo a otro. En realidad,
 no lo entiende de verdad hasta que puede explicárselo a un computador.”
 
 -- Donald Knuth
@@ -31,7 +31,7 @@ Así es como la programación no es tanto sobre computadores, sino sobre resolve
 
 Un **algoritmo** es un procedimiento bien definido para resolver un problema. Todo el mundo conoce y utiliza algoritmos a diario, incluso sin darse cuenta:
 
-**a) Una receta** 
+**a) Una receta**
 
 Una receta de cocina es un algoritmo; si bien podríamos cuestionar que algunos pasos son ambiguos (¿cuánto es «una pizca de sal»? ¿qué significa «agregar a gusto»?), en general las instrucciones están lo suficientemente bien definidas para que uno las pueda seguir sin problemas.
 
@@ -141,7 +141,7 @@ o si no:
     escribir x1
     escribir x2
 ```
-    
+
 Las líneas que comienzan con `leer` y `escribir` denotan, respectivamente, la entrada y la salida del programa. Los diferentes casos son representados usando sentencias `si` y o `si no`. Las asignaciones siguen la misma notación que en el caso de los diagramas de flujo.
 
 La notación de pseudocódigo es bien liberal. Uno puede mezclar notación de matemáticas con frases en español, siempre que quede absolutamente claro para el lector qué representa cada una de las líneas del algoritmo.
