@@ -14,6 +14,4 @@ parts:
     - file: docs/funcional.ipynb
     - file: docs/error.ipynb
     - file: docs/buenas_practicas.ipynb
-  - caption: Solución Ejercicios
-    chapters:
     - file: docs/solucion.ipynb
