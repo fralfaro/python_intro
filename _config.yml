@@ -1,0 +1,48 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Introducción a Python
+author: Francisco Alfaro
+copyright: "2023"
+logo: docs/images/python.svg
+exclude_patterns: [.DS_Store, "**.ipynb_checkpoints", "**.pytest_cache", "tools"]
+
+
+# Launch on Google Colab button
+launch_buttons:
+  notebook_interface: "classic"
+  colab_url: "https://colab.research.google.com"
+
+# only build files that appear in toc
+only_build_toc_files: true
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: off
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_engine: pdflatex
+  use_jupyterbook_latex: true
+  latex_documents:
+    targetname: latex-manual.tex
+
+#sphinx:
+#  extra_extensions:
+#    - sphinxcontrib.mermaid
+
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/fralfaro/python_intro  # Online location of your book
+  branch: dev  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  favicon: "docs/images/logo_python.svg"
+  use_issues_button: false
+  use_repository_button: true
+  use_multitoc_numbering: true
+  google_analytics_id: G-TB617QHPDG

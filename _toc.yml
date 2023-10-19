@@ -1,0 +1,19 @@
+# Table of contents
+format: jb-book
+root: docs/index.md
+parts:
+  - caption: Contenidos
+    numbered: True  # Only applies to chapters in Part 1.
+    chapters:
+    - file: docs/intro_progra.md
+    - file: docs/introduccion.md
+    - file: docs/basico.ipynb
+    - file: docs/flujo.ipynb
+    - file: docs/estructura.ipynb
+    - file: docs/funciones.ipynb
+    - file: docs/funcional.ipynb
+    - file: docs/error.ipynb
+    - file: docs/buenas_practicas.ipynb
+  - caption: Solución Ejercicios
+    chapters:
+    - file: docs/solucion.ipynb

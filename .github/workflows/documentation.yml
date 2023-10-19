@@ -16,13 +16,12 @@ jobs:
         run: pip install poetry
       - name: Activate venv
         run: poetry install
+      - name: Run precommit
+        run: poetry run pre-commit run --all
       - name: Build the book
-        run: poetry run mkdocs build --site-dir public
+        run: poetry run jupyter-book build .
       - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          
-
-
+          publish_dir: ./_build/html
