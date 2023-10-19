@@ -1,0 +1,1138 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>9. Buenas prácticas &#8212; Introducción a Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-TB617QHPDG"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-TB617QHPDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/buenas_practicas';</script>
+    <link rel="shortcut icon" href="../_static/logo_python.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Solución" href="solucion.html" />
+    <link rel="prev" title="8. Excepciones" href="error.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/python.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introducción a Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenidos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_progra.html">1. Programación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">2. Motivación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basico.html">3. Nomenclatura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flujo.html">4. Control de Flujo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructura.html">5. Estructura de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones y módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcional.html">7. Programación Funcional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">8. Excepciones</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Buenas prácticas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solución Ejercicios</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="solucion.html">Solución</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/fralfaro/python_intro/blob/dev/docs/buenas_practicas.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/fralfaro/python_intro" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/buenas_practicas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Buenas prácticas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estilo-de-codificacion">9.1. Estilo de codificación</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">9.1.1. Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-de-codigos">9.1.2. Lineas de códigos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comentarios">9.1.3. Comentarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identacion">9.1.4. Identación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulacion-de-listas">9.1.5. Manipulación de listas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#especificar-tipo-de-error">9.1.6. Especificar tipo de error</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicitar-dependencias-de-una-funcion">9.1.7. Explicitar dependencias de una función</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escritura-dinamica-y-estatica">9.1.8. Escritura dinámica y estática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-de-codigo">9.1.9. Documentación de código</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zen-de-python">9.2. Zen de python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-consejos">9.3. Más consejos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entender-programacion-multiparadigma">9.3.1. Entender programación multiparadigma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-s-o-l-i-d">9.3.2. Principio S.O.L.I.D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-de-diseno">9.3.3. Patrones de diseño</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">9.3.4. Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">9.4. Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><a href="https://colab.research.google.com/github/fralfaro/python_intro/blob/main/docs/buenas_practicas.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="buenas-practicas">
+<h1><span class="section-number">9. </span>Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permalink to this heading">#</a></h1>
+<p><a id='c1'></a></p>
+<section id="estilo-de-codificacion">
+<h2><span class="section-number">9.1. </span>Estilo de codificación<a class="headerlink" href="#estilo-de-codificacion" title="Permalink to this heading">#</a></h2>
+<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/pep8.png" width="240" height="240" align="center"/><p>Además de una correcta y ordenada estructura general que deben tener los programa, es conveniente mantener ciertas buenas prácticas de codificación y el estilo de codificación recomendado. Estas normas no son obligatorias, como lo es la propia sintaxis del lenguaje, pero conviene <a class="reference external" href="https://legacy.python.org/dev/peps/pep-0008/">seguir las recomendaciones</a> de los desarrolladores de Python para facilitar la lectura del programa y ayudar a encontrar posibles errores.</p>
+<p>A continuación, se presentan algunas buenas prácticas relacionadas con es estilo de codificación:</p>
+<section id="variables">
+<h3><span class="section-number">9.1.1. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h3>
+<p>Cuando sea posible, define variables con nombres que tengan algún sentido o que puedas identificar fácilmente, no importa que sean más largas. Por ejemplo, en un programa podríamos escribir:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">10.</span>  
+<span class="n">b</span> <span class="o">=</span> <span class="mf">3.5</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El volumen es </span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El volumen es 35.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>pero, ¿qué significan <code class="docutils literal notranslate"><span class="pre">a</span></code> y  <code class="docutils literal notranslate"><span class="pre">b</span></code>? lo sabemos por el comentario (bien hecho), pero si más adelante nos encontramos con esas variables, tendremos que recordar cual es cual. Es mejor usar nombres con significado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">altura</span> <span class="o">=</span> <span class="mf">10.</span>
+<span class="n">base</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El volumen es </span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">altura</span><span class="o">*</span><span class="n">base</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El volumen es 35.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lineas-de-codigos">
+<h3><span class="section-number">9.1.2. </span>Lineas de códigos<a class="headerlink" href="#lineas-de-codigos" title="Permalink to this heading">#</a></h3>
+<p>Las líneas de codigo no deben ser muy largas, como mucho 72 caracteres. Si se tiene una línea larga, se puede cortar con una barra invertida (<code class="docutils literal notranslate"><span class="pre">\</span></code>) y continuar en la siguiente línea:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esta es una frase muy larga, se puede cortar con una </span><span class="se">\</span>
+<span class="s2">       y seguir en la línea inferior.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta es una frase muy larga, se puede cortar con una        y seguir en la línea inferior.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comentarios">
+<h3><span class="section-number">9.1.3. </span>Comentarios<a class="headerlink" href="#comentarios" title="Permalink to this heading">#</a></h3>
+<p>Los comentarios son muy importantes al escribir un programa. Describen lo que está sucediendo dentro de un programa, para que una persona que mira el código fuente no tenga dificultades para descifrarlo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># esto es un comentario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hola
+</pre></div>
+</div>
+</div>
+</div>
+<p>También podemos tener comentarios multilíneas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Este es un comentario largo</span>
+<span class="c1"># y se extiende</span>
+<span class="c1"># a varias líneas</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="identacion">
+<h3><span class="section-number">9.1.4. </span>Identación<a class="headerlink" href="#identacion" title="Permalink to this heading">#</a></h3>
+<p>Dentro de paréntesis, corchetes o llaves, no dejar espacios inmediatamente dentro de ellos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no:  </span>
+<span class="n">lista_01</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si </span>
+<span class="n">lista_01</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> 
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aunque en Python se pueden hacer varias declaraciones en una línea, se recomienda hacer sólo una en cada línea:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cuando se trabaja con lista, conjuntos y/o tuplas se recomienda poner en cada línea sus argumentos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hola&#39;</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;mundo&#39;</span><span class="p">),]</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hola&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;mundo&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo anterior se puede extender para funciones con muchos argumentos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no</span>
+<span class="k">def</span> <span class="nf">funcion_01</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">funcion_02</span><span class="p">(</span>
+    <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si</span>
+<span class="k">def</span> <span class="nf">funcion_01</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span>
+               <span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">):</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">funcion_02</span><span class="p">(</span>
+        <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span>
+        <span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">):</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">,</span><span class="n">x4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="manipulacion-de-listas">
+<h3><span class="section-number">9.1.5. </span>Manipulación de listas<a class="headerlink" href="#manipulacion-de-listas" title="Permalink to this heading">#</a></h3>
+<p>Aunque combinar iterables con elementos de control de flujo para manipular listas es muy sencillo con Python, hay métodos específicos más eficientes para hacer lo mismo. Pensemos el fitrado de datos de una lista:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Seleccionar los números positivos</span>
+<span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">positivos</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">positivos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;positivos: </span><span class="si">{</span><span class="n">positivos</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>positivos: [2, 1, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aunque técnicamente es correcto, es más eficiente hacer <strong>List Comprehension</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># comprension de lista</span>
+<span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">positivos</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numeros</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># List Comprehension</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;positivos: </span><span class="si">{</span><span class="n">positivos</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>positivos: [2, 1, 7]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="especificar-tipo-de-error">
+<h3><span class="section-number">9.1.6. </span>Especificar tipo de error<a class="headerlink" href="#especificar-tipo-de-error" title="Permalink to this heading">#</a></h3>
+<p>Cuando se ocupa <code class="docutils literal notranslate"><span class="pre">try/except</span></code>, es necesario especificar el tipo de error que se está cometiendo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importar librerias</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops! ocurrio un&quot;</span><span class="p">,</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Oops! ocurrio un &lt;class &#39;ZeroDivisionError&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops! ocurrio un&quot;</span><span class="p">,</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Oops! ocurrio un &lt;class &#39;ZeroDivisionError&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="explicitar-dependencias-de-una-funcion">
+<h3><span class="section-number">9.1.7. </span>Explicitar dependencias de una función<a class="headerlink" href="#explicitar-dependencias-de-una-funcion" title="Permalink to this heading">#</a></h3>
+<p>Siempre es mejor definir las variables dentro de una función y no dejar variables globales.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">funcion_01</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">variable</span> <span class="o">+</span> <span class="n">valor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">funcion_01</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si</span>
+<span class="k">def</span> <span class="nf">funcion_01</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span><span class="n">valor</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">variable</span> <span class="o">+</span> <span class="n">valor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">funcion_01</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="escritura-dinamica-y-estatica">
+<h3><span class="section-number">9.1.8. </span>Escritura dinámica y estática<a class="headerlink" href="#escritura-dinamica-y-estatica" title="Permalink to this heading">#</a></h3>
+<p>Con Python 3 se puede especificar el tipo de parámetro y el tipo de retorno de una función. Se definen dos conceptos claves:</p>
+<ul class="simple">
+<li><p><strong>Escritura  dinámica</strong>: no se especifican los atributos de los inputs ni de los ouputs</p></li>
+<li><p><strong>Escritura  estática</strong>: se especifican los atributos de los inputs y los ouputs</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># escritura dinámica</span>
+<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># escritura estatica</span>
+<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span>
+         <span class="n">y</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para la escritura estática, si bien se especifica el tipo de atributo (tanto de los inputs o outputs), la función puede recibir otros tipos de atributos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">,</span><span class="s2">&quot; mundo&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hola mundo
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para validar los tipos de datos son los correctos, se deben ocupar librerías especializadas en la validación de datos (por ejemplo <code class="docutils literal notranslate"><span class="pre">pydantic</span></code>).</p>
+</section>
+<section id="documentacion-de-codigo">
+<h3><span class="section-number">9.1.9. </span>Documentación de código<a class="headerlink" href="#documentacion-de-codigo" title="Permalink to this heading">#</a></h3>
+<p>Casi tan importante como la escritura de código, es su correcta documentación, una parte fundamental de cualquier programa que a menudo se infravalora o simplemente se ignora. Aparte de los comentarios entre el código explicando cómo funciona, el elemento básico de documentación de Python es el Docstring o cadena de documentación, que ya hemos visto. Simplemente es una cadena de texto con triple comillas que se coloca justo después de la definición de función o clase que sirve de documentación a ese elemento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la potencia arbitraria de un numero</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="n">potencia</span><span class="o">.</span><span class="vm">__doc__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n    Calcula la potencia arbitraria de un numero\n    &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="n">help</span><span class="p">(</span><span class="n">potencia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function potencia in module __main__:
+
+potencia(x, y)
+    Calcula la potencia arbitraria de un numero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo correcto es detallar lo mejor posible en el <em>Docstring</em> qué hace y cómo se usa la función o clase y los parámetros que necesita. Se recomienda usar el estilo de documentación del software de documentación <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a>, que emplea <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> como lenguaje de marcado.</p>
+<p>Veamos un ejemplo de una función bien documentada:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la potencia arbitraria de un numero</span>
+
+<span class="sd">    :param x: base</span>
+<span class="sd">    :param y: exponente</span>
+<span class="sd">    :return:  potencia de un numero</span>
+<span class="sd">    :ejemplos:</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; potencia(2, 1)</span>
+<span class="sd">    2</span>
+<span class="sd">    &gt;&gt;&gt; potencia(3, 2)</span>
+<span class="sd">    9</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="n">potencia</span><span class="o">.</span><span class="vm">__doc__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n    Calcula la potencia arbitraria de un numero\n\n    :param x: base\n    :param y: exponente\n    :return:  potencia de un numero\n    :ejemplos:\n    \n    &gt;&gt;&gt; potencia(2, 1)\n    2\n    &gt;&gt;&gt; potencia(3, 2)\n    9\n    &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acceso a la documentación</span>
+<span class="n">help</span><span class="p">(</span><span class="n">potencia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function potencia in module __main__:
+
+potencia(x, y)
+    Calcula la potencia arbitraria de un numero
+    
+    :param x: base
+    :param y: exponente
+    :return:  potencia de un numero
+    :ejemplos:
+    
+    &gt;&gt;&gt; potencia(2, 1)
+    2
+    &gt;&gt;&gt; potencia(3, 2)
+    9
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Tipos de Docstring</strong></p>
+<p>Existen varias formas de documentar tus funciones, las principales encontradas en la literatura son:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings">Google docstrings</a>:Google’s recommended form of documentation.</p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructured Text</a>:Official Python documentation standard; Not beginner friendly but feature rich.</p></li>
+<li><p><a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">NumPy/SciPy docstrings</a>:NumPy’s combination of reStructured and Google Docstrings.</p></li>
+<li><p><a class="reference external" href="http://epydoc.sourceforge.net/epytext.html">Epytext</a>A Python adaptation of Epydoc; Great for Java developer.”</p></li>
+</ul>
+<p><a id='c2'></a></p>
+</section>
+</section>
+<section id="zen-de-python">
+<h2><span class="section-number">9.2. </span>Zen de python<a class="headerlink" href="#zen-de-python" title="Permalink to this heading">#</a></h2>
+<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/zen.jpg" width="480" height="240" align="center"/>
+<p>El <strong>Zen</strong> de Python te dará la guía para decidir sobre que hacer con tu código, no te dice como lo debes escribir, sino como debes pensar si estas programando en Python.</p>
+<p>Principios importantes:</p>
+<ul class="simple">
+<li><p><strong>Explícito es mejor que implícito</strong>: Que no se asuma nada, asegúrate que las cosas sean.</p></li>
+<li><p><strong>Simple es mejor que complejo</strong>: Evita código complejo, código espagueti o que hace mas cosas para poder hacer una simple tarea.</p></li>
+<li><p><strong>Plano es mejor que anidado</strong>: Si tu código tiene mas de 3 niveles de identación, deberías mover parte de ese código a una función.</p></li>
+<li><p><strong>Los errores nunca deberían pasar silenciosamente</strong>: No uses un Try/Except sin definir que tipo de error vas a cachar, viene de la mano con Explicito es mejor que implícito.</p></li>
+<li><p><strong>Si la implementación es difícil de explicar, es mala idea</strong>.</p></li>
+</ul>
+<p>También, podemos ver el mensaje original del zen de python, ejecutando la siguiente linea de comando.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mas-consejos">
+<h2><span class="section-number">9.3. </span>Más consejos<a class="headerlink" href="#mas-consejos" title="Permalink to this heading">#</a></h2>
+<p>Los consejos que se presentan son de mucha utilidad si usted quiere llevar sus conociminetos de programación al siguiente nivel, sin embargo, el contenido de cada uno amerita un curso por si solo. Se deja recomienda al lector seguir profundizando en estos temas.</p>
+<section id="entender-programacion-multiparadigma">
+<h3><span class="section-number">9.3.1. </span>Entender programación multiparadigma<a class="headerlink" href="#entender-programacion-multiparadigma" title="Permalink to this heading">#</a></h3>
+<p>Python al ser multiparadigma, nos da una amplia gama de posibilidades de diseñar nuestros códigos. Dentro de estos se destacan:</p>
+<ul class="simple">
+<li><p>Programación orientada a objetos (OOP)</p></li>
+<li><p>Programación funcional</p></li>
+</ul>
+<p>Cuándo ocupar uno o la otra, va a depender de cómo queremos abordar una determinada problemática, puesto que en la mayoría de los casos, se puede pasar de un paradigma a o otro (incluso mezclarlos de ser necesario).</p>
+</section>
+<section id="principio-s-o-l-i-d">
+<h3><span class="section-number">9.3.2. </span>Principio S.O.L.I.D<a class="headerlink" href="#principio-s-o-l-i-d" title="Permalink to this heading">#</a></h3>
+<p>En ingeniería de software, SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion) es un acrónimo mnemónico introducido por <strong>Robert C. Martin</strong> a comienzos de la década del 2000 que representa cinco principios básicos de la programación orientada a objetos y el diseño. Cuando estos principios se aplican en conjunto es más probable que un desarrollador cree un sistema que sea fácil de mantener y ampliar con el tiempo.</p>
+<p>En el siguiente <a class="reference external" href="https://medium.com/&#64;vubon.roy/solid-principles-with-python-examples-10e1f3d91259">link</a> se deja una guía para poder entender estos conceptos en python.</p>
+</section>
+<section id="patrones-de-diseno">
+<h3><span class="section-number">9.3.3. </span>Patrones de diseño<a class="headerlink" href="#patrones-de-diseno" title="Permalink to this heading">#</a></h3>
+<p>Los patrones de diseño son la base para la búsqueda de soluciones a problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces.</p>
+<blockquote>
+<div><p>Un patrón de diseño es una solución a un problema de diseño.</p>
+</div></blockquote>
+<p>Se destacan tres tipos de patrones de diseños:</p>
+<ul class="simple">
+<li><p><strong>Comportamiento</strong></p></li>
+<li><p><strong>Creacionales</strong></p></li>
+<li><p><strong>Estructurales</strong></p></li>
+</ul>
+<p>En el siguiente <a class="reference external" href="https://refactoring.guru/design-patterns/python">link</a> se deja una guía para poder entender estos conceptos en python.</p>
+</section>
+<section id="lecturas-recomendadas">
+<h3><span class="section-number">9.3.4. </span>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Clean Code: A Handbook of Agile Software</strong> - <em>Robert C. Martin</em> (2009): Habla sobre las buenas prácticas que debe seguir todo buen programador al momento de escribir su código. Si bien el lenguaje de programación emepleado es <code class="docutils literal notranslate"><span class="pre">Java</span></code>, la lógica se extiende a cualquier lenguaje de programación.</p></li>
+<li><p><strong>The Clean Coder: A Code Of Conduct For Professional Programmers</strong> <em>Robert C. Martin</em> (2011): Habla sobre las conductas que debe seguir todo programador. Además de hablar aspectos técnicos como estimación, diseño de código, refactorización y testeos, también nos habla sobre la actitud que un programador debe tener en distintas situaciones laborales.</p></li>
+</ul>
+</section>
+</section>
+<section id="referencias">
+<h2><span class="section-number">9.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/zedr/clean-code-python">clean-code-python</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/documenting-python-code/">Documenting Python Code: A Complete Guide</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="error.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Excepciones</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="solucion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Solución</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estilo-de-codificacion">9.1. Estilo de codificación</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">9.1.1. Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-de-codigos">9.1.2. Lineas de códigos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comentarios">9.1.3. Comentarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identacion">9.1.4. Identación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulacion-de-listas">9.1.5. Manipulación de listas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#especificar-tipo-de-error">9.1.6. Especificar tipo de error</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicitar-dependencias-de-una-funcion">9.1.7. Explicitar dependencias de una función</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escritura-dinamica-y-estatica">9.1.8. Escritura dinámica y estática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-de-codigo">9.1.9. Documentación de código</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zen-de-python">9.2. Zen de python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-consejos">9.3. Más consejos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entender-programacion-multiparadigma">9.3.1. Entender programación multiparadigma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-s-o-l-i-d">9.3.2. Principio S.O.L.I.D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-de-diseno">9.3.3. Patrones de diseño</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">9.3.4. Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">9.4. Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco Alfaro
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

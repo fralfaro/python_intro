@@ -1,0 +1,1150 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>8. Excepciones &#8212; Introducción a Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-TB617QHPDG"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-TB617QHPDG');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/error';</script>
+    <link rel="shortcut icon" href="../_static/logo_python.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Buenas prácticas" href="buenas_practicas.html" />
+    <link rel="prev" title="7. Programación Funcional" href="funcional.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/python.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introducción a Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenidos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_progra.html">1. Programación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">2. Motivación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basico.html">3. Nomenclatura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flujo.html">4. Control de Flujo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructura.html">5. Estructura de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones y módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcional.html">7. Programación Funcional</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Excepciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">9. Buenas prácticas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solución Ejercicios</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="solucion.html">Solución</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/fralfaro/python_intro/blob/dev/docs/error.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/fralfaro/python_intro" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/error.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Excepciones</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">8.1. Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-errores">8.2. Tipos de Errores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-sintaxis">8.2.1. Error de sintaxis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-nombre">8.2.2. Error de nombre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-tipo">8.2.3. Error de tipo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-valor">8.2.4. Error de valor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-division-por-cero">8.2.5. Error de división por cero</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-desborde">8.2.6. Error de desborde</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raise">8.3. Raise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menajando-excepciones-try-except">8.4. Menajando excepciones: Try/Except</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aserciones-en-python">8.5. Aserciones en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-en-funciones">8.5.1. assert en funciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-en-testing">8.5.2. assert en testing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warnings">8.6. Warnings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-warnings">8.6.1. Tipos de Warnings</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><a href="https://colab.research.google.com/github/fralfaro/python_intro/blob/main/docs/error.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="excepciones">
+<h1><span class="section-number">8. </span>Excepciones<a class="headerlink" href="#excepciones" title="Permalink to this heading">#</a></h1>
+<section id="introduccion">
+<h2><span class="section-number">8.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
+<p>Existen muchos tipos de errores que pueden estar presentes en un programa. No todos los errores pueden ser detectados por el computador. Veamos el siguiente ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># error semantico</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">doble</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El doble de n es </span><span class="si">{</span><span class="n">doble</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El doble de n es 12
+</pre></div>
+</div>
+</div>
+</div>
+<p>El computador no se dará cuenta del error, pues todas las instrucciones del programa son correctas. El programa simplemente entregará siempre la respuesta equivocada.</p>
+<p>Existen otros errores que sí pueden ser detectados: las <strong>excepciones</strong>. Las excepciones son errores que se producen durante la ejecución de un programa, como por ejemplo un error de sintaxis, un archivo que no se puede abrir o un valor que no se puede dividir por cero.</p>
+<ul class="simple">
+<li><p>Si no se manejan las excepciones, se imprime un mensaje de error y nuestro programa se detiene repentinamente e inesperadamente.</p></li>
+<li><p>Existen varios tipos de  <a class="reference external" href="https://docs.python.org/3/library/exceptions.html">excepciones</a>, sin embargo, en esta sección se presentan algunas de ellas.</p></li>
+</ul>
+</section>
+<section id="tipos-de-errores">
+<h2><span class="section-number">8.2. </span>Tipos de Errores<a class="headerlink" href="#tipos-de-errores" title="Permalink to this heading">#</a></h2>
+<section id="error-de-sintaxis">
+<h3><span class="section-number">8.2.1. </span>Error de sintaxis<a class="headerlink" href="#error-de-sintaxis" title="Permalink to this heading">#</a></h3>
+<p>Un error de sintaxis ocurre cuando el programa no cumple las reglas del lenguaje. Cuando ocurre este error, significa que el programa está mal escrito. El nombre del error es <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SyntaxError</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">))</span>
+               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unmatched &#39;)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="error-de-nombre">
+<h3><span class="section-number">8.2.2. </span>Error de nombre<a class="headerlink" href="#error-de-nombre" title="Permalink to this heading">#</a></h3>
+<p>Un error de nombre ocurre al usar una variable que no ha sido creada con anterioridad. El nombre de la excepción es <code class="docutils literal notranslate"><span class="pre">NameError</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NameError</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># NameError</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="ne">NameError</span>: name &#39;y&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="error-de-tipo">
+<h3><span class="section-number">8.2.3. </span>Error de tipo<a class="headerlink" href="#error-de-tipo" title="Permalink to this heading">#</a></h3>
+<p>En general, todas las operaciones en un programa pueden ser aplicadas sobre valores de tipos bien específicos. Un error de tipo ocurre al aplicar una operación sobre operandos de tipo incorrecto.</p>
+<p>El nombre de la excepción es <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type error</span>
+<span class="s1">&#39;seis&#39;</span> <span class="o">*</span> <span class="s1">&#39;ocho&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># type error</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="s1">&#39;seis&#39;</span> <span class="o">*</span> <span class="s1">&#39;ocho&#39;</span>
+
+<span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="error-de-valor">
+<h3><span class="section-number">8.2.4. </span>Error de valor<a class="headerlink" href="#error-de-valor" title="Permalink to this heading">#</a></h3>
+<p>El error de valor ocurre cuando los operandos son del tipo correcto, pero la operación no tiene sentido para ese valor. El nombre de la excepción es <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ValueError</span>
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;perro&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ValueError</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;perro&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;perro&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="error-de-division-por-cero">
+<h3><span class="section-number">8.2.5. </span>Error de división por cero<a class="headerlink" href="#error-de-division-por-cero" title="Permalink to this heading">#</a></h3>
+<p>El error de division por cero ocurre al intentar dividir por cero. El nombre de la excepción es <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ZeroDivisionError</span>
+<span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ZeroDivisionError</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="error-de-desborde">
+<h3><span class="section-number">8.2.6. </span>Error de desborde<a class="headerlink" href="#error-de-desborde" title="Permalink to this heading">#</a></h3>
+<p>El error de desborde ocurre cuando el resultado de una operación es tan grande que el computador no puede representarlo internamente.</p>
+<p>El nombre de la excepción es <code class="docutils literal notranslate"><span class="pre">OverflowError</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OverflowError</span>
+<span class="mf">20.0</span> <span class="o">**</span> <span class="mf">20.0</span> <span class="o">**</span> <span class="mf">20.0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">OverflowError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># OverflowError</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="mf">20.0</span> <span class="o">**</span> <span class="mf">20.0</span> <span class="o">**</span> <span class="mf">20.0</span>
+
+<span class="ne">OverflowError</span>: (34, &#39;Result too large&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="raise">
+<h2><span class="section-number">8.3. </span>Raise<a class="headerlink" href="#raise" title="Permalink to this heading">#</a></h2>
+<p>En Python, el comando <code class="docutils literal notranslate"><span class="pre">raise</span></code> se utiliza para provocar una excepción de manera explícita en un programa. Es decir, permite al programador generar una excepción en un momento determinado del programa, en lugar de esperar a que se produzca de forma automática.</p>
+<p>La sintaxis del comando <code class="docutils literal notranslate"><span class="pre">raise</span></code> es la siguiente:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="n">TipoExcepcion</span><span class="p">(</span><span class="s2">&quot;Mensaje de error&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Donde <code class="docutils literal notranslate"><span class="pre">TipoExcepcion</span></code> es el tipo de excepción que se desea generar y <code class="docutils literal notranslate"><span class="pre">&quot;Mensaje</span> <span class="pre">de</span> <span class="pre">error&quot;</span></code> es un mensaje opcional que se puede incluir para proporcionar información adicional sobre la excepción.</p>
+<p>Por ejemplo, supongamos que se desea generar una excepción de tipo <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> cuando un valor numérico sea negativo. Para ello, se podría utilizar el siguiente código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;El valor no puede ser negativo&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">num</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, si el valor de <code class="docutils literal notranslate"><span class="pre">num</span></code> es negativo, se genera una excepción de tipo <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> con el mensaje “El valor no puede ser negativo”. De lo contrario, la función devuelve el valor de <code class="docutils literal notranslate"><span class="pre">num</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">funcion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">funcion</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [14],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">funcion</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nn">Input In [12],</span> in <span class="ni">funcion</span><span class="nt">(num)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;El valor no puede ser negativo&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="k">return</span> <span class="n">num</span>
+
+<span class="ne">ValueError</span>: El valor no puede ser negativo
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Conclusión</strong></p>
+<p>Existen dos maneras para lanzar una excepción:</p>
+<ul class="simple">
+<li><p>Hacer una operación que no puede ser realizada (como dividir por cero). En este caso Python se encarga de lanzar automáticamente la excepción.</p></li>
+<li><p>Lanzar nosotros una excepción manualmente, usando <code class="docutils literal notranslate"><span class="pre">raise</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Nota</strong>: El comando <code class="docutils literal notranslate"><span class="pre">raise</span></code> es útil cuando se desea interrumpir el flujo normal de un programa y provocar una excepción en un punto específico. Sin embargo, se debe utilizar con precaución, ya que puede dificultar la depuración del programa si se utiliza en exceso o de manera incorrecta.</p>
+</div></blockquote>
+</section>
+<section id="menajando-excepciones-try-except">
+<h2><span class="section-number">8.4. </span>Menajando excepciones: Try/Except<a class="headerlink" href="#menajando-excepciones-try-except" title="Permalink to this heading">#</a></h2>
+<p>En Python, las excepciones se pueden manejar usando la declaración <code class="docutils literal notranslate"><span class="pre">try</span></code>. Cuando se detectan excepciones, depende de usted qué operador realizar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No se puede dividir entre cero&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No se puede dividir entre cero
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, se intenta dividir el número <code class="docutils literal notranslate"><span class="pre">1</span></code> entre <code class="docutils literal notranslate"><span class="pre">0</span></code>. Como no se puede realizar la división, se produce una excepción de tipo <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code>.</p>
+<p>Por otro lado, también se puede especificar en el <code class="docutils literal notranslate"><span class="pre">except</span></code> el tipo de error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No se puede dividir entre cero&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No se puede dividir entre cero
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Uso de else</strong></p>
+<p>Al ya explicado <code class="docutils literal notranslate"><span class="pre">try</span></code> y <code class="docutils literal notranslate"><span class="pre">except</span></code> le podemos añadir un bloque más, el <code class="docutils literal notranslate"><span class="pre">else</span></code>. Dicho bloque se ejecutará si no ha ocurrido ninguna excepción. Fíjate en la diferencia entre los siguientes códigos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Forzamos una excepción al dividir entre 0</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">/</span><span class="mi">0</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entra en except, ha ocurrido una excepción&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entra en else, no ha ocurrido ninguna excepción&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entra en except, ha ocurrido una excepción
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sin embargo en el siguiente código la división se puede realizar sin problema, por lo que el bloque <code class="docutils literal notranslate"><span class="pre">except</span></code> no se ejecuta pero el <code class="docutils literal notranslate"><span class="pre">else</span></code> si es ejecutado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># La división puede realizarse sin problema</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entra en except, ha ocurrido una excepción&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entra en else, no ha ocurrido ninguna excepción&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entra en else, no ha ocurrido ninguna excepción
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="aserciones-en-python">
+<h2><span class="section-number">8.5. </span>Aserciones en python<a class="headerlink" href="#aserciones-en-python" title="Permalink to this heading">#</a></h2>
+<p>Las aserciones  son expresiones booleanas que comprueban si las condiciones devuelven verdaderas o no. Si es cierto, el programa no hace nada y pasa a la siguiente línea de código. Sin embargo, si es falso, el programa se detiene y arroja un error.</p>
+<p>Las aserciones son importantes al momento de realizar <strong>tests unitarios</strong> o asegurar que un resultado siempre sea el mismo.</p>
+<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/assert.jpg" alt="" width="480" height="480" align="center" />
+<section id="assert-en-funciones">
+<h3><span class="section-number">8.5.1. </span>assert en funciones<a class="headerlink" href="#assert-en-funciones" title="Permalink to this heading">#</a></h3>
+<p>Puede resultar útil usar <code class="docutils literal notranslate"><span class="pre">assert(</span></code>) cuando queremos realizar alguna comprobación, como podría ser dentro de una función. En el siguiente ejemplo tenemos una función <code class="docutils literal notranslate"><span class="pre">suma()</span></code> que sólo suma las variables si son números enteros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funcion suma de variables enteras</span>
+<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;el primer valor ingresado no es entero&quot;</span>
+    <span class="k">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;el segundo valor ingresado no es entero&quot;</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ok, los argumentos son int</span>
+<span class="n">suma</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Error, ya que las variables no son int</span>
+<span class="n">suma</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [20],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Error, ya que las variables no son int</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">suma</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="nn">Input In [18],</span> in <span class="ni">suma</span><span class="nt">(a, b)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="k">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;el primer valor ingresado no es entero&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;el segundo valor ingresado no es entero&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="ne">AssertionError</span>: el primer valor ingresado no es entero
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Error, ya que las variables no son int</span>
+<span class="n">suma</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Error, ya que las variables no son int</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">suma</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="nn">Input In [18],</span> in <span class="ni">suma</span><span class="nt">(a, b)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;el primer valor ingresado no es entero&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="k">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;el segundo valor ingresado no es entero&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="ne">AssertionError</span>: el segundo valor ingresado no es entero
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assert-en-testing">
+<h3><span class="section-number">8.5.2. </span>assert en testing<a class="headerlink" href="#assert-en-testing" title="Permalink to this heading">#</a></h3>
+<p>La función <code class="docutils literal notranslate"><span class="pre">assert()</span></code> puede ser también muy útil para escribir tests unitarios o units tests. Veamos un ejemplo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># definir funcion</span>
+<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ejemplo correcto</span>
+<span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;ejemplo invalido&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ejemplo incorrecto</span>
+<span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;ejemplo invalido&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [24],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ejemplo incorrecto</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;ejemplo invalido&quot;</span>
+
+<span class="ne">AssertionError</span>: ejemplo invalido
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="warnings">
+<h2><span class="section-number">8.6. </span>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">#</a></h2>
+<p>En Python, un <a class="reference external" href="https://docs.python.org/3/library/warnings.html">warnings</a> es un mensaje que se muestra en la consola o en el registro de errores durante la ejecución del código para alertar al programador sobre un posible problema o una situación inusual que podría resultar en un error o un comportamiento no deseado en el programa.</p>
+<p>A diferencia de los errores (que interrumpen la ejecución del programa), los warnings son mensajes informativos que no impiden la ejecución del código, pero deben ser revisados y atendidos por el programador para garantizar la calidad del software.</p>
+<p>Por ejemplo, Python puede mostrar una advertencia si estás utilizando una función que se ha quedado obsoleta o que será eliminada en futuras versiones de Python, o si estás realizando una operación que puede tener efectos secundarios no deseados.</p>
+<p>Es importante prestar atención a las advertencias y abordarlas en consecuencia para asegurarse de que el código funcione de manera correcta y eficiente.</p>
+<p>Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+  
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">)</span>
+  
+<span class="c1"># mostrar un mensaje warning </span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Atencion, esto es un warning!&#39;</span><span class="p">)</span>
+  
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python
+Python!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\franc\AppData\Local\Temp\ipykernel_3104\3783018248.py:6: UserWarning: Atencion, esto es un warning!
+  warnings.warn(&#39;Atencion, esto es un warning!&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, la función <code class="docutils literal notranslate"><span class="pre">warn()</span></code> se utiliza para mostrar el mensajede advertencia: “Atencion, esto es un warning!”.</p>
+<section id="tipos-de-warnings">
+<h3><span class="section-number">8.6.1. </span>Tipos de Warnings<a class="headerlink" href="#tipos-de-warnings" title="Permalink to this heading">#</a></h3>
+<p><strong>DeprecationWarning</strong></p>
+<p>Es un tipo de advertencia que se utiliza para indicar que una característica o función del lenguaje o biblioteca que se está utilizando está obsoleta y se eliminará en futuras versiones. Esta advertencia se emite para permitir que los desarrolladores sepan que deben dejar de utilizar la función o característica en cuestión para evitar errores y fallos en futuras versiones de Python.</p>
+<p>El objetivo principal es ayudar a los desarrolladores a actualizar su código para usar las nuevas funciones y características que reemplazan las obsoletas. Si no se actualiza el código, es posible que no funcione correctamente en futuras versiones de Python.</p>
+<p>Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="k">def</span> <span class="nf">multiplicar_por_dos</span><span class="p">(</span><span class="n">numero</span><span class="p">):</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Esta función está obsoleta, use multiplicar_por_n en su lugar&quot;</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">numero</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">multiplicar_por_n</span><span class="p">(</span><span class="n">numero</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">numero</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">multiplicar_por_dos</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es:&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">multiplicar_por_n</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es:&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El resultado es: 10
+El resultado es: 15
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\franc\AppData\Local\Temp\ipykernel_3104\372299459.py:4: DeprecationWarning: Esta función está obsoleta, use multiplicar_por_n en su lugar
+  warnings.warn(&quot;Esta función está obsoleta, use multiplicar_por_n en su lugar&quot;, DeprecationWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, la función <code class="docutils literal notranslate"><span class="pre">multiplicar_por_dos</span></code> se ha quedado obsoleta y se emitirá una advertencia de tipo <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code> cuando se llame. La advertencia indicará que la función está obsoleta y que los desarrolladores deberían usar la función <code class="docutils literal notranslate"><span class="pre">multiplicar_por_n</span></code> en su lugar.</p>
+<p><strong>FutureWarning</strong></p>
+<p>Es un tipo de advertencia que se utiliza para indicar que una característica o comportamiento del lenguaje o biblioteca puede cambiar en futuras versiones de Python. A diferencia de <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code>, <code class="docutils literal notranslate"><span class="pre">FutureWarning</span></code> no indica que una característica está obsoleta y se eliminará en futuras versiones, sino que simplemente indica que la forma en que se comporta actualmente podría cambiar en el futuro.</p>
+<p>Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;La función sumar puede cambiar en futuras versiones&quot;</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">sumar</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es:&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El resultado es: 5
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\franc\AppData\Local\Temp\ipykernel_3104\680115990.py:4: FutureWarning: La función sumar puede cambiar en futuras versiones
+  warnings.warn(&quot;La función sumar puede cambiar en futuras versiones&quot;, FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, la función <code class="docutils literal notranslate"><span class="pre">sumar</span></code> puede cambiar en futuras versiones, y se emite una advertencia de tipo <code class="docutils literal notranslate"><span class="pre">FutureWarning</span></code> al llamarla. La advertencia indica que la función podría cambiar en el futuro, lo que significa que el resultado podría ser diferente en una versión posterior de Python.</p>
+<p><strong>RuntimeWarning</strong></p>
+<p>Es un tipo de advertencia que se utiliza para indicar que se ha producido un comportamiento inesperado durante la ejecución del programa. A diferencia de las excepciones, que son errores que interrumpen la ejecución del programa, las advertencias <code class="docutils literal notranslate"><span class="pre">RuntimeWarning</span></code> no interrumpen la ejecución, sino que simplemente indican que se ha producido un comportamiento inesperado.</p>
+<p>Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1140</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\franc\AppData\Local\Temp\ipykernel_3104\3819922338.py:2: RuntimeWarning: overflow encountered in exp
+  result = 1/(1+np.exp(1140))
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> realiza el cálculo (el resultado es <code class="docutils literal notranslate"><span class="pre">0,0</span></code>) pero aún imprime <code class="docutils literal notranslate"><span class="pre">RuntimeWarning</span></code>. Esta advertencia se imprime porque el valor <code class="docutils literal notranslate"><span class="pre">np.exp(1140)</span></code> representa <span class="math notranslate nohighlight">\(e^{1140}\)</span>, que es un número muy grande.</p>
+<p><strong>UserWarning</strong></p>
+<p>Es un tipo de advertencia que se utiliza para indicar que se ha detectado una situación que puede no ser un error grave, pero que podría ser importante para el usuario final del programa.</p>
+<p>A diferencia de otras advertencias, como <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code> o <code class="docutils literal notranslate"><span class="pre">RuntimeWarning</span></code>, que se refieren a problemas técnicos en el código, <code class="docutils literal notranslate"><span class="pre">UserWarning</span></code> se utiliza para indicar al usuario que se ha producido una situación que puede requerir su atención o acción.</p>
+<p>Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="k">def</span> <span class="nf">promedio_notas</span><span class="p">(</span><span class="n">notas</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">notas</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;La lista de notas está vacía&quot;</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+
+<span class="n">notas_estudiante</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">promedio</span> <span class="o">=</span> <span class="n">promedio_notas</span><span class="p">(</span><span class="n">notas_estudiante</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El promedio de notas es:&quot;</span><span class="p">,</span> <span class="n">promedio</span><span class="p">)</span>
+
+<span class="n">notas_estudiante_vacias</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">promedio</span> <span class="o">=</span> <span class="n">promedio_notas</span><span class="p">(</span><span class="n">notas_estudiante_vacias</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El promedio de notas es:&quot;</span><span class="p">,</span> <span class="n">promedio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El promedio de notas es: 7.0
+El promedio de notas es: None
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\franc\AppData\Local\Temp\ipykernel_3104\3670255427.py:5: UserWarning: La lista de notas está vacía
+  warnings.warn(&quot;La lista de notas está vacía&quot;, UserWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, la función <code class="docutils literal notranslate"><span class="pre">promedio_notas</span></code> calcula el promedio de un conjunto de notas. Si la lista de notas está vacía, en lugar de devolver un error, se emite una advertencia utilizando el módulo warnings de Python con el mensaje “La lista de notas está vacía” y el tipo de advertencia <code class="docutils literal notranslate"><span class="pre">UserWarning</span></code>. Luego, la función devuelve <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="funcional.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Programación Funcional</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="buenas_practicas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Buenas prácticas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">8.1. Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-errores">8.2. Tipos de Errores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-sintaxis">8.2.1. Error de sintaxis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-nombre">8.2.2. Error de nombre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-tipo">8.2.3. Error de tipo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-valor">8.2.4. Error de valor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-division-por-cero">8.2.5. Error de división por cero</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-de-desborde">8.2.6. Error de desborde</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raise">8.3. Raise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menajando-excepciones-try-except">8.4. Menajando excepciones: Try/Except</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aserciones-en-python">8.5. Aserciones en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-en-funciones">8.5.1. assert en funciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-en-testing">8.5.2. assert en testing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warnings">8.6. Warnings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-warnings">8.6.1. Tipos de Warnings</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco Alfaro
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
