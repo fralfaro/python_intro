@@ -11,7 +11,5 @@ parts:
     - file: docs/flujo.ipynb
     - file: docs/estructura.ipynb
     - file: docs/funciones.ipynb
-    - file: docs/funcional.ipynb
     - file: docs/error.ipynb
     - file: docs/buenas_practicas.ipynb
-    - file: docs/solucion.ipynb
