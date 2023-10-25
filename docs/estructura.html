@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -72,10 +72,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/estructura';</script>
-    <link rel="shortcut icon" href="../_static/logo_python.svg"/>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Funciones y módulos" href="funciones.html" />
+    <link rel="next" title="6. Funciones" href="funciones.html" />
     <link rel="prev" title="4. Control de Flujo" href="flujo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -156,13 +156,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/python.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/python.svg" class="logo__image only-light" alt="Introducción a Python - Home"/>
+    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Introducción a Python - Home"/>`);</script>
   
   
 </a></div>
@@ -183,11 +184,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="basico.html">3. Nomenclatura</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flujo.html">4. Control de Flujo</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Estructura de datos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones y módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcional.html">7. Programación Funcional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="error.html">8. Excepciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">9. Buenas prácticas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solucion.html">10. Solución Ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">7. Excepciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">8. Buenas prácticas</a></li>
 </ul>
 
     </div>
@@ -405,11 +404,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restricciones-sobre-las-llaves">5.4.4. Restricciones sobre las llaves</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-estructuras-de-datos">5.5. Otras estructuras de datos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-range">5.5.1. Python range()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">5.5. Ejercicios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.5.1. Listas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.5.2. Tuplas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.5.3. Conjuntos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.5.4. Diccionarios</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">5.6. Ejercicios</a></li>
 </ul>
             </nav>
         </div>
@@ -449,9 +450,28 @@ su dato relacionado.</p></li>
 <p>Existen varias formas de crear listas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lista vacia</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lista vacia (Usando corchetes)</span>
 <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lista vacia (Usando el constructor)</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
@@ -726,35 +746,84 @@ tercer elemento de la lista: verde
 </section>
 <section id="iterar-sobre-una-lista">
 <h3><span class="section-number">5.1.3. </span>Iterar sobre una lista<a class="headerlink" href="#iterar-sobre-una-lista" title="Permalink to this heading">#</a></h3>
-<p>Una lista es un objeto <code class="docutils literal notranslate"><span class="pre">iterable</span></code>. Esto significa que sus valores se pueden recorrer usando un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>:</p>
+<p>En Python, una lista es un tipo de objeto iterable, lo que significa que puedes recorrer sus elementos utilizando un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>A continuación, te mostraremos un ejemplo de cómo hacerlo paso a paso:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definimos una lista llamada &#39;valores&#39; con algunos números</span>
+<span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Usamos un ciclo &#39;for&#39; para recorrer cada elemento de la lista</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">valores</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># En cada iteración, &#39;i&#39; toma el valor de un elemento de la lista</span>
+    <span class="c1"># y calculamos su cuadrado utilizando el operador &#39;**&#39;</span>
+    <span class="n">cuadrado</span> <span class="o">=</span> <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="c1"># Luego, imprimimos el valor y su cuadrado en la consola</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El cuadrado de </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">cuadrado</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-4
-9
-16
-25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El cuadrado de 1 es 1
+El cuadrado de 2 es 4
+El cuadrado de 3 es 9
+El cuadrado de 4 es 16
+El cuadrado de 5 es 25
 </pre></div>
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p>Creamos una lista llamada <code class="docutils literal notranslate"><span class="pre">valores</span></code> que contiene los números <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code>. Esta será la lista que recorreremos.</p></li>
+<li><p>Utilizamos un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> para iterar a través de cada elemento de la lista. En cada iteración, la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> toma el valor del siguiente elemento de la lista.</p></li>
+<li><p>Dentro del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>, calculamos el cuadrado de <code class="docutils literal notranslate"><span class="pre">i</span></code> usando el operador <code class="docutils literal notranslate"><span class="pre">**</span></code> y almacenamos el resultado en la variable <code class="docutils literal notranslate"><span class="pre">cuadrado</span></code>.</p></li>
+<li><p>Finalmente, imprimimos en la consola un mensaje que muestra el número original (<code class="docutils literal notranslate"><span class="pre">i</span></code>) y su cuadrado (<code class="docutils literal notranslate"><span class="pre">cuadrado</span></code>) utilizando una f-string.</p></li>
+</ol>
 </section>
 </section>
 <section id="tuplas">
 <h2><span class="section-number">5.2. </span>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this heading">#</a></h2>
 <p>Una tupla es una secuencia de valores agrupados. Una tupla sirve para agrupar, como si fueran un único valor, varios valores que, por su naturaleza, deben ir juntos.</p>
-<p>El tipo de datos que representa a las tuplas se llama <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. El tipo tuple es **inmutable: una tupla no puede ser modificada una vez que ha sido creada.</p>
+<p>El tipo de datos que representa a las tuplas se llama <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. El tipo tuple es <strong>inmutable: una tupla no puede ser modificada una vez que ha sido creada</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;uno&quot;</span><span class="p">,</span> <span class="s2">&quot;dos&quot;</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="s2">&quot;cuatro&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tupla vacia (Usando corchetes)</span>
+<span class="n">tupla</span> <span class="o">=</span> <span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tupla vacia (Usando el constructor)</span>
+<span class="n">tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tupla con elementos</span>
+<span class="n">numeros</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;uno&quot;</span><span class="p">,</span> <span class="s2">&quot;dos&quot;</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="s2">&quot;cuatro&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;uno&#39;, &#39;dos&#39;, &#39;tres&#39;, &#39;cuatro&#39;)
 </pre></div>
 </div>
 </div>
@@ -865,50 +934,76 @@ tercer elemento de la lista: verde
 </section>
 <section id="iteracion-sobre-tuplas">
 <h3><span class="section-number">5.2.4. </span>Iteración sobre tuplas<a class="headerlink" href="#iteracion-sobre-tuplas" title="Permalink to this heading">#</a></h3>
-<p>Al igual que las listas, las tuplas son iterables:</p>
+<p>Las tuplas en Python también son objetos iterables, lo que significa que puedes recorrer sus elementos usando un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>A continuación, te mostraremos un ejemplo de cómo hacerlo paso a paso:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="n">valor</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-4
-9
-16
-25
-</pre></div>
-</div>
-</div>
-</div>
-<p>Además, se puede convertir una tupla en una lista usando la función <code class="docutils literal notranslate"><span class="pre">list</span></code>, y una lista en una tupla usando la función <code class="docutils literal notranslate"><span class="pre">tuple</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definimos una tupla con algunos números</span>
+<span class="n">tupla_valores</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
-<span class="c1">#lista</span>
-<span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="c1"># Usamos un ciclo &#39;for&#39; para recorrer cada elemento de la tupla</span>
+<span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">tupla_valores</span><span class="p">:</span>
+    <span class="c1"># En cada iteración, &#39;valor&#39; toma el valor de un elemento de la tupla</span>
+    <span class="c1"># y calculamos su cuadrado utilizando el operador &#39;**&#39;</span>
+    <span class="n">cuadrado</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="c1"># Luego, imprimimos el valor y su cuadrado en la consola</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El cuadrado de </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">cuadrado</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El cuadrado de 1 es 1
+El cuadrado de 2 es 4
+El cuadrado de 3 es 9
+El cuadrado de 4 es 16
+El cuadrado de 5 es 25
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Convertir Entre Listas y Tuplas</strong></p>
+<p>En Python, puedes convertir una tupla en una lista utilizando la función <code class="docutils literal notranslate"><span class="pre">list()</span></code> y una lista en una tupla utilizando la función <code class="docutils literal notranslate"><span class="pre">tuple()</span></code>. Esto es útil cuando necesitas cambiar el tipo de contenedor de datos. A continuación, te proporciono ejemplos para ilustrar ambos casos:</p>
+<p><strong>Convertir una Tupla en una Lista:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tupla</span>
-<span class="nb">tuple</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definimos una tupla</span>
+<span class="n">mi_tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Usamos la función &#39;list()&#39; para convertir la tupla en una lista</span>
+<span class="n">mi_lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mi_tupla</span><span class="p">)</span>
+
+<span class="c1"># Imprimimos la lista resultante</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tupla original:&quot;</span><span class="p">,</span> <span class="n">mi_tupla</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lista resultante:&quot;</span><span class="p">,</span> <span class="n">mi_lista</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 5, 6)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tupla original: (1, 2, 3, 4, 5)
+Lista resultante: [1, 2, 3, 4, 5]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Convertir una Lista en una Tupla:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definimos una lista</span>
+<span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Usamos la función &#39;tuple()&#39; para convertir la lista en una tupla</span>
+<span class="n">mi_tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">)</span>
+
+<span class="c1"># Imprimimos la tupla resultante</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lista original:&quot;</span><span class="p">,</span> <span class="n">mi_lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tupla resultante:&quot;</span><span class="p">,</span> <span class="n">mi_tupla</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lista original: [1, 2, 3, 4, 5]
+Tupla resultante: (1, 2, 3, 4, 5)
 </pre></div>
 </div>
 </div>
@@ -922,6 +1017,34 @@ tercer elemento de la lista: verde
 <section id="como-crear-conjuntos">
 <h3><span class="section-number">5.3.1. </span>Cómo crear conjuntos<a class="headerlink" href="#como-crear-conjuntos" title="Permalink to this heading">#</a></h3>
 <p>Las dos maneras principales de crear un conjunto son:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># conjunto vacio (Usando corchetes)</span>
+<span class="n">conjunto</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># conjunto vacio (Usando el constructor)</span>
+<span class="n">conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set()
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># usar un conjunto literal, entre llave </span>
@@ -1100,7 +1223,7 @@ b
 </div>
 </div>
 <p><strong>Operaciones sobre conjuntos</strong></p>
-<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/set.png"  align="center" width="300" height="500" />
+<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/set.png"  align="center" width="300"  />
 <p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> y <code class="docutils literal notranslate"><span class="pre">|</span></code> son los operadores de intersección y unión repectivamente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1226,9 +1349,28 @@ b
 <p>Los diccionarios literales se crean usando llaves ({ y }). La llave y el valor van separados por dos puntos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># diccionario vacio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># diccionario vacio (Usando corchetes)</span>
 <span class="n">dct</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dct</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lista vacia (Usando el constructor)</span>
 <span class="n">dct</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dct</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
 </pre></div>
 </div>
 </div>
@@ -1385,105 +1527,36 @@ llave: 2, valor: ball
 <p>Típicamente, se usa números, tuplas y strings como llaves de los diccionarios.</p>
 </section>
 </section>
-<section id="otras-estructuras-de-datos">
-<h2><span class="section-number">5.5. </span>Otras estructuras de datos<a class="headerlink" href="#otras-estructuras-de-datos" title="Permalink to this heading">#</a></h2>
-<section id="python-range">
-<h3><span class="section-number">5.5.1. </span>Python range()<a class="headerlink" href="#python-range" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">range()</span></code> devuelve una secuencia inmutable de números entre el entero de inicio dado al entero de parada.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="c1"># Output: range(1, 10)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(1, 10)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Hemos omitido el parámetro de <code class="docutils literal notranslate"><span class="pre">step</span></code> opcional para <code class="docutils literal notranslate"><span class="pre">range()</span></code> en los ejemplos anteriores. Cuando se omite, el paso predeterminado es 1. Probemos algunos ejemplos con el parámetro de paso.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero1</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">numero1</span><span class="p">))</span> <span class="c1"># Output: [1, 2, 3, 4, 5]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero2</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">numero2</span><span class="p">))</span> <span class="c1"># Output: [1, 3, 5]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 5]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero3</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">numero3</span><span class="p">))</span> <span class="c1"># Output: [5, 4, 3, 2, 1]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 4, 3, 2, 1]
-</pre></div>
-</div>
-</div>
-</div>
-<p>El resultado es iterable y puede convertirlo en <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>, etc. Por ejemplo:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">numeros</span><span class="p">))</span> <span class="c1"># Output: [1, 2, 3, 4, 5]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">numeros</span><span class="p">))</span> <span class="c1"># Output: (1, 2, 3, 4, 5)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">numeros</span><span class="p">))</span> <span class="c1"># Output: {1, 2, 3, 4, 5}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output: {1: 99, 2: 99, 3: 99, 4: 99, 5: 99} </span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">numeros</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
 <section id="ejercicios">
-<h2><span class="section-number">5.6. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.5. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">5.5.1. </span>Listas<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p><strong>Ejercicio 01</strong></p>
-<p>Escriba un programa que muestre la tabla de multiplicar del 1 al 10 del número ingresado por el usuario:</p>
-<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>Ingrese un numero: 9
-9 x 1 = 9
-9 x 2 = 18
-9 x 3 = 27
-9 x 4 = 36
-9 x 5 = 45
-9 x 6 = 54
-9 x 7 = 63
-9 x 8 = 72
-9 x 9 = 81
-9 x 10 = 90
+<p>Considere las siguientes listas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;perro&#39;</span><span class="p">,</span> <span class="s1">&#39;gato&#39;</span><span class="p">,</span> <span class="s1">&#39;jirafa&#39;</span><span class="p">,</span> <span class="s1">&#39;elefante&#39;</span><span class="p">]</span>
+<span class="n">e</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Sin usar el computador, indique cuál es el resultado y el tipo de las siguientes expresiones. A continuación, verifique sus respuestas en el computador.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="n">c</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">c</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">d</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;jirafa&#39;</span><span class="p">)</span>
+<span class="n">e</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">complex</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1494,9 +1567,11 @@ llave: 2, valor: ball
 </div>
 </div>
 <p><strong>Ejercicio 02</strong></p>
-<p>Escriba un programa que genere todas las potencias de 2, desde la 0-ésima hasta la ingresada por el usuario:</p>
-<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>Ingrese num: 10
-1 2 4 8 16 32 64 128 256 512 1024
+<p>Escriba la función <code class="docutils literal notranslate"><span class="pre">mayores_que(x,</span> <span class="pre">valores)</span></code> que cuente cuántos valores en la lista valores son mayores que <code class="docutils literal notranslate"><span class="pre">x</span></code>:</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; mayores_que(5, [7, 3, 6, 0, 4, 5, 10])
+3
+&gt;&gt;&gt; mayores_que(2, [-1, 1, 8, 2, 0])
+1
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1507,7 +1582,32 @@ llave: 2, valor: ball
 </div>
 </div>
 <p><strong>Ejercicio 03</strong></p>
-<p>Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje <code class="docutils literal notranslate"><span class="pre">Yo</span> <span class="pre">estudio</span> <span class="pre">&lt;asignatura&gt;</span></code>, donde <code class="docutils literal notranslate"><span class="pre">&lt;asignatura&gt;</span></code> es cada una de las asignaturas de la lista.</p>
+<p>El <a class="reference external" href="https://es.wikipedia.org/wiki/Producto_escalar">producto interno</a> de dos listas de números es la suma de los productos de los términos correspondientes de ambas.</p>
+<p>Por ejemplo, si:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>entonces el producto interno entre <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> es:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">producto_interno(a,</span> <span class="pre">b)</span></code> que entregue el producto interno de <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">producto_interno</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">68</span>
+</pre></div>
+</div>
+</li>
+<li><p>Dos listas de números son <a class="reference external" href="https://es.wikipedia.org/wiki/Producto_escalar#Vectores_ortogonales">ortogonales</a> si su producto interno es cero. Escriba la función <code class="docutils literal notranslate"><span class="pre">son_ortogonales(a,</span> <span class="pre">b)</span></code> que indique si <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code> son ortogonales:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">son_ortogonales</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
@@ -1515,17 +1615,33 @@ llave: 2, valor: ball
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 04</strong></p>
-<p>Un número natural es un <a class="reference external" href="https://es.wikipedia.org/wiki/Pal%C3%ADndromo">palíndromo</a> si se lee igual de izquierda a derecha y de derecha a izquierda.</p>
-<p>Por ejemplo, <span class="math notranslate nohighlight">\(14941\)</span> es un palíndromo, mientras que <span class="math notranslate nohighlight">\(81924\)</span> no lo es.</p>
-<p>Escriba un programa que indique si el número ingresado es o no palíndromo:</p>
-<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>Ingrese un numero: 14941
-14941 es palindromo
+</section>
+<section id="id2">
+<h3><span class="section-number">5.5.2. </span>Tuplas<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p><strong>Ejercicio 01</strong></p>
+<p>Considere las siguientes asignaciones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1991</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1990</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Donald&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">((</span><span class="mi">27</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">z</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>Ingrese un numero: 81924
-81924 no es palindromo
-
+<p>Sin usar el computador, indique cuál es el resultado y el tipo de las siguientes expresiones. A continuación, verifique sus respuestas en el computador.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span>
+<span class="n">y</span> <span class="o">+</span> <span class="n">w</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">a</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">z</span><span class="p">,</span> <span class="n">y</span>
+<span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">str</span><span class="p">((</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1535,13 +1651,36 @@ llave: 2, valor: ball
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 05</strong></p>
-<p>Escribir una función que reciba una lista de tuplas, y que devuelva un diccionario en donde las claves sean los primeros elementos de las tuplas, y los valores una lista con los segundos.</p>
-<p>Por ejemplo, dado una lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="s1">&#39;Nola&#39;</span><span class="p">,</span> <span class="s1">&#39;don Pepito&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Nola&#39;</span><span class="p">,</span> <span class="s1">&#39;don Jose&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Buenos&#39;</span><span class="p">,</span> <span class="s1">&#39;días&#39;</span><span class="p">)</span> <span class="p">]</span>
+<p><strong>Ejercicio 02</strong></p>
+<p>Una fecha puede ser representada como una tupla <code class="docutils literal notranslate"><span class="pre">(anno,</span> <span class="pre">mes,</span> <span class="pre">dia)</span></code>.</p>
+<ol class="arabic">
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">dia_siguiente(f)</span></code> que reciba como parámetro una fecha <code class="docutils literal notranslate"><span class="pre">f</span></code> y entegue cuál es la fecha siguiente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dia_siguiente</span><span class="p">((</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="go">(2011, 4, 12)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dia_siguiente</span><span class="p">((</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="go">(2011, 5, 1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dia_siguiente</span><span class="p">((</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
+<span class="go">(2012, 1, 1)</span>
 </pre></div>
 </div>
-<p>Deberá mostrar: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">'Nola':</span> <span class="pre">['don</span> <span class="pre">Pepito',</span> <span class="pre">'don</span> <span class="pre">Jose'],</span> <span class="pre">'Buenos':</span> <span class="pre">['días']</span> <span class="pre">}</span></code></p>
+<p>Como recomendación, dentro de su función use una lista con la cantidad de días que tiene cada mes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dias_mes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span>
+        <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">dias_entre(f1,</span> <span class="pre">f2)</span></code> que retorne la cantidad de días que han transcurrido entre las fechas <code class="docutils literal notranslate"><span class="pre">f1</span></code> y <code class="docutils literal notranslate"><span class="pre">f2</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hoy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">navidad</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dias_entre</span><span class="p">(</span><span class="n">hoy</span><span class="p">,</span> <span class="n">navidad</span><span class="p">)</span>
+<span class="go">258</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dias_entre</span><span class="p">(</span><span class="n">hoy</span><span class="p">,</span> <span class="n">hoy</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
@@ -1549,6 +1688,177 @@ llave: 2, valor: ball
 </div>
 </div>
 </div>
+</section>
+<section id="id3">
+<h3><span class="section-number">5.5.3. </span>Conjuntos<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p><strong>Ejercicio 01</strong></p>
+<p>Considere las siguientes asignaciones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">e</span> <span class="o">=</span> <span class="p">{(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)}</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>Sin usar el computador, indique cuál es el resultado y el tipo de las siguientes expresiones. A continuación, verifique sus respuestas en el computador.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">b</span> <span class="o">|</span> <span class="n">c</span><span class="p">)</span>
+<span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="o">|</span> <span class="n">c</span>
+<span class="n">c</span> <span class="o">-</span> <span class="n">a</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a</span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">a</span>
+<span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span> <span class="ow">in</span> <span class="n">f</span>
+<span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s1">&#39;perro&#39;</span><span class="p">))</span>
+<span class="nb">len</span><span class="p">({</span><span class="s1">&#39;perro&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio 02</strong></p>
+<p>El <a class="reference external" href="https://es.wikipedia.org/wiki/Conjunto_potencia">conjunto potencia</a> de un conjunto <span class="math notranslate nohighlight">\(S\)</span> es el conjunto de todos los subconjuntos de <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>Por ejemplo, el conjunto potencia de <span class="math notranslate nohighlight">\(\{1,2,3\}\)</span>
+es:</p>
+<div class="math notranslate nohighlight">
+\[\{\emptyset,\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}\]</div>
+<p>En Python, un conjunto no puede contener a otros conjuntos, ya que no puede tener elementos mutables, y los conjuntos lo son:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">add</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span>        <span class="c1"># :(</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;console&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">unhashable type: &#39;set&#39;</span>
+</pre></div>
+</div>
+<p>Lo que sí podemos crear es una lista de conjuntos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span>     <span class="c1"># :)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">l</span>
+<span class="go">[set([1, 2])]</span>
+</pre></div>
+</div>
+<p>Escriba la <code class="docutils literal notranslate"><span class="pre">función</span> <span class="pre">conjunto_potencia(s)</span></code> que reciba como parámetro un conjunto cualquiera <code class="docutils literal notranslate"><span class="pre">s</span></code> y retorne su «lista potencia» (la lista de todos sus subconjuntos):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conjunto_potencia</span><span class="p">({</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">})</span>
+<span class="go">[set(), set([6]), set([1]), set([4]), set([6, 1]), set([6, 4]), set([1, 4]), set([6, 1, 4])]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3><span class="section-number">5.5.4. </span>Diccionarios<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p><strong>Ejercicio 01</strong></p>
+<p>Considere las siguientes asignaciones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">88</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">12</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">5</span><span class="p">:</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="mi">10</span><span class="p">:</span> <span class="p">[</span><span class="mi">11</span><span class="p">]}</span>
+<span class="n">e</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">11</span> <span class="o">+</span> <span class="mi">12</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Sin usar el computador, indique cuál es el resultado y el tipo de las siguientes expresiones. A continuación, verifique sus respuestas en el computador.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span>
+<span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="ow">or</span> <span class="n">b</span><span class="p">[</span><span class="mi">55</span><span class="p">]</span>
+<span class="mi">23</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="mi">5</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+<span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio 02</strong></p>
+<p>Para este ejercicio considere lo siguiente:</p>
+<p>Para obtener la lista de palabras de la oración, puede usar el método <code class="docutils literal notranslate"><span class="pre">split</span></code> de los strings:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;el gato y el pato&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="go">[&#39;el&#39;, &#39;gato&#39;, &#39;y&#39;, &#39;el&#39;, &#39;pato&#39;]</span>
+</pre></div>
+</div>
+<p>Para obtener un string en minúsculas, puede usar el método lower:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Venezuela&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="go">&#39;venezuela&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_letras(oracion)</span></code> que retorne un diccionario asociando a cada letra la cantidad de veces que aparece en la oracion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_letras</span><span class="p">(</span><span class="s1">&#39;El elefante avanza hacia Asia&#39;</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: 8, &#39;c&#39;: 1, &#39;e&#39;: 4, &#39;f&#39;: 1, &#39;h&#39;: 1, &#39;i&#39;: 2, &#39;l&#39;: 2, &#39;n&#39;: 2, &#39;s&#39;: 1, &#39;t&#39;: 1, &#39;v&#39;: 1, &#39;z&#39;: 1}</span>
+</pre></div>
+</div>
+<p>Cada valor del diccionario debe considerar tanto las apariciones en mayúscula como en minúscula de la letra correspondiente. Los espacios deben ser ignorados.</p>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_vocales(oracion)</span></code> que retorne un diccionario asociando a cada vocal la cantidad de veces que aparece en la oracion. Si una vocal no aparece en la oración, de todos modos debe estar en el diccionario asociada al valor 0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_vocales</span><span class="p">(</span><span class="s1">&#39;El elefante avanza hacia Asia&#39;</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: 8, &#39;e&#39;: 4, &#39;i&#39;: 2, &#39;o&#39;: 0, &#39;u&#39;: 0}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_iniciales(oracion)</span></code> que retorne un diccionario asociando a cada letra la cantidad de veces que aparece al principio de una palabra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_iniciales</span><span class="p">(</span><span class="s1">&#39;El elefante avanza hacia Asia&#39;</span><span class="p">)</span>
+<span class="go">{&#39;e&#39;: 2, &#39;h&#39;: 1, &#39;a&#39;: 2}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">contar_iniciales</span><span class="p">(</span><span class="s1">&#39;Varias vacas vuelan sobre Venezuela&#39;</span><span class="p">)</span>
+<span class="go">{&#39;s&#39;: 1&#39;, &#39;v&#39;: 4}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">obtener_largo_palabras(oracion)</span></code> que retorne un diccionario asociando a cada palabra su cantidad de letras:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obtener_largo_palabras</span><span class="p">(</span><span class="s1">&#39;el gato y el pato son amigos&#39;</span><span class="p">)</span>
+<span class="go">{&#39;el&#39;: 2, &#39;son&#39;: 3, &#39;gato&#39;: 4, &#39;y&#39;: 1, &#39;amigos&#39;: 6, &#39;pato&#39;: 4}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_palabras(oracion)</span></code> que retorne un diccionario asociando a cada palabra la cantidad de veces que aparece en la oración:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_palabras</span><span class="p">(</span><span class="s1">&#39;El sobre esta sobre el pupitre&#39;</span><span class="p">)</span>
+<span class="go">{&#39;sobre&#39;: 2, &#39;pupitre&#39;: 1, &#39;el&#39;: 2, &#39;esta&#39;: 1}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">palabras_repetidas(oracion)</span></code> que retorne una lista con las palabras que están repetidas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">palabras_repetidas</span><span class="p">(</span><span class="s1">&#39;El partido termino cero a cero&#39;</span><span class="p">)</span>
+<span class="go">[&#39;cero&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palabras_repetidas</span><span class="p">(</span><span class="s1">&#39;El sobre esta sobre el mueble&#39;</span><span class="p">)</span>
+<span class="go">[&#39;el&#39;, &#39;sobre&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palabras_repetidas</span><span class="p">(</span><span class="s1">&#39;Ay, ahi no hay pan&#39;</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1596,7 +1906,7 @@ llave: 2, valor: ball
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Funciones y módulos</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Funciones</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1640,11 +1950,13 @@ llave: 2, valor: ball
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restricciones-sobre-las-llaves">5.4.4. Restricciones sobre las llaves</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-estructuras-de-datos">5.5. Otras estructuras de datos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-range">5.5.1. Python range()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">5.5. Ejercicios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.5.1. Listas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.5.2. Tuplas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.5.3. Conjuntos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.5.4. Diccionarios</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">5.6. Ejercicios</a></li>
 </ul>
   </nav></div>
 
@@ -1692,8 +2004,8 @@ By Francisco Alfaro
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

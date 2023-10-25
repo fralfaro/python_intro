@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Funciones y módulos &#8212; Introducción a Python</title>
+    <title>6. Funciones &#8212; Introducción a Python</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -72,10 +72,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/funciones';</script>
-    <link rel="shortcut icon" href="../_static/logo_python.svg"/>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Programación Funcional" href="funcional.html" />
+    <link rel="next" title="7. Excepciones" href="error.html" />
     <link rel="prev" title="5. Estructura de datos" href="estructura.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -156,13 +156,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/python.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/python.svg" class="logo__image only-light" alt="Introducción a Python - Home"/>
+    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Introducción a Python - Home"/>`);</script>
   
   
 </a></div>
@@ -183,11 +184,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="basico.html">3. Nomenclatura</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flujo.html">4. Control de Flujo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estructura.html">5. Estructura de datos</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Funciones y módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcional.html">7. Programación Funcional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="error.html">8. Excepciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">9. Buenas prácticas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solucion.html">10. Solución Ejercicios</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">7. Excepciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">8. Buenas prácticas</a></li>
 </ul>
 
     </div>
@@ -370,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Funciones y módulos</h1>
+    <h1>Funciones</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,16 +379,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">6.1. Funciones en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">6.1. Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-de-escribir-una-funcion">6.2. Formas de escribir una función</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursion">6.2.1. Recursion</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda">6.2.2. Lambda</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocupando-args-kwargs">6.2.3. Ocupando args  &amp; kwargs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoradores">6.2.4. Decoradores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilizando-args-y-kwargs">6.2.3. Utilizando <code class="docutils literal notranslate"><span class="pre">*args</span></code> y <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modulos">6.3. Módulos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.4. Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.3. Ejercicios</a></li>
 </ul>
             </nav>
         </div>
@@ -402,10 +399,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <p><a href="https://colab.research.google.com/github/fralfaro/python_intro/blob/main/docs/funciones.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<section class="tex2jax_ignore mathjax_ignore" id="funciones-y-modulos">
-<h1><span class="section-number">6. </span>Funciones y módulos<a class="headerlink" href="#funciones-y-modulos" title="Permalink to this heading">#</a></h1>
-<section id="funciones-en-python">
-<h2><span class="section-number">6.1. </span>Funciones en python<a class="headerlink" href="#funciones-en-python" title="Permalink to this heading">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="funciones">
+<h1><span class="section-number">6. </span>Funciones<a class="headerlink" href="#funciones" title="Permalink to this heading">#</a></h1>
+<section id="introduccion">
+<h2><span class="section-number">6.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
 <p>Las funciones en Python son bloques de código que pueden ser llamados en cualquier momento del programa. Estos bloques de código reciben uno o varios argumentos y pueden devolver un valor. Las funciones son muy útiles porque te permiten escribir código una vez y reutilizarlo en distintas partes del programa, lo que puede ahorrar mucho tiempo y esfuerzo.</p>
 <p>Formalmente, una función tiene tres componentes importantes:</p>
 <ul class="simple">
@@ -423,8 +420,6 @@ document.write(`
     <span class="c1"># código de la función</span>
     <span class="n">resultado</span> <span class="o">=</span> <span class="n">operacion</span><span class="p">(</span><span class="n">parametro_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">parametro_n</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">resultado</span> <span class="c1"># output de la funcion</span>
-    
-    
 </pre></div>
 </div>
 <p>Se utiliza la palabra clave <code class="docutils literal notranslate"><span class="pre">def</span></code> seguida del nombre de la función, los parámetros que recibe entre paréntesis y dos puntos <code class="docutils literal notranslate"><span class="pre">:</span></code>. El cuerpo de la función va indentado y puede contener cualquier código que se quiera ejecutar. Para devolver un valor se utiliza la palabra clave <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
@@ -639,7 +634,7 @@ Buenos días Maria
 </div>
 </div>
 <p>Analicemos recursivamente el factorial del número <span class="math notranslate nohighlight">\(3\)</span>.</p>
-<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/fact.png"  align="center" width="300" height="500" />
+<p><img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/fact.png"  align="center" width="400" /> <br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
@@ -656,18 +651,19 @@ Buenos días Maria
 </section>
 <section id="lambda">
 <h3><span class="section-number">6.2.2. </span>Lambda<a class="headerlink" href="#lambda" title="Permalink to this heading">#</a></h3>
-<p>En Python, puede definir funciones sin nombre. Estas funciones se denominan <code class="docutils literal notranslate"><span class="pre">lambda</span></code> o función anónima. Para crear una función <em>lambda</em>, se utiliza la palabra clave <em>lambda</em>.</p>
+<p>En Python, puedes definir funciones sin nombre utilizando funciones lambda o, como también se les conoce, funciones anónimas. Estas funciones son útiles para realizar operaciones simples en una sola línea de código. Para crear una función lambda, se utiliza la palabra clave <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. A continuación, te presento una comparación entre una función definida de manera convencional y una función lambda:</p>
+<p><strong>Función Definida de Manera Convencional:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># de manera normal</span>
-<span class="k">def</span> <span class="nf">cuadrado_normal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrado_normal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Funcion que eleva al cuadrado un numero</span>
+<span class="sd">    Función que eleva al cuadrado un número.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
 
-<span class="c1"># instanciar funcion</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cuadrado_normal</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="c1"># Llamamos a la función convencional</span>
+<span class="n">resultado_normal</span> <span class="o">=</span> <span class="n">cuadrado_normal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado_normal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -677,11 +673,15 @@ Buenos días Maria
 </div>
 </div>
 </div>
+<p><strong>Función Lambda:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># funcion lambda</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definimos una función lambda para elevar al cuadrado un número</span>
 <span class="n">cuadrado</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cuadrado</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Llamamos a la función lambda</span>
+<span class="n">resultado_lambda</span> <span class="o">=</span> <span class="n">cuadrado</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado_lambda</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -691,18 +691,25 @@ Buenos días Maria
 </div>
 </div>
 </div>
-</section>
-<section id="ocupando-args-kwargs">
-<h3><span class="section-number">6.2.3. </span>Ocupando args  &amp; kwargs<a class="headerlink" href="#ocupando-args-kwargs" title="Permalink to this heading">#</a></h3>
-<p>Lo primero de todo es que en realidad no tienes porque usar los nombres <code class="docutils literal notranslate"><span class="pre">args</span></code> o <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>, ya que se trata de una mera convención entre programadores. Definamos estos conceptos:</p>
+<p><strong>Explicación:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">*args</span></code>: es una lista de argumentos, como argumentos posicionales.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>: es un diccionario cuyas claves se convierten en parámetros y sus valores en los argumentos de los parámetros.</p></li>
+<li><p>En el primer ejemplo, se define una función convencional llamada <code class="docutils literal notranslate"><span class="pre">cuadrado_normal</span></code> que toma un argumento <code class="docutils literal notranslate"><span class="pre">x</span></code> y devuelve el cuadrado de <code class="docutils literal notranslate"><span class="pre">x</span></code> utilizando la declaración <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+<li><p>En el segundo ejemplo, se crea una función lambda que realiza la misma operación. La función lambda se define como <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code>, donde <code class="docutils literal notranslate"><span class="pre">x</span></code> es el argumento de entrada y <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> es la expresión que se evalúa y devuelve.</p></li>
+<li><p>Luego, llamamos tanto a la función convencional como a la función lambda con un valor de <code class="docutils literal notranslate"><span class="pre">5</span></code> como argumento, y guardamos los resultados en las variables <code class="docutils literal notranslate"><span class="pre">resultado_normal</span></code> y <code class="docutils literal notranslate"><span class="pre">resultado_lambda</span></code>, respectivamente.</p></li>
+<li><p>Finalmente, imprimimos los resultados, que serán <code class="docutils literal notranslate"><span class="pre">25</span></code> tanto para la función convencional como para la función lambda, ya que ambas calculan el cuadrado de <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
 </ul>
+</section>
+<section id="utilizando-args-y-kwargs">
+<h3><span class="section-number">6.2.3. </span>Utilizando <code class="docutils literal notranslate"><span class="pre">*args</span></code> y <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code><a class="headerlink" href="#utilizando-args-y-kwargs" title="Permalink to this heading">#</a></h3>
+<p>En Python, puedes utilizar <code class="docutils literal notranslate"><span class="pre">*args</span></code> y <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> para manejar un número variable de argumentos en una función. Estos nombres, <code class="docutils literal notranslate"><span class="pre">args</span></code> y <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>, son convenciones comunes, pero en realidad puedes nombrarlos como desees. Ahora, profundicemos en estos conceptos:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*args</span></code>: Es una convención para indicar que se acepta un número variable de argumentos no nombrados (posicionales). Los argumentos se almacenan en una tupla.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>: Es una convención para indicar que se acepta un número variable de argumentos con nombre. Los argumentos se almacenan en un diccionario, donde las claves se convierten en los nombres de los parámetros y los valores son los argumentos asociados.</p></li>
+</ul>
+<p><strong>Usando <code class="docutils literal notranslate"><span class="pre">*args</span></code>:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># args</span>
-<span class="k">def</span> <span class="nf">sumar_numeros</span><span class="p">(</span><span class="o">*</span><span class="n">numeros</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sumar_numeros</span><span class="p">(</span><span class="o">*</span><span class="n">numeros</span><span class="p">):</span>
     <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
         <span class="n">suma</span> <span class="o">+=</span> <span class="n">numero</span>
@@ -719,15 +726,15 @@ Buenos días Maria
 </div>
 </div>
 </div>
-<p>En el primer ejemplo, se define una función llamada <code class="docutils literal notranslate"><span class="pre">sumar_numeros</span></code> que recibe un número variable de argumentos. La función suma todos los argumentos recibidos y devuelve el resultado.</p>
+<p>En el primer ejemplo, se define la función <code class="docutils literal notranslate"><span class="pre">sumar_numeros</span></code>, que toma un número variable de argumentos no nombrados. La función suma todos los argumentos recibidos y devuelve el resultado. En este caso, llamamos a la función con los números <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4</span></code>, y la suma se almacena en <code class="docutils literal notranslate"><span class="pre">resultado</span></code>.</p>
+<p><strong>Usando <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kwargs</span>
-<span class="k">def</span> <span class="nf">imprimir_datos</span><span class="p">(</span><span class="o">**</span><span class="n">datos</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprimir_datos</span><span class="p">(</span><span class="o">**</span><span class="n">datos</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">llave</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">datos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">llave</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
 
-<span class="n">imprimir_datos</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="n">edad</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">ciudad</span><span class="o">=</span><span class="s2">&quot;Lima&quot;</span><span class="p">)</span>       
+<span class="n">imprimir_datos</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="n">edad</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">ciudad</span><span class="o">=</span><span class="s2">&quot;Lima&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -739,101 +746,14 @@ ciudad : Lima
 </div>
 </div>
 </div>
-<p>En el segundo ejemplo, se define una función llamada <code class="docutils literal notranslate"><span class="pre">imprimir_datos</span></code> que recibe un número variable de argumentos con nombre. La función imprime los valores de cada argumento utilizando un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>En el segundo ejemplo, se define la función <code class="docutils literal notranslate"><span class="pre">imprimir_datos</span></code>, que toma un número variable de argumentos con nombre. La función itera a través del diccionario <code class="docutils literal notranslate"><span class="pre">datos</span></code> y muestra las claves y sus valores asociados. Llamamos a la función con argumentos con nombre, como “nombre”, “edad” y “ciudad”, y se imprime la información correspondiente.</p>
 <blockquote>
-<div><p><strong>Nota</strong>: Esto es una forma práctica de trabajar, sin embargo, siempre (o en la mayoría de los casos), es mejor ser explícito con las variables.</p>
+<div><p><strong>Nota</strong>: Es importante recordar que aunque <code class="docutils literal notranslate"><span class="pre">*args</span></code> y <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> son útiles, se recomienda ser explícito en la definición de tus funciones siempre que sea posible para hacer el código más legible y mantenible.</p>
 </div></blockquote>
 </section>
-<section id="decoradores">
-<h3><span class="section-number">6.2.4. </span>Decoradores<a class="headerlink" href="#decoradores" title="Permalink to this heading">#</a></h3>
-<p>Python tiene una característica interesante llamada decoradores para agregar funcionalidad a un código existente.
-Esto también se llama metaprogramación ya que una parte del programa intenta modificar otra parte del programa en tiempo de compilación.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">nueva_funcion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La funcion Sumar es llamada!!!&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">nueva_funcion</span>
-
-
-<span class="nd">@debug</span> <span class="c1"># decorador</span>
-<span class="k">def</span> <span class="nf">Sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La funcion Sumar es llamada!!!
-12
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="modulos">
-<h2><span class="section-number">6.3. </span>Módulos<a class="headerlink" href="#modulos" title="Permalink to this heading">#</a></h2>
-<p>Si sales del intérprete de Python y vuelves a entrar, las definiciones que habías hecho (funciones y variables) se pierden. Por lo tanto, si quieres escribir un programa más o menos largo, es mejor que utilices un editor de texto para preparar la entrada para el intérprete y ejecutarlo con ese archivo como entrada. Esto se conoce como crear un <code class="docutils literal notranslate"><span class="pre">script</span></code>. A medida que tu programa crezca, quizás quieras separarlo en varios archivos para que el mantenimiento sea más sencillo. Quizás también quieras usar una función útil que has escrito en distintos programas sin copiar su definición en cada programa.</p>
-<p>Un <strong>módulo</strong> (o biblioteca o librería) es una colección de definiciones de variables, funciones y tipos (entre otras cosas) que pueden ser importadas para ser usadas desde cualquier programa.</p>
-<p>Veamos un ejemplo, lo primero es crear y guardar nuestro módulo <code class="docutils literal notranslate"><span class="pre">modulo_01.py</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> modulo_01.py
-<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing modulo_01.py
-</pre></div>
-</div>
-</div>
-</div>
-<p>Para usar este módulo, usamos la palabra clave <code class="docutils literal notranslate"><span class="pre">import</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importar modulo </span>
-<span class="kn">import</span> <span class="nn">modulo_01</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># acceder a las funciones del modulo</span>
-<span class="n">modulo_01</span><span class="o">.</span><span class="n">sumar</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.5
-</pre></div>
-</div>
-</div>
-</div>
-<p>Python viene con una biblioteca de <strong>módulos estándar</strong>, descrita en un documento separado, la Referencia de la Biblioteca de Python . Algunos módulos se integran en el intérprete; estos proveen acceso a operaciones que no son parte del núcleo del lenguaje pero que sin embargo están integrados, tanto por eficiencia como para proveer acceso a primitivas del sistema operativo, como llamadas al sistema.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-
-<span class="n">resultado</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># retorna logaritmo base 2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># Output: 2.321928094887362</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.321928094887362
-</pre></div>
-</div>
-</div>
-</div>
-<p>Python tiene una tonelada de módulos estándar fácilmente disponibles para su uso. En el siguiente <a class="reference external" href="https://docs.python.org/3/library/">link</a> se deja la documentación oficial de las librerías nativas de Python.</p>
 </section>
 <section id="ejercicios">
-<h2><span class="section-number">6.4. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this heading">#</a></h2>
 <p><strong>Ejercicio 01</strong></p>
 <p>Escriba una función que se llame <code class="docutils literal notranslate"><span class="pre">saludar</span></code> que reciba como input un string <strong>s</strong> y devuelva como output “Hola + valor de s”.</p>
 <ul class="simple">
@@ -864,17 +784,16 @@ Esto también se llama metaprogramación ya que una parte del programa intenta m
 </div>
 </div>
 <p><strong>Ejercicio 03</strong></p>
-<p>Escriba una función que se llame <code class="docutils literal notranslate"><span class="pre">es_primo</span></code> que reciba como input un número entero <strong>n</strong> y devuelva como output <em>True</em> si el número es primo, y <em>False</em> en otro caso.</p>
-<ul class="simple">
-<li><p><strong>Ejemplo</strong>:</p>
-<ul>
-<li><p><em>es_primo(1)</em> = False</p></li>
-<li><p><em>es_primo(2)</em> = True</p></li>
-<li><p><em>es_primo(3)</em> = True</p></li>
-<li><p><em>es_primo(4)</em> = False</p></li>
-</ul>
-</li>
-</ul>
+<p>Escriba la función <code class="docutils literal notranslate"><span class="pre">invertir_digitos(n)</span></code> que reciba un número entero n y entregue como resultado el número <code class="docutils literal notranslate"><span class="pre">n</span></code> con los dígitos en el orden inverso:</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span> &gt;&gt;&gt; invertir_digitos(142)
+241
+</pre></div>
+</div>
+<p>A continuación, escriba un programa que indique si el número ingresado es palíndromo o no, usando la función <code class="docutils literal notranslate"><span class="pre">invertir_digitos</span></code>:</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>Ingrese n: 81418
+Es palíndromo
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
@@ -883,6 +802,63 @@ Esto también se llama metaprogramación ya que una parte del programa intenta m
 </div>
 </div>
 <p><strong>Ejercicio 04</strong></p>
+<p>Muchos de estos programas sólo tenían pequeñas diferencias entre ellos, por lo que había que repetir mucho código al escribirlos. En este ejercicio, usted deberá implementar algunos de esos programas como funciones, reutilizando componentes para evitar escribir código repetido.</p>
+<p><strong>Ejercicio 041</strong></p>
+<p>Escriba la función <code class="docutils literal notranslate"><span class="pre">es_divisible(n,</span> <span class="pre">d)</span></code> que indique si <code class="docutils literal notranslate"><span class="pre">n</span></code> es divisible por <code class="docutils literal notranslate"><span class="pre">d</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">es_divisible</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_divisible</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p><strong>Ejercicio 042</strong></p>
+<p>Usando la función es_divisible, escriba una función <code class="docutils literal notranslate"><span class="pre">es_primo(n)</span></code> que determine si un número es primo o no:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">es_primo</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_primo</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p><strong>Ejercicio 043</strong></p>
+<p>Usando la función <code class="docutils literal notranslate"><span class="pre">es_primo</span></code>, escriba la función <code class="docutils literal notranslate"><span class="pre">i_esimo_primo(i)</span></code> que entregue el i-ésimo número primo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i_esimo_primo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i_esimo_primo</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="go">71</span>
+</pre></div>
+</div>
+<p><strong>Ejercicio 044</strong></p>
+<p>Usando las funciones anteriores, escriba la función <code class="docutils literal notranslate"><span class="pre">primeros_primos(m)</span></code> que entregue una lista de los primeros m números primos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">primeros_primos</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]</span>
+</pre></div>
+</div>
+<p><strong>Ejercicio 045</strong></p>
+<p>Usando las funciones anteriores, escriba la función <code class="docutils literal notranslate"><span class="pre">primos_hasta(m)</span></code> que entregue una lista de los primos menores o iguales que <code class="docutils literal notranslate"><span class="pre">m</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">primos_hasta</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
+<span class="go">[2, 3, 5, 7, 11, 13, 17, 19]</span>
+</pre></div>
+</div>
+<p><strong>Ejercicio 046</strong></p>
+<p>Un <a class="reference external" href="https://es.wikipedia.org/wiki/N%C3%BAmero_primo_de_Mersenne">primo de Mersenne</a> es un número primo de la forma <span class="math notranslate nohighlight">\(2p−1\)</span>.
+Una propiedad conocida de los primos de Mersenne es que <span class="math notranslate nohighlight">\(p\)</span> debe ser también un número primo.</p>
+<p>Escriba la función <code class="docutils literal notranslate"><span class="pre">mersenne</span></code> que pregunte al usuario un número <span class="math notranslate nohighlight">\(n\)</span>, y muestre como salida los primeros <code class="docutils literal notranslate"><span class="pre">n</span></code> primos de Mersenne:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mersenne</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="go">7</span>
+<span class="go">31</span>
+<span class="go">127</span>
+<span class="go">8191</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio 05</strong></p>
 <p>La suma natural de los primeros <strong>n</strong> números naturales esta dado por:
 $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k = 1 +2 +3 +...+n = \dfrac{n(n+1)}{2} \)</span>$</p>
 <p>Escriba una función que se llame <code class="docutils literal notranslate"><span class="pre">suma_numeros_naturales</span></code> que reciba como input un número entero <strong>n</strong> y devuelva como output la suma de los primeros <strong>n</strong> números naturales.</p>
@@ -904,7 +880,7 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 05</strong></p>
+<p><strong>Ejercicio 06</strong></p>
 <p>En los siglos XVII y XVIII, James Gregory y Gottfried Leibniz descubrieron una serie infinita que sirve para calcular <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\displaystyle \pi = 4 \sum_{k=1}^{\infty}\dfrac{(-1)^{k+1}}{2k-1} = 4(1-\dfrac{1}{3}+\dfrac{1}{5}-\dfrac{1}{7} + ...) \]</div>
@@ -924,7 +900,7 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 06</strong></p>
+<p><strong>Ejercicio 07</strong></p>
 <p>Euler realizó varios aportes en relación a <span class="math notranslate nohighlight">\(e\)</span>, pero no fue hasta 1748 cuando publicó su <strong>Introductio in analysin infinitorum</strong> que dio un tratamiento definitivo a las ideas sobre <span class="math notranslate nohighlight">\(e\)</span>. Allí mostró que:</p>
 <p>En los siglos XVII y XVIII, James Gregory y Gottfried Leibniz descubrieron una serie infinita que sirve para calcular π:</p>
 <div class="math notranslate nohighlight">
@@ -950,7 +926,7 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 07</strong></p>
+<p><strong>Ejercicio 08</strong></p>
 <p>Sea <span class="math notranslate nohighlight">\(\sigma(n)\)</span> definido como la suma de los divisores propios de <span class="math notranslate nohighlight">\(n\)</span> (números menores que n que se dividen en <span class="math notranslate nohighlight">\(n\)</span>).</p>
 <p>Los <a class="reference external" href="https://en.wikipedia.org/wiki/Amicable_numbers">números amigos</a> son  enteros positivos <span class="math notranslate nohighlight">\(n_1\)</span> y <span class="math notranslate nohighlight">\(n_2\)</span> tales que la suma de los divisores propios de uno es igual al otro número y viceversa, es decir, <span class="math notranslate nohighlight">\(\sigma(n_1)=\sigma(n_2)\)</span> y <span class="math notranslate nohighlight">\(\sigma(n_2)=\sigma(n_1)\)</span>.</p>
 <p>Por ejemplo, los números 220 y 284 son números amigos.</p>
@@ -979,7 +955,7 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 08</strong></p>
+<p><strong>Ejercicio 09</strong></p>
 <p>La <a class="reference external" href="https://en.wikipedia.org/wiki/Collatz_conjecture">conjetura de Collatz</a>, conocida también como conjetura <span class="math notranslate nohighlight">\(3n+1\)</span> o conjetura de Ulam (entre otros nombres), fue enunciada por el matemático Lothar Collatz en 1937, y a la fecha no se ha resuelto.</p>
 <p>Sea la siguiente operación, aplicable a cualquier número entero positivo:</p>
 <ul class="simple">
@@ -998,7 +974,7 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
 </div>
 </div>
 </div>
-<p><strong>Ejercicio 09</strong></p>
+<p><strong>Ejercicio 10</strong></p>
 <p>La <a class="reference external" href="https://en.wikipedia.org/wiki/Goldbach%27s_conjecture">conjetura de Goldbach</a> es uno de los problemas abiertos más antiguos en matemáticas. Concretamente, G.H. Hardy, en 1921, en su famoso discurso pronunciado en la Sociedad Matemática de Copenhague, comentó que probablemente la conjetura de Goldbach no es solo uno de los problemas no resueltos más difíciles de la teoría de números, sino de todas las matemáticas. Su enunciado es el siguiente:</p>
 <blockquote>
 <div><p>Todo número par mayor que 2 puede escribirse como suma de dos números primos - Christian Goldbach (1742)</p>
@@ -1069,11 +1045,11 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
       </div>
     </a>
     <a class="right-next"
-       href="funcional.html"
+       href="error.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Programación Funcional</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Excepciones</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1092,16 +1068,14 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">6.1. Funciones en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">6.1. Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-de-escribir-una-funcion">6.2. Formas de escribir una función</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursion">6.2.1. Recursion</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda">6.2.2. Lambda</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocupando-args-kwargs">6.2.3. Ocupando args  &amp; kwargs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoradores">6.2.4. Decoradores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilizando-args-y-kwargs">6.2.3. Utilizando <code class="docutils literal notranslate"><span class="pre">*args</span></code> y <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modulos">6.3. Módulos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.4. Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.3. Ejercicios</a></li>
 </ul>
   </nav></div>
 
@@ -1149,8 +1123,8 @@ By Francisco Alfaro
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

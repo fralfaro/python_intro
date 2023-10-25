@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>9. Buenas prácticas &#8212; Introducción a Python</title>
+    <title>8. Buenas prácticas &#8212; Introducción a Python</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -70,11 +70,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/buenas_practicas';</script>
-    <link rel="shortcut icon" href="../_static/logo_python.svg"/>
+    <link rel="shortcut icon" href="../_static/icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Solución Ejercicios" href="solucion.html" />
-    <link rel="prev" title="8. Excepciones" href="error.html" />
+    <link rel="prev" title="7. Excepciones" href="error.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,13 +153,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/python.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/python.svg" class="logo__image only-light" alt="Introducción a Python - Home"/>
+    <script>document.write(`<img src="../_static/python.svg" class="logo__image only-dark" alt="Introducción a Python - Home"/>`);</script>
   
   
 </a></div>
@@ -181,11 +181,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="basico.html">3. Nomenclatura</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flujo.html">4. Control de Flujo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estructura.html">5. Estructura de datos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones y módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcional.html">7. Programación Funcional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="error.html">8. Excepciones</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Buenas prácticas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solucion.html">10. Solución Ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">7. Excepciones</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Buenas prácticas</a></li>
 </ul>
 
     </div>
@@ -378,27 +376,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estilo-de-codificacion">9.1. Estilo de codificación</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">9.1.1. Variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-de-codigos">9.1.2. Lineas de códigos</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comentarios">9.1.3. Comentarios</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identacion">9.1.4. Identación</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulacion-de-listas">9.1.5. Manipulación de listas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#especificar-tipo-de-error">9.1.6. Especificar tipo de error</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicitar-dependencias-de-una-funcion">9.1.7. Explicitar dependencias de una función</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escritura-dinamica-y-estatica">9.1.8. Escritura dinámica y estática</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-de-codigo">9.1.9. Documentación de código</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estilo-de-codificacion">8.1. Estilo de codificación</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">8.1.1. Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-de-codigos">8.1.2. Lineas de códigos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comentarios">8.1.3. Comentarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identacion">8.1.4. Identación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulacion-de-listas">8.1.5. Manipulación de listas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#especificar-tipo-de-error">8.1.6. Especificar tipo de error</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicitar-dependencias-de-una-funcion">8.1.7. Explicitar dependencias de una función</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escritura-dinamica-y-estatica">8.1.8. Escritura dinámica y estática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-de-codigo">8.1.9. Documentación de código</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zen-de-python">9.2. Zen de python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-consejos">9.3. Más consejos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entender-programacion-multiparadigma">9.3.1. Entender programación multiparadigma</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-s-o-l-i-d">9.3.2. Principio S.O.L.I.D</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-de-diseno">9.3.3. Patrones de diseño</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">9.3.4. Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zen-de-python">8.2. Zen de python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-consejos">8.3. Más consejos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entender-programacion-multiparadigma">8.3.1. Entender programación multiparadigma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-s-o-l-i-d">8.3.2. Principio S.O.L.I.D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-de-diseno">8.3.3. Patrones de diseño</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">8.3.4. Lecturas recomendadas</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">9.4. Referencias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">8.4. Referencias</a></li>
 </ul>
             </nav>
         </div>
@@ -412,14 +410,14 @@ document.write(`
                   
   <p><a href="https://colab.research.google.com/github/fralfaro/python_intro/blob/main/docs/buenas_practicas.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="buenas-practicas">
-<h1><span class="section-number">9. </span>Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permalink to this heading">#</a></h1>
 <p><a id='c1'></a></p>
 <section id="estilo-de-codificacion">
-<h2><span class="section-number">9.1. </span>Estilo de codificación<a class="headerlink" href="#estilo-de-codificacion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>Estilo de codificación<a class="headerlink" href="#estilo-de-codificacion" title="Permalink to this heading">#</a></h2>
 <img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/pep8.png" width="240" height="240" align="center"/><p>Además de una correcta y ordenada estructura general que deben tener los programa, es conveniente mantener ciertas buenas prácticas de codificación y el estilo de codificación recomendado. Estas normas no son obligatorias, como lo es la propia sintaxis del lenguaje, pero conviene <a class="reference external" href="https://legacy.python.org/dev/peps/pep-0008/">seguir las recomendaciones</a> de los desarrolladores de Python para facilitar la lectura del programa y ayudar a encontrar posibles errores.</p>
 <p>A continuación, se presentan algunas buenas prácticas relacionadas con es estilo de codificación:</p>
 <section id="variables">
-<h3><span class="section-number">9.1.1. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.1. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h3>
 <p>Cuando sea posible, define variables con nombres que tengan algún sentido o que puedas identificar fácilmente, no importa que sean más largas. Por ejemplo, en un programa podríamos escribir:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -452,7 +450,7 @@ document.write(`
 </div>
 </section>
 <section id="lineas-de-codigos">
-<h3><span class="section-number">9.1.2. </span>Lineas de códigos<a class="headerlink" href="#lineas-de-codigos" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.2. </span>Lineas de códigos<a class="headerlink" href="#lineas-de-codigos" title="Permalink to this heading">#</a></h3>
 <p>Las líneas de codigo no deben ser muy largas, como mucho 72 caracteres. Si se tiene una línea larga, se puede cortar con una barra invertida (<code class="docutils literal notranslate"><span class="pre">\</span></code>) y continuar en la siguiente línea:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -469,7 +467,7 @@ document.write(`
 </div>
 </section>
 <section id="comentarios">
-<h3><span class="section-number">9.1.3. </span>Comentarios<a class="headerlink" href="#comentarios" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.3. </span>Comentarios<a class="headerlink" href="#comentarios" title="Permalink to this heading">#</a></h3>
 <p>Los comentarios son muy importantes al escribir un programa. Describen lo que está sucediendo dentro de un programa, para que una persona que mira el código fuente no tenga dificultades para descifrarlo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -496,7 +494,7 @@ document.write(`
 </div>
 </section>
 <section id="identacion">
-<h3><span class="section-number">9.1.4. </span>Identación<a class="headerlink" href="#identacion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.4. </span>Identación<a class="headerlink" href="#identacion" title="Permalink to this heading">#</a></h3>
 <p>Dentro de paréntesis, corchetes o llaves, no dejar espacios inmediatamente dentro de ellos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -589,7 +587,7 @@ document.write(`
 </div>
 </section>
 <section id="manipulacion-de-listas">
-<h3><span class="section-number">9.1.5. </span>Manipulación de listas<a class="headerlink" href="#manipulacion-de-listas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.5. </span>Manipulación de listas<a class="headerlink" href="#manipulacion-de-listas" title="Permalink to this heading">#</a></h3>
 <p>Aunque combinar iterables con elementos de control de flujo para manipular listas es muy sencillo con Python, hay métodos específicos más eficientes para hacer lo mismo. Pensemos el fitrado de datos de una lista:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -628,7 +626,7 @@ document.write(`
 </div>
 </section>
 <section id="especificar-tipo-de-error">
-<h3><span class="section-number">9.1.6. </span>Especificar tipo de error<a class="headerlink" href="#especificar-tipo-de-error" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.6. </span>Especificar tipo de error<a class="headerlink" href="#especificar-tipo-de-error" title="Permalink to this heading">#</a></h3>
 <p>Cuando se ocupa <code class="docutils literal notranslate"><span class="pre">try/except</span></code>, es necesario especificar el tipo de error que se está cometiendo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -672,7 +670,7 @@ document.write(`
 </div>
 </section>
 <section id="explicitar-dependencias-de-una-funcion">
-<h3><span class="section-number">9.1.7. </span>Explicitar dependencias de una función<a class="headerlink" href="#explicitar-dependencias-de-una-funcion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.7. </span>Explicitar dependencias de una función<a class="headerlink" href="#explicitar-dependencias-de-una-funcion" title="Permalink to this heading">#</a></h3>
 <p>Siempre es mejor definir las variables dentro de una función y no dejar variables globales.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -720,7 +718,7 @@ document.write(`
 </div>
 </section>
 <section id="escritura-dinamica-y-estatica">
-<h3><span class="section-number">9.1.8. </span>Escritura dinámica y estática<a class="headerlink" href="#escritura-dinamica-y-estatica" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.8. </span>Escritura dinámica y estática<a class="headerlink" href="#escritura-dinamica-y-estatica" title="Permalink to this heading">#</a></h3>
 <p>Con Python 3 se puede especificar el tipo de parámetro y el tipo de retorno de una función. Se definen dos conceptos claves:</p>
 <ul class="simple">
 <li><p><strong>Escritura  dinámica</strong>: no se especifican los atributos de los inputs ni de los ouputs</p></li>
@@ -785,7 +783,7 @@ document.write(`
 <p>Para validar los tipos de datos son los correctos, se deben ocupar librerías especializadas en la validación de datos (por ejemplo <code class="docutils literal notranslate"><span class="pre">pydantic</span></code>).</p>
 </section>
 <section id="documentacion-de-codigo">
-<h3><span class="section-number">9.1.9. </span>Documentación de código<a class="headerlink" href="#documentacion-de-codigo" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.1.9. </span>Documentación de código<a class="headerlink" href="#documentacion-de-codigo" title="Permalink to this heading">#</a></h3>
 <p>Casi tan importante como la escritura de código, es su correcta documentación, una parte fundamental de cualquier programa que a menudo se infravalora o simplemente se ignora. Aparte de los comentarios entre el código explicando cómo funciona, el elemento básico de documentación de Python es el Docstring o cadena de documentación, que ya hemos visto. Simplemente es una cadena de texto con triple comillas que se coloca justo después de la definición de función o clase que sirve de documentación a ese elemento.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -902,17 +900,22 @@ potencia(x, y)
 </section>
 </section>
 <section id="zen-de-python">
-<h2><span class="section-number">9.2. </span>Zen de python<a class="headerlink" href="#zen-de-python" title="Permalink to this heading">#</a></h2>
-<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/zen.jpg" width="480" height="240" align="center"/>
-<p>El <strong>Zen</strong> de Python te dará la guía para decidir sobre que hacer con tu código, no te dice como lo debes escribir, sino como debes pensar si estas programando en Python.</p>
-<p>Principios importantes:</p>
-<ul class="simple">
-<li><p><strong>Explícito es mejor que implícito</strong>: Que no se asuma nada, asegúrate que las cosas sean.</p></li>
-<li><p><strong>Simple es mejor que complejo</strong>: Evita código complejo, código espagueti o que hace mas cosas para poder hacer una simple tarea.</p></li>
-<li><p><strong>Plano es mejor que anidado</strong>: Si tu código tiene mas de 3 niveles de identación, deberías mover parte de ese código a una función.</p></li>
-<li><p><strong>Los errores nunca deberían pasar silenciosamente</strong>: No uses un Try/Except sin definir que tipo de error vas a cachar, viene de la mano con Explicito es mejor que implícito.</p></li>
-<li><p><strong>Si la implementación es difícil de explicar, es mala idea</strong>.</p></li>
-</ul>
+<h2><span class="section-number">8.2. </span>Zen de python<a class="headerlink" href="#zen-de-python" title="Permalink to this heading">#</a></h2>
+<img src="https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/zen.jpg" width="300" align="center"/>
+<p>El <strong>Zen de Python</strong> es un conjunto de principios y directrices que guían la escritura de código en el lenguaje de programación Python. Estas recomendaciones son presentadas de manera humorística y filosófica en el documento <code class="docutils literal notranslate"><span class="pre">PEP</span> <span class="pre">20</span></code> (Python Enhancement Proposal 20), que se puede obtener al ejecutar <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">this</span></code> en un intérprete de Python. Aquí tienes algunas de las principales recomendaciones del Zen de Python:</p>
+<ol class="arabic simple">
+<li><p><strong>Legibilidad cuenta:</strong> El código debe ser legible por los seres humanos y debe ser claro, conciso y fácil de entender.</p></li>
+<li><p><strong>Explícito es mejor que implícito:</strong> Es preferible que el código sea explícito en lugar de depender de comportamientos implícitos que pueden ser confusos.</p></li>
+<li><p><strong>Simple es mejor que complejo:</strong> Debes tratar de escribir código sencillo en lugar de complejo. La simplicidad facilita la depuración y el mantenimiento.</p></li>
+<li><p><strong>Plano es mejor que anidado:</strong> Evita anidar demasiados bloques de código. Niveles excesivos de anidación pueden hacer que el código sea difícil de seguir.</p></li>
+<li><p><strong>La legibilidad cuenta:</strong> Se repite la idea de que la legibilidad del código es crucial. Si el código es claro y legible, es más fácil de mantener y depurar.</p></li>
+<li><p><strong>Los errores nunca deben pasar en silencio:</strong> Los errores o excepciones no deben ser ignorados. Deben manejarse de manera adecuada y, si es necesario, registrarse para su posterior análisis.</p></li>
+<li><p><strong>En la duda, sigue el Zen de Python:</strong> Cuando tengas dudas sobre cómo escribir código de Python, consulta el Zen de Python para obtener orientación.</p></li>
+<li><p><strong>Hermoso es mejor que feo:</strong> Se fomenta la escritura de código limpio y elegante en lugar de código confuso o “feo”.</p></li>
+<li><p><strong>Nunca te pases de listo:</strong> Evita escribir código excesivamente complejo o trucos innecesarios. La claridad es más importante que la astucia.</p></li>
+<li><p><strong>La simplicidad vence a la complejidad:</strong> Enfrenta los problemas de manera sencilla y evita soluciones innecesariamente complicadas.</p></li>
+</ol>
+<p>Estas son solo algunas de las recomendaciones del Zen de Python. Estas pautas ayudan a los programadores a escribir código Python de manera consistente y a seguir buenas prácticas de programación.</p>
 <p>También, podemos ver el mensaje original del zen de python, ejecutando la siguiente linea de comando.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -948,10 +951,10 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
 </div>
 </section>
 <section id="mas-consejos">
-<h2><span class="section-number">9.3. </span>Más consejos<a class="headerlink" href="#mas-consejos" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.3. </span>Más consejos<a class="headerlink" href="#mas-consejos" title="Permalink to this heading">#</a></h2>
 <p>Los consejos que se presentan son de mucha utilidad si usted quiere llevar sus conociminetos de programación al siguiente nivel, sin embargo, el contenido de cada uno amerita un curso por si solo. Se deja recomienda al lector seguir profundizando en estos temas.</p>
 <section id="entender-programacion-multiparadigma">
-<h3><span class="section-number">9.3.1. </span>Entender programación multiparadigma<a class="headerlink" href="#entender-programacion-multiparadigma" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.3.1. </span>Entender programación multiparadigma<a class="headerlink" href="#entender-programacion-multiparadigma" title="Permalink to this heading">#</a></h3>
 <p>Python al ser multiparadigma, nos da una amplia gama de posibilidades de diseñar nuestros códigos. Dentro de estos se destacan:</p>
 <ul class="simple">
 <li><p>Programación orientada a objetos (OOP)</p></li>
@@ -960,12 +963,12 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
 <p>Cuándo ocupar uno o la otra, va a depender de cómo queremos abordar una determinada problemática, puesto que en la mayoría de los casos, se puede pasar de un paradigma a o otro (incluso mezclarlos de ser necesario).</p>
 </section>
 <section id="principio-s-o-l-i-d">
-<h3><span class="section-number">9.3.2. </span>Principio S.O.L.I.D<a class="headerlink" href="#principio-s-o-l-i-d" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.3.2. </span>Principio S.O.L.I.D<a class="headerlink" href="#principio-s-o-l-i-d" title="Permalink to this heading">#</a></h3>
 <p>En ingeniería de software, SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion) es un acrónimo mnemónico introducido por <strong>Robert C. Martin</strong> a comienzos de la década del 2000 que representa cinco principios básicos de la programación orientada a objetos y el diseño. Cuando estos principios se aplican en conjunto es más probable que un desarrollador cree un sistema que sea fácil de mantener y ampliar con el tiempo.</p>
 <p>En el siguiente <a class="reference external" href="https://medium.com/&#64;vubon.roy/solid-principles-with-python-examples-10e1f3d91259">link</a> se deja una guía para poder entender estos conceptos en python.</p>
 </section>
 <section id="patrones-de-diseno">
-<h3><span class="section-number">9.3.3. </span>Patrones de diseño<a class="headerlink" href="#patrones-de-diseno" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.3.3. </span>Patrones de diseño<a class="headerlink" href="#patrones-de-diseno" title="Permalink to this heading">#</a></h3>
 <p>Los patrones de diseño son la base para la búsqueda de soluciones a problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces.</p>
 <blockquote>
 <div><p>Un patrón de diseño es una solución a un problema de diseño.</p>
@@ -979,7 +982,7 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
 <p>En el siguiente <a class="reference external" href="https://refactoring.guru/design-patterns/python">link</a> se deja una guía para poder entender estos conceptos en python.</p>
 </section>
 <section id="lecturas-recomendadas">
-<h3><span class="section-number">9.3.4. </span>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.3.4. </span>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Clean Code: A Handbook of Agile Software</strong> - <em>Robert C. Martin</em> (2009): Habla sobre las buenas prácticas que debe seguir todo buen programador al momento de escribir su código. Si bien el lenguaje de programación emepleado es <code class="docutils literal notranslate"><span class="pre">Java</span></code>, la lógica se extiende a cualquier lenguaje de programación.</p></li>
 <li><p><strong>The Clean Coder: A Code Of Conduct For Professional Programmers</strong> <em>Robert C. Martin</em> (2011): Habla sobre las conductas que debe seguir todo programador. Además de hablar aspectos técnicos como estimación, diseño de código, refactorización y testeos, también nos habla sobre la actitud que un programador debe tener en distintas situaciones laborales.</p></li>
@@ -987,7 +990,7 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">9.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://github.com/zedr/clean-code-python">clean-code-python</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/documenting-python-code/">Documenting Python Code: A Complete Guide</a></p></li>
@@ -1031,17 +1034,8 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Excepciones</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Excepciones</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="solucion.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Solución Ejercicios</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -1058,27 +1052,27 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estilo-de-codificacion">9.1. Estilo de codificación</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">9.1.1. Variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-de-codigos">9.1.2. Lineas de códigos</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comentarios">9.1.3. Comentarios</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identacion">9.1.4. Identación</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulacion-de-listas">9.1.5. Manipulación de listas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#especificar-tipo-de-error">9.1.6. Especificar tipo de error</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicitar-dependencias-de-una-funcion">9.1.7. Explicitar dependencias de una función</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escritura-dinamica-y-estatica">9.1.8. Escritura dinámica y estática</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-de-codigo">9.1.9. Documentación de código</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estilo-de-codificacion">8.1. Estilo de codificación</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">8.1.1. Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-de-codigos">8.1.2. Lineas de códigos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comentarios">8.1.3. Comentarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identacion">8.1.4. Identación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulacion-de-listas">8.1.5. Manipulación de listas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#especificar-tipo-de-error">8.1.6. Especificar tipo de error</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicitar-dependencias-de-una-funcion">8.1.7. Explicitar dependencias de una función</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escritura-dinamica-y-estatica">8.1.8. Escritura dinámica y estática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-de-codigo">8.1.9. Documentación de código</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zen-de-python">9.2. Zen de python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-consejos">9.3. Más consejos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entender-programacion-multiparadigma">9.3.1. Entender programación multiparadigma</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-s-o-l-i-d">9.3.2. Principio S.O.L.I.D</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-de-diseno">9.3.3. Patrones de diseño</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">9.3.4. Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zen-de-python">8.2. Zen de python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-consejos">8.3. Más consejos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entender-programacion-multiparadigma">8.3.1. Entender programación multiparadigma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-s-o-l-i-d">8.3.2. Principio S.O.L.I.D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-de-diseno">8.3.3. Patrones de diseño</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">8.3.4. Lecturas recomendadas</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">9.4. Referencias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">8.4. Referencias</a></li>
 </ul>
   </nav></div>
 
@@ -1126,8 +1120,8 @@ By Francisco Alfaro
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>
