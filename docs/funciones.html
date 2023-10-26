@@ -187,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Funciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error.html">7. Excepciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">8. Buenas prácticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solucion.html">9. Solución Ejercicios</a></li>
 </ul>
 
     </div>
@@ -995,6 +996,169 @@ $<span class="math notranslate nohighlight">\(\displaystyle S = \sum_{k=1}^{n} k
 <li><p>c) Ocupe la función <code class="docutils literal notranslate"><span class="pre">lista_de_primos</span></code> dentro de la función <code class="docutils literal notranslate"><span class="pre">goldbash</span></code>.</p></li>
 <li><p><strong>Ejemplo</strong>: goldbash(4) = (2,2), goldbash(6) = (3,3) , goldbash(8) = (3,5)</p></li>
 </ul>
+<p><strong>Ejercicio 11</strong></p>
+<p>El <a class="reference external" href="https://es.wikipedia.org/wiki/Producto_escalar">producto interno</a> de dos listas de números es la suma de los productos de los términos correspondientes de ambas.</p>
+<p>Por ejemplo, si:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>entonces el producto interno entre <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> es:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">producto_interno(a,</span> <span class="pre">b)</span></code> que entregue el producto interno de <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">producto_interno</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">68</span>
+</pre></div>
+</div>
+</li>
+<li><p>Dos listas de números son <a class="reference external" href="https://es.wikipedia.org/wiki/Producto_escalar#Vectores_ortogonales">ortogonales</a> si su producto interno es cero. Escriba la función <code class="docutils literal notranslate"><span class="pre">son_ortogonales(a,</span> <span class="pre">b)</span></code> que indique si <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code> son ortogonales:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">son_ortogonales</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio 12</strong></p>
+<p>Una fecha puede ser representada como una tupla <code class="docutils literal notranslate"><span class="pre">(anno,</span> <span class="pre">mes,</span> <span class="pre">dia)</span></code>.</p>
+<ol class="arabic">
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">dia_siguiente(f)</span></code> que reciba como parámetro una fecha <code class="docutils literal notranslate"><span class="pre">f</span></code> y entegue cuál es la fecha siguiente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dia_siguiente</span><span class="p">((</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="go">(2011, 4, 12)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dia_siguiente</span><span class="p">((</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="go">(2011, 5, 1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dia_siguiente</span><span class="p">((</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
+<span class="go">(2012, 1, 1)</span>
+</pre></div>
+</div>
+<p>Como recomendación, dentro de su función use una lista con la cantidad de días que tiene cada mes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dias_mes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span>
+        <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">dias_entre(f1,</span> <span class="pre">f2)</span></code> que retorne la cantidad de días que han transcurrido entre las fechas <code class="docutils literal notranslate"><span class="pre">f1</span></code> y <code class="docutils literal notranslate"><span class="pre">f2</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hoy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">navidad</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dias_entre</span><span class="p">(</span><span class="n">hoy</span><span class="p">,</span> <span class="n">navidad</span><span class="p">)</span>
+<span class="go">258</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dias_entre</span><span class="p">(</span><span class="n">hoy</span><span class="p">,</span> <span class="n">hoy</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio 13</strong></p>
+<p>El <a class="reference external" href="https://es.wikipedia.org/wiki/Conjunto_potencia">conjunto potencia</a> de un conjunto <span class="math notranslate nohighlight">\(S\)</span> es el conjunto de todos los subconjuntos de <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>Por ejemplo, el conjunto potencia de <span class="math notranslate nohighlight">\(\{1,2,3\}\)</span>
+es:</p>
+<div class="math notranslate nohighlight">
+\[\{\emptyset,\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}\]</div>
+<p>En Python, un conjunto no puede contener a otros conjuntos, ya que no puede tener elementos mutables, y los conjuntos lo son:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">add</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span>        <span class="c1"># :(</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;console&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">unhashable type: &#39;set&#39;</span>
+</pre></div>
+</div>
+<p>Lo que sí podemos crear es una lista de conjuntos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span>     <span class="c1"># :)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">l</span>
+<span class="go">[set([1, 2])]</span>
+</pre></div>
+</div>
+<p>Escriba la <code class="docutils literal notranslate"><span class="pre">función</span> <span class="pre">conjunto_potencia(s)</span></code> que reciba como parámetro un conjunto cualquiera <code class="docutils literal notranslate"><span class="pre">s</span></code> y retorne su «lista potencia» (la lista de todos sus subconjuntos):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conjunto_potencia</span><span class="p">({</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">})</span>
+<span class="go">[set(), set([6]), set([1]), set([4]), set([6, 1]), set([6, 4]), set([1, 4]), set([6, 1, 4])]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio 14</strong></p>
+<p>Para este ejercicio considere lo siguiente:</p>
+<p>Para obtener la lista de palabras de la oración, puede usar el método <code class="docutils literal notranslate"><span class="pre">split</span></code> de los strings:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;el gato y el pato&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="go">[&#39;el&#39;, &#39;gato&#39;, &#39;y&#39;, &#39;el&#39;, &#39;pato&#39;]</span>
+</pre></div>
+</div>
+<p>Para obtener un string en minúsculas, puede usar el método lower:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Venezuela&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="go">&#39;venezuela&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_letras(oracion)</span></code> que retorne un diccionario asociando a cada letra la cantidad de veces que aparece en la oracion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_letras</span><span class="p">(</span><span class="s1">&#39;El elefante avanza hacia Asia&#39;</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: 8, &#39;c&#39;: 1, &#39;e&#39;: 4, &#39;f&#39;: 1, &#39;h&#39;: 1, &#39;i&#39;: 2, &#39;l&#39;: 2, &#39;n&#39;: 2, &#39;s&#39;: 1, &#39;t&#39;: 1, &#39;v&#39;: 1, &#39;z&#39;: 1}</span>
+</pre></div>
+</div>
+<p>Cada valor del diccionario debe considerar tanto las apariciones en mayúscula como en minúscula de la letra correspondiente. Los espacios deben ser ignorados.</p>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_vocales(oracion)</span></code> que retorne un diccionario asociando a cada vocal la cantidad de veces que aparece en la oracion. Si una vocal no aparece en la oración, de todos modos debe estar en el diccionario asociada al valor 0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_vocales</span><span class="p">(</span><span class="s1">&#39;El elefante avanza hacia Asia&#39;</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: 8, &#39;e&#39;: 4, &#39;i&#39;: 2, &#39;o&#39;: 0, &#39;u&#39;: 0}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_iniciales(oracion)</span></code> que retorne un diccionario asociando a cada letra la cantidad de veces que aparece al principio de una palabra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_iniciales</span><span class="p">(</span><span class="s1">&#39;El elefante avanza hacia Asia&#39;</span><span class="p">)</span>
+<span class="go">{&#39;e&#39;: 2, &#39;h&#39;: 1, &#39;a&#39;: 2}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">contar_iniciales</span><span class="p">(</span><span class="s1">&#39;Varias vacas vuelan sobre Venezuela&#39;</span><span class="p">)</span>
+<span class="go">{&#39;s&#39;: 1&#39;, &#39;v&#39;: 4}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">obtener_largo_palabras(oracion)</span></code> que retorne un diccionario asociando a cada palabra su cantidad de letras:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obtener_largo_palabras</span><span class="p">(</span><span class="s1">&#39;el gato y el pato son amigos&#39;</span><span class="p">)</span>
+<span class="go">{&#39;el&#39;: 2, &#39;son&#39;: 3, &#39;gato&#39;: 4, &#39;y&#39;: 1, &#39;amigos&#39;: 6, &#39;pato&#39;: 4}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">contar_palabras(oracion)</span></code> que retorne un diccionario asociando a cada palabra la cantidad de veces que aparece en la oración:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contar_palabras</span><span class="p">(</span><span class="s1">&#39;El sobre esta sobre el pupitre&#39;</span><span class="p">)</span>
+<span class="go">{&#39;sobre&#39;: 2, &#39;pupitre&#39;: 1, &#39;el&#39;: 2, &#39;esta&#39;: 1}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Escriba la función <code class="docutils literal notranslate"><span class="pre">palabras_repetidas(oracion)</span></code> que retorne una lista con las palabras que están repetidas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">palabras_repetidas</span><span class="p">(</span><span class="s1">&#39;El partido termino cero a cero&#39;</span><span class="p">)</span>
+<span class="go">[&#39;cero&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palabras_repetidas</span><span class="p">(</span><span class="s1">&#39;El sobre esta sobre el mueble&#39;</span><span class="p">)</span>
+<span class="go">[&#39;el&#39;, &#39;sobre&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palabras_repetidas</span><span class="p">(</span><span class="s1">&#39;Ay, ahi no hay pan&#39;</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>

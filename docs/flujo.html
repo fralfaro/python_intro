@@ -187,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="funciones.html">6. Funciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error.html">7. Excepciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buenas_practicas.html">8. Buenas prácticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solucion.html">9. Solución Ejercicios</a></li>
 </ul>
 
     </div>
@@ -386,14 +387,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loop">4.2. While Loop</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-comunes">4.2.1. Patrones Comunes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-acumulacion-con-suma">4.2.1.1. Patrón de acumulación con suma</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-acumulacion-con-multiplicacion">4.2.1.2. Patrón de acumulación con multiplicación</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-conteo">4.2.1.3. Patrón de conteo</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-encontrar-el-mayor-maximo">4.2.1.4. Patrón de encontrar el mayor (máximo)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-encontrar-el-menor-minimo">4.2.1.5. Patrón de encontrar el menor (mínimo)</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-acumulacion-con-suma">4.2.1. Ejemplo:  acumulación con suma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-acumulacion-con-multiplicacion">4.2.2. Ejemplo: acumulación con multiplicación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-conteo">4.2.3. Ejemplo: conteo</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-for-con-rango">4.3. Ciclo for con rango</a></li>
@@ -839,18 +835,8 @@ En el primer programa, se imprime el caso correspondiente (por ejemplo, “caso 
 <li><p>Después de que el bucle se detiene, se imprime el resultado, que es el producto acumulado de <code class="docutils literal notranslate"><span class="pre">m</span></code> y <code class="docutils literal notranslate"><span class="pre">n</span></code> en la variable <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p></li>
 </ol>
 <p>La razón por la que estamos seguros de que el ciclo terminará en algún momento es que la condición del bucle <code class="docutils literal notranslate"><span class="pre">while</span></code> se verifica en cada iteración, y <code class="docutils literal notranslate"><span class="pre">m</span></code> se reduce en 1 en cada iteración. Dado que <code class="docutils literal notranslate"><span class="pre">m</span></code> se inicializa con el valor 4, y en cada iteración se reduce en 1, eventualmente alcanzará el valor 0 después de 4 iteraciones, lo que hará que la condición <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> sea falsa y el ciclo se detendrá. Por lo tanto, podemos estar seguros de que el ciclo terminará.</p>
-<section id="patrones-comunes">
-<h3><span class="section-number">4.2.1. </span>Patrones Comunes<a class="headerlink" href="#patrones-comunes" title="Permalink to this heading">#</a></h3>
-<p>Un patrón es una solución que puede ser aplicada a distintos problemas o situaciones, con ligeros cambios.</p>
-<ol class="arabic simple">
-<li><p><strong>Patrón de acumulación con suma.</strong></p></li>
-<li><p><strong>Patrón de acumulación con multiplicación.</strong></p></li>
-<li><p><strong>Patrón de conteo.</strong></p></li>
-<li><p><strong>Patrón de encontrar el mayor (máximo).</strong></p></li>
-<li><p><strong>Patrón de encontrar el menor (mínimo).</strong></p></li>
-</ol>
-<section id="patron-de-acumulacion-con-suma">
-<h4><span class="section-number">4.2.1.1. </span>Patrón de acumulación con suma<a class="headerlink" href="#patron-de-acumulacion-con-suma" title="Permalink to this heading">#</a></h4>
+<section id="ejemplo-acumulacion-con-suma">
+<h3><span class="section-number">4.2.1. </span>Ejemplo:  acumulación con suma<a class="headerlink" href="#ejemplo-acumulacion-con-suma" title="Permalink to this heading">#</a></h3>
 <p>Escriba un programa que reciba como entrada un número entero. El programa debe mostrar el resultado de la suma de los números al cuadrado desde el <span class="math notranslate nohighlight">\(1\)</span> hasta el valor ingresado.
 $<span class="math notranslate nohighlight">\(
 1^2+2^2+\ldots+(n-1)^2+n^2
@@ -882,18 +868,11 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 </div>
-<p><strong>Estructura del patrón de acumulación con suma</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">condición_del_ciclo</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#calcular lo que se quiere acumular</span>
-    <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">+</span> <span class="n">n</span>
-</pre></div>
-</div>
 </section>
-<section id="patron-de-acumulacion-con-multiplicacion">
-<h4><span class="section-number">4.2.1.2. </span>Patrón de acumulación con multiplicación<a class="headerlink" href="#patron-de-acumulacion-con-multiplicacion" title="Permalink to this heading">#</a></h4>
+<section id="ejemplo-acumulacion-con-multiplicacion">
+<h3><span class="section-number">4.2.2. </span>Ejemplo: acumulación con multiplicación<a class="headerlink" href="#ejemplo-acumulacion-con-multiplicacion" title="Permalink to this heading">#</a></h3>
 <p>Escriba una programa que calcule el factorial de un número <span class="math notranslate nohighlight">\(n\)</span> ingresada como entrada:
-<span class="math notranslate nohighlight">\(3! = 1\cdot 2 \cdot 3\)</span></p>
+<span class="math notranslate nohighlight">\(10! = 1\cdot 2 \cdot 3 ... \cdot 10\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solicita al usuario ingresar un número entero</span>
@@ -921,16 +900,9 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 </div>
-<p><strong>Estructura del patrón de acumulación con multiplicación</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">producto</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">condición_del_ciclo</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#calcular lo que se quiere acumular</span>
-    <span class="n">producto</span> <span class="o">=</span> <span class="n">producto</span> <span class="o">*</span> <span class="n">n</span>
-</pre></div>
-</div>
 </section>
-<section id="patron-de-conteo">
-<h4><span class="section-number">4.2.1.3. </span>Patrón de conteo<a class="headerlink" href="#patron-de-conteo" title="Permalink to this heading">#</a></h4>
+<section id="ejemplo-conteo">
+<h3><span class="section-number">4.2.3. </span>Ejemplo: conteo<a class="headerlink" href="#ejemplo-conteo" title="Permalink to this heading">#</a></h3>
 <p>Escriba un programa que solicite un número entero y calcule cuantos números son divisibles por 3 o 5.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -960,95 +932,6 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 </div>
-<p><strong>Estructura del patrón de conteo</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">condición_del_ciclo</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">condición_para_contar</span><span class="p">):</span>
-        <span class="n">contador</span> <span class="o">=</span> <span class="n">contador</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</section>
-<section id="patron-de-encontrar-el-mayor-maximo">
-<h4><span class="section-number">4.2.1.4. </span>Patrón de encontrar el mayor (máximo)<a class="headerlink" href="#patron-de-encontrar-el-mayor-maximo" title="Permalink to this heading">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir el rango de números</span>
-<span class="n">inicio</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">fin</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Cambia esto según el rango que desees</span>
-
-<span class="c1"># Inicializar el valor máximo</span>
-<span class="n">maximo</span> <span class="o">=</span> <span class="n">inicio</span>
-
-<span class="c1"># Inicializar el contador</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">inicio</span>
-
-<span class="c1"># Utilizar un ciclo while con range</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">maximo</span><span class="p">:</span>
-        <span class="n">maximo</span> <span class="o">=</span> <span class="n">i</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="c1"># Mostrar el valor máximo</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor máximo en el rango de </span><span class="si">{</span><span class="n">inicio</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">fin</span><span class="si">}</span><span class="s2"> es: </span><span class="si">{</span><span class="n">maximo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor máximo en el rango de 1 a 10 es: 10
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Estructura del patrón de encontrar el mayor</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mayor</span> <span class="o">=</span> <span class="n">numero_muy_chico</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">condición_del_ciclo</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#determinar lo que se quiere comparar</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">mayor</span><span class="p">:</span>
-        <span class="n">mayor</span> <span class="o">=</span> <span class="n">n</span>
-</pre></div>
-</div>
-</section>
-<section id="patron-de-encontrar-el-menor-minimo">
-<h4><span class="section-number">4.2.1.5. </span>Patrón de encontrar el menor (mínimo)<a class="headerlink" href="#patron-de-encontrar-el-menor-minimo" title="Permalink to this heading">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir el rango (por ejemplo, de 1 a 10)</span>
-<span class="n">inicio</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">fin</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="c1"># Inicializar el valor mínimo con el primer número del rango</span>
-<span class="n">minimo</span> <span class="o">=</span> <span class="n">inicio</span>
-
-<span class="c1"># Inicializar el contador para recorrer el rango</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">inicio</span> <span class="o">+</span> <span class="mi">1</span>
-
-<span class="c1"># Utilizar un ciclo while para encontrar el valor mínimo</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
-    <span class="n">numero</span> <span class="o">=</span> <span class="n">i</span>  <span class="c1"># Valor actual</span>
-    <span class="k">if</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="n">minimo</span><span class="p">:</span>
-        <span class="n">minimo</span> <span class="o">=</span> <span class="n">numero</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="c1"># Mostrar el valor mínimo</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor mínimo en el rango de </span><span class="si">{</span><span class="n">inicio</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">fin</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">minimo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor mínimo en el rango de 1 a 10 es 1
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Estructura del patrón de encontrar el menor</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">menor</span> <span class="o">=</span> <span class="n">numero_muy_grande</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">condición_del_ciclo</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#determinar lo que se quiere comparar</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">menor</span><span class="p">:</span>
-        <span class="n">menor</span> <span class="o">=</span> <span class="n">n</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 <section id="ciclo-for-con-rango">
@@ -1424,6 +1307,11 @@ El triangulo es equilatero.
 </table>
 <p>El índice de masa corporal es el cuociente entre el peso del individuo en kilos y el cuadrado de su estatura en metros (<span class="math notranslate nohighlight">\(IMC = \dfrac{peso}{estatura^2} \)</span>).</p>
 <p>Escriba un programa que reciba como entrada la estatura, el peso y la edad de una persona, y le entregue su condición de riesgo.</p>
+<p><strong>ejemplos</strong></p>
+<ul class="simple">
+<li><p>Si el usuario ingresa una estatura de 1.75 metros, un peso de 70 kilogramos y una edad de 30 años, el programa mostrará: “La condición de riesgo es: medio”.</p></li>
+<li><p>Si el usuario ingresa una estatura de 1.65 metros, un peso de 90 kilogramos y una edad de 50 años, el programa mostrará: “La condición de riesgo es: alto”.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
@@ -1598,20 +1486,14 @@ El triangulo es equilatero.
 </div>
 </div>
 <p><strong>Ejercicio 04</strong></p>
-<p>Calcula la suma de los cuadrados de los números en un rango dado. Utiliza la declaración <code class="docutils literal notranslate"><span class="pre">range</span></code> para resolver este problema.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Ejercicio 05</strong></p>
-<p>Calcula la suma de los cuadrados de los números en un rango dado. Utiliza la declaración <code class="docutils literal notranslate"><span class="pre">range</span></code> para resolver este problema.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ingrese</span> <span class="n">un</span> <span class="n">número</span><span class="p">:</span> <span class="mi">123456</span>
-<span class="n">El</span> <span class="n">número</span> <span class="n">tiene</span> <span class="mi">3</span> <span class="n">dígitos</span> <span class="n">pares</span><span class="o">.</span>
-</pre></div>
-</div>
+<p>Escribe un programa que solicite al usuario un número entero positivo y luego calcule la suma de los cuadrados de todos los números desde 1 hasta el número ingresado. Utiliza la declaración <code class="docutils literal notranslate"><span class="pre">range</span></code> para generar los números en el rango y luego suma los cuadrados de esos números.</p>
+<p><strong>Ejemplos</strong></p>
+<ol class="arabic">
+<li><p>Si el usuario ingresa el número 4, el programa calculará la suma de los cuadrados de los números desde 1 hasta 4 de la siguiente manera:</p>
+<p>Suma = 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 30</p>
+<p>El programa mostrará: “La suma de los cuadrados de los números en el rango de 1 a 4 es 30.”</p>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
@@ -1638,7 +1520,7 @@ El triangulo es equilatero.
 <p><strong>Ejercicio 02</strong></p>
 <p>Calcula la suma de los números en un rango dado (por ejemplo, de 1 a 10), pero omite los múltiplos de 3 utilizando la declaración <code class="docutils literal notranslate"><span class="pre">continue</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ingrese</span> <span class="n">un</span> <span class="n">número</span><span class="p">:</span> <span class="mi">10</span>
-<span class="n">La</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">no</span> <span class="n">divisibles</span> <span class="n">por</span> <span class="mi">3</span> <span class="n">en</span> <span class="n">el</span> <span class="n">rango</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">a</span> <span class="mi">10</span> <span class="n">es</span> <span class="mi">38</span>
+<span class="n">La</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">números</span> <span class="n">no</span> <span class="n">divisibles</span> <span class="n">por</span> <span class="mi">3</span> <span class="n">en</span> <span class="n">el</span> <span class="n">rango</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">a</span> <span class="mi">10</span> <span class="n">es</span> <span class="mi">37</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1649,11 +1531,7 @@ El triangulo es equilatero.
 </div>
 </div>
 <p><strong>Ejercicio 03</strong></p>
-<p>Solicita al usuario un número y suma los dígitos pares, pero utiliza la declaración <code class="docutils literal notranslate"><span class="pre">break</span></code> para salir del ciclo cuando se encuentra un dígito impar.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ingrese</span> <span class="n">un</span> <span class="n">número</span><span class="p">:</span> <span class="mi">246813</span>
-<span class="n">La</span> <span class="n">suma</span> <span class="n">de</span> <span class="n">los</span> <span class="n">dígitos</span> <span class="n">pares</span> <span class="n">es</span> <span class="mi">12</span>
-</pre></div>
-</div>
+<p>Dada una lista de números enteros, solicita al usuario un número objetivo y busca si el número está en la lista. Utiliza un bucle con <code class="docutils literal notranslate"><span class="pre">break</span></code> para detener la búsqueda una vez que encuentres el número o determines que no está en la lista.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># respuesta</span>
@@ -1662,9 +1540,19 @@ El triangulo es equilatero.
 </div>
 </div>
 <p><strong>Ejercicio 04</strong></p>
-<p>Solicita al usuario un número y cuenta cuántos de sus dígitos son impares, pero utiliza la declaración <code class="docutils literal notranslate"><span class="pre">break</span></code> para salir del ciclo cuando se encuentra un dígito par.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ingrese</span> <span class="n">un</span> <span class="n">número</span><span class="p">:</span> <span class="mi">374268</span>
-<span class="n">El</span> <span class="n">número</span> <span class="n">tiene</span> <span class="mi">3</span> <span class="n">dígitos</span> <span class="n">impares</span><span class="o">.</span>
+<p>Simula un juego en el que la computadora “piensa” en un número y el jugador intenta adivinarlo. Crea un bucle que permita al jugador hacer intentos para adivinar el número, y utiliza <code class="docutils literal notranslate"><span class="pre">break</span></code> para salir del bucle si el jugador adivina el número o excede un número máximo de intentos.</p>
+<blockquote>
+<div><p><strong>Hint</strong>: Considera la siguiente rutina para partir tu código:</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Generar un número aleatorio entre 1 y 100</span>
+<span class="n">numero_secreto</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Número máximo de intentos permitidos</span>
+<span class="n">intentos_maximos</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># ....</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1748,14 +1636,9 @@ El triangulo es equilatero.
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loop">4.2. While Loop</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patrones-comunes">4.2.1. Patrones Comunes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-acumulacion-con-suma">4.2.1.1. Patrón de acumulación con suma</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-acumulacion-con-multiplicacion">4.2.1.2. Patrón de acumulación con multiplicación</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-conteo">4.2.1.3. Patrón de conteo</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-encontrar-el-mayor-maximo">4.2.1.4. Patrón de encontrar el mayor (máximo)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patron-de-encontrar-el-menor-minimo">4.2.1.5. Patrón de encontrar el menor (mínimo)</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-acumulacion-con-suma">4.2.1. Ejemplo:  acumulación con suma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-acumulacion-con-multiplicacion">4.2.2. Ejemplo: acumulación con multiplicación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-conteo">4.2.3. Ejemplo: conteo</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-for-con-rango">4.3. Ciclo for con rango</a></li>
