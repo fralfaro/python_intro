@@ -13,3 +13,4 @@ parts:
     - file: docs/funciones.ipynb
     - file: docs/error.ipynb
     - file: docs/buenas_practicas.ipynb
+    - file: docs/solucion.ipynb
