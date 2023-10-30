@@ -1,5 +1,18 @@
 # Introducción a Python
 
+::::{grid}
+:gutter: 2
+
+:::{grid-item-card} AUTOR
+Francisco Alfaro Medina
+:::
+
+:::{grid-item-card} FECHA DE PUBLICACIÓN
+Octubre del 2023
+:::
+
+::::
+
 ## Contenidos
 
 ### Programación & Python

@@ -42,7 +42,7 @@ html_theme_options = {
         "binderhub_url": "",
         "jupyterhub_url": "",
         "thebe": False,
-        "colab_url": "https://colab.research.google.com",
+        #"colab_url": "https://colab.research.google.com",
     },
     "path_to_docs": "",
     "repository_url": "https://github.com/ampl/mo-book.ampl.com",
