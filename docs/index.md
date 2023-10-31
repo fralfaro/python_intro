@@ -3,12 +3,12 @@
 ::::{grid}
 :gutter: 2
 
-:::{grid-item-card} AUTOR
-Francisco Alfaro Medina
+:::{grid-item-card} AUTOR 
+[🌐](https://fralfaro.github.io/portfolio/about_me/me/) Francisco Alfaro Medina
 :::
 
 :::{grid-item-card} FECHA DE PUBLICACIÓN
-Octubre del 2023
+📅 Octubre del 2023
 :::
 
 ::::
