@@ -93,9 +93,9 @@ Aún así, es posible identificar los pasos del algoritmo. Por ejemplo, hay que 
 Un diagrama de flujo es una representación gráfica de un algoritmo. Los pasos son representados por varios tipos de bloques, y el flujo de ejecución es indicado por flechas que conectan los bloques:
 
 
-```{figure} https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/flujo.png
+```{figure} images/flujo.png
 ---
-scale: 50%
+scale: 70%
 align: center
 name: fig11
 ---
