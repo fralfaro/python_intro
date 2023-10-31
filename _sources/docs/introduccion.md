@@ -20,9 +20,9 @@ Además, en la encuesta anual [Stack Overflow Developer Survey 2021](https://ins
 
 ```{figure} https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/survey_2021.png
 ---
+scale: 50%
 align: center
 name: fig21
-scale: 50%
 ---
 Stack Overflow Developer Survey 2021
 ```
@@ -43,9 +43,9 @@ En general, la popularidad de Python es una buena señal y es una de las razones
 
 ```{figure} https://m.media-amazon.com/images/S/aplus-media/kdp/78de7e02-6712-4648-8c38-f590fbe26a23.__CR0,0,970,600_PT0_SX970_V1___.png
 ---
+scale: 50%
 align: center
 name: fig22
-scale: 50%
 ---
 Librerías y frameworks
 ```

@@ -95,9 +95,9 @@ Un diagrama de flujo es una representación gráfica de un algoritmo. Los pasos 
 
 ```{figure} https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/flujo.png
 ---
+scale: 50%
 align: center
 name: fig11
-scale: 50%
 ---
 Diagrama de flujo
 ```
