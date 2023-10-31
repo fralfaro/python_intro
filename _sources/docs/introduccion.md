@@ -18,9 +18,9 @@ El índice [TIOBE](https://www.tiobe.com/tiobe-index/), que mide la popularidad 
 
 Además, en la encuesta anual [Stack Overflow Developer Survey 2021](https://insights.stackoverflow.com/survey/2021), Python fue el tercer lenguaje de programación más popular, después de JavaScript y HTML/CSS. También se ha convertido en uno de los lenguajes más populares para la ciencia de datos y el aprendizaje automático.
 
-```{figure} https://raw.githubusercontent.com/fralfaro/python_intro/main/docs/images/survey_2021.png
+```{figure} images/survey_2021.png
 ---
-scale: 50%
+scale: 75%
 align: center
 name: fig21
 ---
@@ -41,9 +41,9 @@ En general, la popularidad de Python es una buena señal y es una de las razones
 
 ## Librerías y frameworks
 
-```{figure} https://m.media-amazon.com/images/S/aplus-media/kdp/78de7e02-6712-4648-8c38-f590fbe26a23.__CR0,0,970,600_PT0_SX970_V1___.png
+```{figure} images/python_landscape.jpg
 ---
-scale: 50%
+scale: 70%
 align: center
 name: fig22
 ---
