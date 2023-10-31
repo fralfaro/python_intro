@@ -9,9 +9,9 @@ exclude_patterns: [.DS_Store, "**.ipynb_checkpoints", "**.pytest_cache", "tools"
 
 
 # Launch on Google Colab button
-launch_buttons:
-  notebook_interface: "classic"
-  colab_url: "https://colab.research.google.com"
+#launch_buttons:
+#  notebook_interface: "classic"
+#  colab_url: "https://colab.research.google.com"
 
 # only build files that appear in toc
 only_build_toc_files: true
