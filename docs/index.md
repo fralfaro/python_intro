@@ -3,7 +3,7 @@
 ::::{grid}
 :gutter: 2
 
-:::{grid-item-card} AUTOR 
+:::{grid-item-card} AUTOR
 [🌐](https://fralfaro.github.io/portfolio/about_me/me/) Francisco Alfaro Medina
 :::
 
