@@ -1,5 +1,11 @@
 # Motivación
 
+```{image} images/main/python2.svg
+:alt: code
+:width: 600px
+:align: center
+```
+
 [Python](https://www.python.org/) es un lenguaje de programación interpretado de alto nivel, diseñado para ser fácil de leer y escribir. Fue creado a finales de la década de 1980 por [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) y se ha convertido en uno de los lenguajes de programación más populares en la actualidad. Python es un lenguaje versátil que se puede utilizar para una variedad de tareas, desde el desarrollo web y la ciencia de datos hasta la automatización de tareas y la programación de sistemas.
 
 Algunas características de Python:
