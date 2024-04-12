@@ -1,23 +1,42 @@
 # Programación
 
+```{image} images/main/code.png
+:alt: code
+:width: 250px
+:align: center
+```
+
+
+
+## Introducción
+
 ```{epigraph}
-“Se suele decir que una persona no entiende algo de verdad hasta que puede explicárselo a otro. En realidad,
-no lo entiende de verdad hasta que puede explicárselo a un computador.”
+“Se dice que uno no comprende verdaderamente algo hasta que puede explicárselo a otro. En realidad, uno no lo entiende completamente hasta que puede explicárselo a una computadora.”
 
 -- Donald Knuth
 ```
 
-Si tuvieramos que resumir el propósito de la programación en una frase, ésta debería ser:
+Si tuviéramos que resumir el propósito de la programación en una frase, sería:
 
 ```{epigraph}
-que el computador haga el trabajo por nosotros.
+Automatizar tareas para que la computadora las realice por nosotros.
 ```
 
-Los computadores son buenos para hacer tareas rutinarias. Idealmente, cualquier problema tedioso y repetitivo debería ser resuelto por un computador, y los seres humanos sólo deberíamos encargarnos de los problemas realmente interesantes: los que requieren creatividad, pensamiento crítico y subjetividad.
+Las computadoras son expertas en llevar a cabo tareas rutinarias. Idealmente, cualquier labor tediosa y repetitiva debería ser delegada a una computadora, permitiendo así que los humanos se enfoquen en los problemas verdaderamente interesantes: aquellos que demandan creatividad, pensamiento crítico y subjetividad.
 
-La **programación** es el proceso de transformar un método para resolver problemas en uno que pueda ser entendido por el computador.
+La **programación** es el proceso de traducir un enfoque para resolver problemas en términos comprensibles para la computadora.
+
+Además, la programación abarca una amplia gama de lenguajes y paradigmas, cada uno con sus propias características y aplicaciones. Desde los clásicos como C y Java hasta los modernos como Python y JavaScript, cada lenguaje tiene sus fortalezas y debilidades, y la elección del lenguaje adecuado depende del contexto y los requisitos del proyecto.
+
+La programación no se limita solo a escribir código. También implica planificación, diseño y depuración de software. Los programadores deben comprender los requisitos del usuario, diseñar soluciones eficientes y depurar errores para garantizar que el software funcione correctamente.
 
 ## Algoritmos
+
+```{image} images/main/algorithm.png
+:alt: code
+:width: 300px
+:align: center
+```
 
 ```{epigraph}
 “La informática se trata de computadores tanto como la astronomía se trata de telescopios.”
@@ -25,39 +44,42 @@ La **programación** es el proceso de transformar un método para resolver probl
 -- Edsger Dijkstra
 ```
 
-Al diseñar un programa, el desafío principal es crear y describir un procedimiento que esté completamente bien definido, que no tenga ambigüedades, y que efectivamente resuelva el problema.
+Al diseñar un programa, el desafío principal es crear y describir un procedimiento que esté completamente bien definido, sin ambigüedades, y que efectivamente resuelva el problema.
 
-Así es como la programación no es tanto sobre computadores, sino sobre resolver problemas de manera estructurada. El objeto de estudio de la programación no son los programas, sino los algoritmos.
+Por tanto, la programación no se centra tanto en los computadores como en resolver problemas de manera estructurada. Su objeto de estudio principal son los algoritmos.
 
-Un **algoritmo** es un procedimiento bien definido para resolver un problema. Todo el mundo conoce y utiliza algoritmos a diario, incluso sin darse cuenta:
+Un **algoritmo** es un procedimiento bien definido para resolver un problema. Todos utilizamos algoritmos a diario, incluso sin darnos cuenta:
 
-**a) Una receta**
+**a) Receta de cocina**
 
-Una receta de cocina es un algoritmo; si bien podríamos cuestionar que algunos pasos son ambiguos (¿cuánto es «una pizca de sal»? ¿qué significa «agregar a gusto»?), en general las instrucciones están lo suficientemente bien definidas para que uno las pueda seguir sin problemas.
+Una receta de cocina es un ejemplo de algoritmo; aunque algunos pasos puedan parecer ambiguos (¿cuánto es «una pizca de sal»? ¿qué significa «agregar a gusto»?), en general las instrucciones están lo suficientemente bien definidas para seguirlas sin problemas.
 
-La entrada de una receta son los ingredientes y algunos datos como: ¿para cuántas personas se cocinará? El proceso es la serie de pasos para manipular los ingredientes. La salida es el plato terminado.
+La entrada de una receta son los ingredientes y ciertos datos como: ¿para cuántas personas se está cocinando? El proceso es la serie de pasos para manipular los ingredientes. La salida es el plato terminado.
 
-En principio, si una receta está suficientemente bien explicada, podría permitir preparar un plato a alguien que no sepa nada de cocina.
+En principio, si una receta está suficientemente bien explicada, cualquiera podría preparar el plato incluso sin conocimientos previos de cocina.
 
-**b) Método de multiplicar**
+**b) Método de multiplicación**
 
-El método para multiplicar números a mano que aprendimos en el colegio es un algoritmo. Dado cualquier par de números enteros, si seguimos paso a paso el procedimiento siempre obtendremos el producto:
+El método para multiplicar números a mano que aprendemos en la escuela es otro ejemplo de algoritmo. Siguiendo paso a paso el procedimiento, siempre obtendremos el producto.
 
-La entrada del algoritmo de multiplicación son los dos factores. El proceso es la secuencia de pasos en que los dígitos van siendo multiplicados las reservas van siendo sumadas, y los productos intermedios son finalmente sumados. La salida del algoritmo es el producto obtenido.
-
+La entrada del algoritmo de multiplicación son los dos factores. El proceso consiste en una secuencia de pasos donde los dígitos se multiplican, las reservas se suman, y los productos intermedios se suman finalmente. La salida del algoritmo es el producto obtenido.
 
 ### Componentes de un algoritmo
 
-Conceptualmente, un algoritmo tiene tres componentes:
+Conceptualmente, un algoritmo consta de tres elementos principales:
 
-* **entrada**: son los datos sobre los que el algoritmo opera;
-* **proceso**: son los pasos que hay que seguir, utilizando la entrada;
-* **salida**: es el resultado que entrega el algoritmo.
+* **Entrada**: Representa los datos iniciales o inputs que el algoritmo utilizará para llevar a cabo su tarea.
+* **Proceso**: Consiste en la serie de pasos lógicos y operaciones que el algoritmo realiza utilizando la entrada para producir un resultado.
+* **Salida**: Es el resultado final o output que proporciona el algoritmo después de ejecutar el proceso.
 
-El proceso es una secuencia de sentencias, que debe ser realizada en orden. El proceso también puede tener ciclos (grupos de sentencias que son ejecutadas varias veces) y condicionales (grupos de sentencias que sólo son ejecutadas bajo ciertas condiciones).
+El proceso se describe mediante una secuencia ordenada de instrucciones. 
+Además, puede incluir estructuras como ciclos, que repiten un conjunto de
+instrucciones un número determinado de veces, y condicionales, que determinan qué
+conjunto de instrucciones se ejecutarán según ciertas condiciones.
 
 ### Cómo describir un algoritmo
-Consideremos un ejemplo sencillo: un algoritmo para resolver ecuaciones cuadráticas.
+
+Consideremos un ejemplo sencillo: **un algoritmo para resolver ecuaciones cuadráticas**.
 
 Una ecuación cuadrática es una ecuación de la forma $ax^2+bx+c=0$, donde $a, b$ y $c$ son datos dados, con $a\neq0$, y $x$ es la incógnita cuyo valor que se desea determinar.
 
