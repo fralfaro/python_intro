@@ -72,7 +72,7 @@ Conceptualmente, un algoritmo consta de tres elementos principales:
 * **Proceso**: Consiste en la serie de pasos lógicos y operaciones que el algoritmo realiza utilizando la entrada para producir un resultado.
 * **Salida**: Es el resultado final o output que proporciona el algoritmo después de ejecutar el proceso.
 
-El proceso se describe mediante una secuencia ordenada de instrucciones. 
+El proceso se describe mediante una secuencia ordenada de instrucciones.
 Además, puede incluir estructuras como ciclos, que repiten un conjunto de
 instrucciones un número determinado de veces, y condicionales, que determinan qué
 conjunto de instrucciones se ejecutarán según ciertas condiciones.
