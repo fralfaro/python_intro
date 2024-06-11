@@ -4,7 +4,7 @@
 [![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://fralfaro.github.io/python_intro/)
 
 
-<img src="https://cdn.worldvectorlogo.com/logos/python-3.svg" alt="" align="center" width="500"/>
+<img src="images/python.png" alt="" align="center" width="500"/>
 
 ## Contenidos
 
