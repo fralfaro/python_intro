@@ -1,7 +1,7 @@
 # Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 
 # Project information
-site_name: Python Introduction
+site_name: Introducción Python
 
 site_url: https://github.com/fralfaro/python_intro
 site_author: Francisco Alfaro
@@ -16,18 +16,19 @@ edit_uri: ''
 
 # Markdown extensions
 markdown_extensions:
-  - attr_list
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - neoteroi.cards
+  - neoteroi.timeline
+  - neoteroi.projects
   - admonition
-  - md_in_html
+  - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.tasklist
-  - pymdownx.tabbed
+
+extra_css:
+  - css/neoteroi-mkdocs.css
 
 # Extra javascript
 extra_javascript:
@@ -39,14 +40,20 @@ extra_javascript:
 theme:
   name: material
   language: es
-  logo: images/logo_python.svg
-  favicon: images/logo_fam.png
+  logo: images/python.png
+  favicon: images/icon.png
   features:
-    - navigation.instant
-    - navigation.top
-    - content.code.annotate
     - search.suggest
     - search.highlight
+    - content.tabs.link
+    - navigation.indexes
+    - content.tooltips
+    - navigation.path
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.tabs
+    - navigation.footer
   palette:
     # Light mode
     - media: '(prefers-color-scheme: light)'
@@ -91,13 +98,16 @@ plugins:
 
 # TOC
 nav:
-    - Home: index.md
-    - Programación: intro_progra.ipynb
-    - Motivación: introduccion.ipynb
-    - Nomenclatura: basico.ipynb
-    - Control de Flujo: flujo.ipynb
-    - Estructura de datos: estructura.ipynb
-    - Funciones: funciones.ipynb
-    - Programación Funcional: funcional.ipynb
-    - Excepciones: error.ipynb
-    - Buenas prácticas: buenas_practicas.ipynb
+    - 🏠 Home:
+        - index.md
+        - Programación: intro_progra.ipynb
+        - Motivación: intro_python.ipynb
+    - 📚 Capítulos:
+        - Nomenclatura: basico.ipynb
+        - Control de Flujo: flujo.ipynb
+        - Estructura de datos: estructura.ipynb
+        - Funciones: funciones.ipynb
+        - Excepciones: error.ipynb
+        - Buenas prácticas: buenas_practicas.ipynb
+    - 💡 Solución:
+        - solucion.ipynb
